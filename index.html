@@ -5,46 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elisarrtech | IA, Educación y Tecnología</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
-        min-height: 100vh;
-        font-family: 'Poppins', sans-serif;
-      }
-      .neon-text {
-        color: #18e191;
-        text-shadow: 0 0 5px #18e191, 0 0 10px #18e191;
-      }
-      .glow-button {
-        box-shadow: 0 0 10px #18e191, 0 0 20px #18e191;
-      }
-      .glass {
-        backdrop-filter: blur(10px);
-        background: rgba(15, 12, 41, 0.8);
-      }
-      .wave-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle at 50% 50%, #18e19133 0%, transparent 70%);
-        animation: slowPulse 6s infinite alternate;
-        z-index: -10;
-        pointer-events: none;
-      }
-      @keyframes slowPulse {
-        0% {
-          transform: scale(1) translate(-25%, -25%);
-        }
-        100% {
-          transform: scale(1.05) translate(-20%, -20%);
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="relative text-white p-0 m-0">
     <div class="wave-bg"></div>
@@ -108,10 +69,7 @@
     <!-- CONTACTO -->
     <section id="contacto" class="py-20 max-w-3xl mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold neon-text mb-10">Contacto</h2>
-      <p class="text-gray-300 mb-6">
-        ¿Quieres trabajar conmigo o tienes alguna pregunta?
-        <br> ¡Estoy a un clic de distancia!
-      </p>
+      <p class="text-gray-300 mb-6">¿Quieres trabajar conmigo o tienes alguna pregunta?<br> ¡Estoy a un clic de distancia!</p>
       <form action="https://formsubmit.co/tucorreo@example.com" method="POST" class="flex flex-col gap-4">
         <input type="text" name="name" placeholder="Tu nombre" required class="bg-[#1b1b2f] text-white px-4 py-2 rounded-md border border-[#18e191]" />
         <input type="email" name="email" placeholder="Tu correo" required class="bg-[#1b1b2f] text-white px-4 py-2 rounded-md border border-[#18e191]" />
@@ -120,23 +78,14 @@
       </form>
     </section>
 
-    <!-- WhatsApp -->
     <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="fixed bottom-5 right-5 bg-[#18e191] p-3 rounded-full shadow-lg hover:scale-110 transition z-50">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6" />
     </a>
 
-    <!-- Footer -->
     <footer class="text-center py-6 text-sm text-gray-400 border-t border-[#18e191] mt-10">
       © 2025 Elisarrtech. Todos los derechos reservados. | Tecnología • Educación • IA
     </footer>
 
-    <!-- JS -->
-    <script>
-      const menuBtn = document.getElementById('menuBtn');
-      const menu = document.getElementById('menu');
-      menuBtn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
