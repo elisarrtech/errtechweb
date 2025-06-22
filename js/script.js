@@ -14,6 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
+
+    // Validación simple
+    const name = form.querySelector('input[name="name"]').value.trim();
+    const email = form.querySelector('input[name="email"]').value.trim();
+    const message = form.querySelector('textarea[name="message"]').value.trim();
+    if (!name || !email || !message) {
+      alert("Por favor, completa todos los campos.");
+      return;
+    }
+
     const formData = new FormData(form);
 
     fetch("https://formsubmit.co/ajax/elisarrtech@gmail.com", {
@@ -30,5 +40,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       })
       .catch(() => alert("❌ No se pudo enviar. Verifica tu conexión."));
+  });
+
+  // Botón para volver arriba
+  const scrollBtn = document.createElement("button");
+  scrollBtn.innerHTML = "⬆️";
+  scrollBtn.className = "fixed bottom-20 right-5 bg-[#18e191] text-black p-3 rounded-full shadow-lg hover:scale-110 transition z-50";
+  scrollBtn.style.display = "none";
+  scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  document.body.appendChild(scrollBtn);
+
+  window.addEventListener("scroll", () => {
+    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
   });
 });
