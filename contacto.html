@@ -42,8 +42,7 @@
     <h1 class="text-neon-purple mb-4">Contáctame</h1>
     <p class="mb-4">¿Tienes dudas, comentarios o quieres colaborar? Llena el formulario y te responderé pronto.</p>
 
-    <form action="https://formsubmit.co/tuemail@correo.com" method="POST" class="bg-black p-4 rounded border border-secondary shadow-lg">
-      <!-- Alerta de validación -->
+    <form action="https://formsubmit.co/elisarrtech@gmail.com" method="POST" class="bg-black p-4 rounded border border-secondary shadow-lg">
       <div id="formAlert" class="alert alert-danger d-none" role="alert"></div>
 
       <!-- Nombre -->
@@ -70,8 +69,8 @@
       <!-- Botón -->
       <button type="submit" class="btn btn-outline-light px-4">Enviar</button>
 
-      <!-- FormSubmit hidden fields -->
-      <input type="hidden" name="_next" value="https://tu-dominio.com/gracias.html">
+      <!-- Campos ocultos de FormSubmit -->
+      <input type="hidden" name="_next" value="https://elisarrtech.github.io/errtechweb/gracias.html">
       <input type="hidden" name="_captcha" value="false">
     </form>
   </main>
@@ -89,7 +88,7 @@
     </div>
   </footer>
 
-  <!-- Validación -->
+  <!-- Validación JS -->
   <script>
     document.querySelector("form").addEventListener("submit", function (e) {
       const nombre = document.getElementById("nombre");
@@ -97,7 +96,7 @@
       const mensaje = document.getElementById("mensaje");
       const alerta = document.getElementById("formAlert");
 
-      const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const correoValido = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
       let errores = [];
 
       [nombre, correo, mensaje].forEach(input => input.classList.remove("is-invalid"));
@@ -131,4 +130,3 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
