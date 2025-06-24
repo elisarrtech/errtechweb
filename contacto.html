@@ -37,7 +37,7 @@
     </div>
   </nav>
 
-  <!-- Formulario de contacto -->
+  <!-- Formulario -->
   <main class="container py-5">
     <h1 class="text-neon-purple mb-4">Contáctame</h1>
     <p class="mb-4">¿Tienes dudas, comentarios o quieres colaborar? Llena el formulario y te responderé pronto.</p>
@@ -66,10 +66,9 @@
         <div class="invalid-feedback">El mensaje debe tener al menos 10 caracteres.</div>
       </div>
 
-      <!-- Botón -->
       <button type="submit" class="btn btn-outline-light px-4">Enviar</button>
 
-      <!-- Campos ocultos -->
+      <!-- Hidden inputs -->
       <input type="hidden" name="_next" value="https://elisarrtech.github.io/errtechweb/gracias.html">
       <input type="hidden" name="_captcha" value="false">
     </form>
@@ -88,7 +87,7 @@
     </div>
   </footer>
 
-  <!-- Validación JS -->
+  <!-- Validación -->
   <script>
     document.querySelector("form").addEventListener("submit", function (e) {
       const nombre = document.getElementById("nombre");
@@ -96,7 +95,7 @@
       const mensaje = document.getElementById("mensaje");
       const alerta = document.getElementById("formAlert");
 
-      const correoValido = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+      const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       let errores = [];
 
       [nombre, correo, mensaje].forEach(input => input.classList.remove("is-invalid"));
@@ -118,7 +117,7 @@
 
       if (errores.length > 0) {
         e.preventDefault();
-        alerta.innerHTML = "Por favor corrige los errores marcados.";
+        alerta.innerHTML = errores.join("<br>");
         alerta.classList.remove("d-none");
       } else {
         alerta.classList.add("d-none");
@@ -126,7 +125,8 @@
     });
   </script>
 
-  <!-- Bootstrap JS -->
+  <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
