@@ -42,7 +42,7 @@
     <h1 class="text-neon-purple mb-4">Contáctame</h1>
     <p class="mb-4">¿Tienes dudas, comentarios o quieres colaborar? Llena el formulario y te responderé pronto.</p>
 
-    <form action="https://formsubmit.co/elisarrtech@gmail.com" method="POST" class="bg-black p-4 rounded border border-secondary shadow-lg">
+    <form action="https://formsubmit.co/elisarrtech@gmail.com" method="POST" class="bg-black p-4 rounded border border-secondary shadow-lg" novalidate>
       <div id="formAlert" class="alert alert-danger d-none" role="alert"></div>
 
       <!-- Nombre -->
@@ -69,7 +69,7 @@
       <!-- Botón -->
       <button type="submit" class="btn btn-outline-light px-4">Enviar</button>
 
-      <!-- Campos ocultos de FormSubmit -->
+      <!-- Campos ocultos -->
       <input type="hidden" name="_next" value="https://elisarrtech.github.io/errtechweb/gracias.html">
       <input type="hidden" name="_captcha" value="false">
     </form>
@@ -106,7 +106,7 @@
         nombre.classList.add("is-invalid");
       }
 
-      if (!correoValido.test(correo.value)) {
+      if (!correoValido.test(correo.value.trim())) {
         errores.push("El correo electrónico no es válido.");
         correo.classList.add("is-invalid");
       }
