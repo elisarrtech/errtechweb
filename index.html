@@ -8,103 +8,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/estilos.css" />
   <script src="https://kit.fontawesome.com/a2e0c6e6f7.js" crossorigin="anonymous"></script>
-  <style>
-    .navbar-custom {
-      background: linear-gradient(90deg, #1f0037, #00314d);
-      box-shadow: 0 4px 10px rgba(0, 255, 255, 0.1);
-      border-bottom: 2px solid #00f0ff33;
-    }
-    .navbar-custom .nav-link {
-      color: #fff !important;
-      transition: all 0.3s ease;
-    }
-    .navbar-custom .nav-link:hover {
-      color: #00f0ff !important;
-      text-shadow: 0 0 8px #00f0ff;
-    }
-    .hero-section {
-      position: relative;
-      background: linear-gradient(135deg, #121212, #1f0037, #00314d);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      overflow: hidden;
-    }
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    .hero-overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-      z-index: 1;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      animation: fadeInUp 1.5s ease-in-out;
-    }
-    .scroll-down {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 1.5rem;
-      animation: bounce 2s infinite;
-      z-index: 2;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(-10px); }
-    }
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    .fade-section {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .fade-section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    #backToTopBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #00f0ff;
-      color: #000;
-      border: none;
-      border-radius: 50%;
-      padding: 12px 16px;
-      font-size: 20px;
-      box-shadow: 0 0 10px #00f0ff;
-      cursor: pointer;
-      z-index: 9999;
-      display: none;
-    }
-  </style>
 </head>
 <body class="bg-dark text-light">
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fade-section">
-    <!-- contenido navbar -->
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logotransp.png" alt="Elisarrtech" style="max-height: 40px;" class="img-fluid">
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <!-- Hero -->
   <header class="hero-section fade-section">
-    <!-- contenido hero -->
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <img src="img/logotransp.png" alt="Logotipo" style="max-width: 150px;" class="mb-4 animate-glow">
+      <h1 class="display-4 text-neon-pink animate-glow">Tecnología + Educación + IA</h1>
+      <p class="lead">El futuro de la educación y la innovación digital empieza aquí</p>
+      <p class="typewriter lead text-light mt-3">Desarrollo Web | Inteligencia Artificial |Asistente Virtual | Educación Digital</p>
+      <a href="proyectos.html" class="cta-btn">Explora mis proyectos</a>
+    </div>
+    <div class="scroll-down">
+      <i class="fas fa-chevron-down text-neon-blue"></i>
+    </div>
   </header>
 
   <!-- Sección 1 -->
