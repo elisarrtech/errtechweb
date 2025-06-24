@@ -40,97 +40,21 @@ form input:focus, form textarea:focus {
 }
 
 /* =================== NAVEGACIÓN =================== */
-a.nav-link {
-  transition: all 0.3s;
+.navbar-custom {
+  background: linear-gradient(90deg, #1f0037, #00314d);
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.1);
+  border-bottom: 2px solid #00f0ff33;
 }
-a.nav-link:hover {
+.navbar-custom .nav-link {
+  color: #fff !important;
+  transition: all 0.3s ease;
+}
+.navbar-custom .nav-link:hover {
   color: #00f0ff !important;
+  text-shadow: 0 0 8px #00f0ff;
 }
 
-/* =================== IMÁGENES =================== */
-img {
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.15));
-}
-
-/* =================== TARJETAS =================== */
-.card-title { font-weight: 600; }
-.card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card-img-top {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-bottom: 1px solid #444;
-}
-.card:hover .card-img-top {
-  transform: scale(1.05);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
-}
-
-/* =================== TARJETAS CON EFECTO NEÓN =================== */
-.neon-card {
-  background: rgba(18, 18, 18, 0.75);
-  border: 1px solid rgba(0, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 1.5rem;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  color: #fff;
-}
-.neon-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 0 40px rgba(0, 255, 255, 0.1);
-}
-
-/* =================== SECCIÓN TECNOLOGÍAS =================== */
-.tech-bar {
-  background: rgba(18, 18, 18, 0.8);
-  border-top: 1px solid #00f0ff33;
-  border-bottom: 1px solid #00f0ff33;
-}
-.tech-bar h5 {
-  font-weight: 600;
-  font-size: 1.2rem;
-  text-align: center;
-  color: #00f0ff;
-  margin-bottom: 1rem;
-}
-.tech-logos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.logo-box {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  padding: 8px;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(5px);
-}
-.logo-box:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
-}
-.tech-icon {
-  width: 100%;
-  height: auto;
-  filter: brightness(1.5) contrast(1.2) drop-shadow(0 0 10px rgba(0, 240, 255, 0.4));
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-.tech-icon:hover {
-  filter: brightness(1.8) contrast(1.5) drop-shadow(0 0 15px rgba(0, 240, 255, 0.6));
-  transform: scale(1.05);
-}
-
-/* =================== HERO CON FONDO ANIMADO =================== */
+/* =================== HERO =================== */
 .hero-section {
   position: relative;
   background: linear-gradient(-45deg, #121212, #1f0037, #00314d);
@@ -141,12 +65,13 @@ img {
   align-items: center;
   justify-content: center;
   color: #fff;
+  overflow: hidden;
 }
-.hero-section::before {
-  content: "";
+.hero-overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 .hero-content {
@@ -165,7 +90,7 @@ img {
   color: #ccc;
 }
 
-/* =================== ANIMACIONES CLAVE =================== */
+/* =================== ANIMACIONES =================== */
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -175,15 +100,76 @@ img {
   0%, 100% { text-shadow: 0 0 10px #ff4df0, 0 0 20px #ff4df0; }
   50% { text-shadow: 0 0 20px #fff, 0 0 40px #ff4df0; }
 }
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
 .animate-glow {
   animation: glow 2s infinite ease-in-out;
 }
-
-/* =================== BOTÓN DE FILTRO ACTIVO =================== */
-.filter-btn.active {
-  background-color: #00f0ff;
-  color: #000;
-  border-color: #00f0ff;
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* =================== BOTÓN IR ARRIBA =================== */
+#backToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background-color: #00f0ff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00f0ff;
+  z-index: 1000;
+}
+
+/* =================== TRIÁNGULOS ANIMADOS =================== */
+.bg-animated-shapes {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+.bg-animated-shapes li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid rgba(0, 240, 255, 0.15);
+  animation: floatShape 25s linear infinite;
+  bottom: -150px;
+}
+.bg-animated-shapes li:nth-child(1) { left: 25%; animation-delay: 0s; }
+.bg-animated-shapes li:nth-child(2) { left: 10%; animation-delay: 2s; }
+.bg-animated-shapes li:nth-child(3) { left: 70%; animation-delay: 4s; }
+.bg-animated-shapes li:nth-child(4) { left: 40%; animation-delay: 0s; }
+.bg-animated-shapes li:nth-child(5) { left: 65%; animation-delay: 0s; }
+.bg-animated-shapes li:nth-child(6) { left: 75%; animation-delay: 3s; }
+.bg-animated-shapes li:nth-child(7) { left: 35%; animation-delay: 7s; }
+.bg-animated-shapes li:nth-child(8) { left: 50%; animation-delay: 15s; }
+.bg-animated-shapes li:nth-child(9) { left: 20%; animation-delay: 2s; }
+.bg-animated-shapes li:nth-child(10) { left: 85%; animation-delay: 0s; }
+
+@keyframes floatShape {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  50% { opacity: 0.3; }
+  100% { transform: translateY(-1000px) rotate(360deg); opacity: 0; }
+}
 
