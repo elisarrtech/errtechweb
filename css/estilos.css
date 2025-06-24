@@ -22,6 +22,46 @@ form input:focus, form textarea:focus {
   outline: none;
 }
 
+/* Tarjetas con efecto neon animado */
+.neon-card {
+  background: rgba(18, 18, 18, 0.75);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.neon-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 0 40px rgba(0, 255, 255, 0.1);
+}
+
+/* Animación fade-up */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+/* Retrasos para las tarjetas */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+
 /* =================== BOTÓN PRINCIPAL (CTA) =================== */
 .cta-btn {
   background-color: transparent;
