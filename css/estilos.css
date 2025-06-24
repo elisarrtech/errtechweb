@@ -78,4 +78,20 @@ img {
   100% { background-position: 0% 50%; }
 }
 
+.hero-section {
+  background: linear-gradient(-45deg, #121212, #1f0037, #00314d);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px #ff4df0, 0 0 20px #ff4df0; }
+  50% { text-shadow: 0 0 20px #fff, 0 0 40px #ff4df0; }
+}
+
+.animate-glow {
+  animation: glow 2s infinite ease-in-out;
+}
+
 
