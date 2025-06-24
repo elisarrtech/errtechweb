@@ -1,5 +1,5 @@
 
-/* =================== TIPOGRAFÍA GENERAL =================== */
+/* =================== RESET Y TIPOGRAFÍA =================== */
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -91,7 +91,7 @@ img {
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 0 40px rgba(0, 255, 255, 0.1);
 }
 
-/* =================== FILTRO ACTIVO =================== */
+/* =================== BOTÓN DE FILTRO ACTIVO =================== */
 .filter-btn.active {
   background-color: #00f0ff;
   color: #000;
@@ -155,7 +155,7 @@ img {
   animation: fadeUp 1.2s ease-out both;
 }
 
-/* =================== ELEMENTOS DE LÍNEA DE TIEMPO =================== */
+/* =================== LÍNEA DE TIEMPO =================== */
 .timeline-item {
   background-color: #1e1e1e;
   border-left: 4px solid #00f0ff;
@@ -169,35 +169,15 @@ img {
   box-shadow: 0 0 20px rgba(0,255,255,0.2);
 }
 
-/* =================== RETRASOS PARA ANIMACIONES =================== */
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
-
-/* =================== FONDO CON FORMAS GEOMÉTRICAS ANIMADAS =================== */
+/* =================== FONDO TRIÁNGULOS ANIMADOS =================== */
 .bg-animated-shapes {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
 }
-
-/* =================== FONDO CON TRIÁNGULOS ANIMADOS =================== */
-.bg-animated-shapes {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
-  pointer-events: none;
-}
-
 .bg-animated-shapes li {
   position: absolute;
   display: block;
@@ -210,7 +190,6 @@ img {
   animation: floatShape 25s linear infinite;
   bottom: -150px;
 }
-
 .bg-animated-shapes li:nth-child(1) { left: 25%; animation-delay: 0s; }
 .bg-animated-shapes li:nth-child(2) { left: 10%; animation-delay: 2s; }
 .bg-animated-shapes li:nth-child(3) { left: 70%; animation-delay: 4s; }
@@ -223,104 +202,30 @@ img {
 .bg-animated-shapes li:nth-child(10) { left: 85%; animation-delay: 0s; }
 
 @keyframes floatShape {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateY(-1000px) rotate(360deg);
-    opacity: 0;
-  }
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  50% { opacity: 0.3; }
+  100% { transform: translateY(-1000px) rotate(360deg); opacity: 0; }
 }
 
-/* =================== FONDO CON TRIÁNGULOS ANIMADOS =================== */
-.bg-animated-shapes {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.bg-animated-shapes li {
-  position: absolute;
-  display: block;
-  list-style: none;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 25px solid rgba(0, 240, 255, 0.15);
-  animation: floatShape 25s linear infinite;
-  bottom: -150px;
-}
-
-.bg-animated-shapes li:nth-child(1) { left: 25%; animation-delay: 0s; }
-.bg-animated-shapes li:nth-child(2) { left: 10%; animation-delay: 2s; }
-.bg-animated-shapes li:nth-child(3) { left: 70%; animation-delay: 4s; }
-.bg-animated-shapes li:nth-child(4) { left: 40%; animation-delay: 0s; }
-.bg-animated-shapes li:nth-child(5) { left: 65%; animation-delay: 0s; }
-.bg-animated-shapes li:nth-child(6) { left: 75%; animation-delay: 3s; }
-.bg-animated-shapes li:nth-child(7) { left: 35%; animation-delay: 7s; }
-.bg-animated-shapes li:nth-child(8) { left: 50%; animation-delay: 15s; }
-.bg-animated-shapes li:nth-child(9) { left: 20%; animation-delay: 2s; }
-.bg-animated-shapes li:nth-child(10) { left: 85%; animation-delay: 0s; }
-
-@keyframes floatShape {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateY(-1000px) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-
-@keyframes floatShape {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  100% {
-    transform: translateY(-1000px) rotate(360deg);
-    opacity: 0;
-  }
-}
-
+/* =================== LOGOS DE TECNOLOGÍA =================== */
 .tech-logo {
-  filter: brightness(1.3) contrast(1.1) drop-shadow(0 0 8px rgba(0, 240, 255, 0.2));
-  transition: filter 0.3s ease;
+  filter: brightness(1.5) contrast(1.2) drop-shadow(0 0 10px rgba(0, 240, 255, 0.4));
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
-
 .tech-logo:hover {
-  filter: brightness(1.6) contrast(1.3) drop-shadow(0 0 12px rgba(0, 240, 255, 0.5));
+  transform: scale(1.05);
+  filter: brightness(1.8) contrast(1.4) drop-shadow(0 0 15px rgba(0, 240, 255, 0.6));
 }
-
 .logo-box {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.07);
   border-radius: 12px;
   padding: 15px;
-  width: 40px;
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+  width: 50px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
 }
 .logo-box:hover {
   transform: scale(1.05);
   box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
 }
-
