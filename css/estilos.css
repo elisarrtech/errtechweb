@@ -1,7 +1,9 @@
+/* Tipografía general */
 body {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Colores neón */
 .text-neon-blue {
   color: #00f0ff !important;
 }
@@ -14,10 +16,12 @@ body {
   color: #a64eff !important;
 }
 
+/* Fondo personalizado */
 .bg-black {
   background-color: #121212 !important;
 }
 
+/* Enlaces */
 a.nav-link {
   transition: all 0.3s;
 }
@@ -26,19 +30,14 @@ a.nav-link:hover {
   color: #00f0ff !important;
 }
 
+/* Imágenes (logo, etc.) */
 img {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.15));
 }
 
-
+/* Tarjetas (cards) */
 .card-title {
   font-weight: 600;
-}
-
-.card:hover {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-  transform: scale(1.02);
-  transition: all 0.3s ease;
 }
 
 .card:hover {
@@ -47,14 +46,7 @@ img {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes glow {
-  0%, 100% { text-shadow: 0 0 10px #ff4df0, 0 0 20px #ff4df0; }
-  50% { text-shadow: 0 0 20px #fff, 0 0 40px #ff4df0; }
-}
-
-.animate-glow {
-  animation: glow 2s infinite ease-in-out;
-}
+/* Botones */
 .btn-outline-light {
   border-radius: 30px;
   transition: all 0.3s ease;
@@ -66,6 +58,7 @@ img {
   border-color: #00f0ff;
 }
 
+/* Fondo animado en hero */
 .hero-section {
   background: linear-gradient(-45deg, #121212, #1f0037, #00314d);
   background-size: 400% 400%;
@@ -78,13 +71,7 @@ img {
   100% { background-position: 0% 50%; }
 }
 
-.hero-section {
-  background: linear-gradient(-45deg, #121212, #1f0037, #00314d);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-}
-
-
+/* Texto brillante */
 @keyframes glow {
   0%, 100% { text-shadow: 0 0 10px #ff4df0, 0 0 20px #ff4df0; }
   50% { text-shadow: 0 0 20px #fff, 0 0 40px #ff4df0; }
@@ -93,5 +80,4 @@ img {
 .animate-glow {
   animation: glow 2s infinite ease-in-out;
 }
-
 
