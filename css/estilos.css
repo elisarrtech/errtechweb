@@ -142,7 +142,10 @@ img {
 
 .hero-section {
   position: relative;
-  background: url("../img/hero.jpg") center/cover no-repeat;
+  background: linear-gradient(-45deg, #121212, #1f0037, #00314d), url("../img/hero.jpg") center/cover no-repeat;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -154,9 +157,10 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* oscurece la imagen */
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
+
 
 .hero-content {
   position: relative;
