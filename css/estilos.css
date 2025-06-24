@@ -209,6 +209,9 @@ img {
 
 /* =================== LOGOS DE TECNOLOGÍA =================== */
 .tech-logo {
+  filter: brightness(2) contrast(1.4) drop-shadow(0 0 12px rgba(0, 240, 255, 0.6));
+  transition: all 0.3s ease;
+}
   filter: brightness(1.5) contrast(1.2) drop-shadow(0 0 10px rgba(0, 240, 255, 0.4));
   transition: transform 0.3s ease, filter 0.3s ease;
 }
