@@ -1,131 +1,31 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto | Elisarrtech</title>
+<section class="container py-5">
+  <h1 class="text-center text-neon-pink mb-4 animate-glow">Contáctame</h1>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form action="https://formsubmit.co/elisarrtech@gmail.com" method="POST" class="bg-black p-4 rounded shadow border border-secondary" id="formularioContacto">
+        
+        <input type="hidden" name="_next" value="https://elisarrtech.github.io/errtechweb/gracias.html">
+        <input type="hidden" name="_captcha" value="false">
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="css/estilos.css" />
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/a2e0c6e6f7.js" crossorigin="anonymous"></script>
-</head>
-<body class="bg-dark text-light">
+        <div class="mb-3">
+          <label class="form-label text-neon-blue">Nombre</label>
+          <input type="text" name="nombre" class="form-control bg-dark text-light border-secondary" required>
+        </div>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="img/logo.png" alt="Elisarrtech" style="max-height: 40px;" class="img-fluid">
-      </a>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
-          <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
-        </ul>
-      </div>
+        <div class="mb-3">
+          <label class="form-label text-neon-pink">Correo electrónico</label>
+          <input type="email" name="email" class="form-control bg-dark text-light border-secondary" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label text-neon-purple">Mensaje</label>
+          <textarea name="mensaje" class="form-control bg-dark text-light border-secondary" rows="4" required></textarea>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-outline-light px-4">Enviar</button>
+        </div>
+      </form>
     </div>
-  </nav>
-
-  <!-- Formulario -->
-  <main class="container py-5">
-    <h1 class="text-neon-purple mb-4">Contáctame</h1>
-    <p class="mb-4">¿Tienes dudas, comentarios o quieres colaborar? Llena el formulario y te responderé pronto.</p>
-
-    <form action="https://formsubmit.co/elisarrtech@gmail.com" method="POST" class="bg-black p-4 rounded border border-secondary shadow-lg" novalidate>
-      <div id="formAlert" class="alert alert-danger d-none" role="alert"></div>
-
-      <!-- Nombre -->
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre completo</label>
-        <input type="text" class="form-control bg-dark text-light border-secondary" name="nombre" id="nombre" required>
-        <div class="invalid-feedback">El nombre es obligatorio.</div>
-      </div>
-
-      <!-- Correo -->
-      <div class="mb-3">
-        <label for="correo" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control bg-dark text-light border-secondary" name="email" id="correo" required>
-        <div class="invalid-feedback">El correo electrónico no es válido.</div>
-      </div>
-
-      <!-- Mensaje -->
-      <div class="mb-3">
-        <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea class="form-control bg-dark text-light border-secondary" name="mensaje" id="mensaje" rows="5" required></textarea>
-        <div class="invalid-feedback">El mensaje debe tener al menos 10 caracteres.</div>
-      </div>
-
-      <button type="submit" class="btn btn-outline-light px-4">Enviar</button>
-
-      <!-- Hidden inputs -->
-      <input type="hidden" name="_next" value="https://elisarrtech.github.io/errtechweb/gracias.html">
-      <input type="hidden" name="_captcha" value="false">
-    </form>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-black text-center text-light border-top border-secondary py-4 mt-5">
-    <div class="container">
-      <h5 class="mb-3 text-neon-purple">Elisarrtech</h5>
-      <div class="mb-3">
-        <a href="https://github.com/elisarrtech" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-github"></i></a>
-        <a href="#" class="text-neon-pink me-3 fs-5"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:elisarrtech@gmail.com" class="text-neon-purple fs-5"><i class="fas fa-envelope"></i></a>
-      </div>
-      <p class="small m-0">&copy; 2025 Elisarrtech | Todos los derechos reservados</p>
-    </div>
-  </footer>
-
-  <!-- Validación -->
-  <script>
-    document.querySelector("form").addEventListener("submit", function (e) {
-      const nombre = document.getElementById("nombre");
-      const correo = document.getElementById("correo");
-      const mensaje = document.getElementById("mensaje");
-      const alerta = document.getElementById("formAlert");
-
-      const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      let errores = [];
-
-      [nombre, correo, mensaje].forEach(input => input.classList.remove("is-invalid"));
-
-      if (nombre.value.trim() === "") {
-        errores.push("El nombre es obligatorio.");
-        nombre.classList.add("is-invalid");
-      }
-
-      if (!correoValido.test(correo.value.trim())) {
-        errores.push("El correo electrónico no es válido.");
-        correo.classList.add("is-invalid");
-      }
-
-      if (mensaje.value.trim().length < 10) {
-        errores.push("El mensaje debe tener al menos 10 caracteres.");
-        mensaje.classList.add("is-invalid");
-      }
-
-      if (errores.length > 0) {
-        e.preventDefault();
-        alerta.innerHTML = errores.join("<br>");
-        alerta.classList.remove("d-none");
-      } else {
-        alerta.classList.add("d-none");
-      }
-    });
-  </script>
-
-  <!-- Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+  </div>
+</section>
