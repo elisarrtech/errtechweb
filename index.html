@@ -1,97 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elisarrtech | IA, Educación y Tecnología</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/png" href="img/favicon.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body class="relative text-white p-0 m-0" style="font-family: 'Orbitron', sans-serif;">
-    <div class="wave-bg"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio | Elisarrtech</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-dark text-light">
 
-    <!-- MENÚ -->
-    <header class="w-full fixed top-0 left-0 z-50 glass border-b border-[#18e191]">
-      <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="text-2xl font-bold neon-text">Elisarrtech</div>
-        <button id="menuBtn" class="md:hidden focus:outline-none text-[#18e191]">☰</button>
-        <ul id="menu" class="hidden md:flex md:space-x-6 text-sm font-medium absolute md:static top-16 left-0 w-full md:w-auto bg-[#0f0c29] md:bg-transparent px-6 py-4 md:py-0 space-y-4 md:space-y-0 text-center md:text-left">
-          <li><a href="#inicio" class="hover:text-[#18e191]">Inicio</a></li>
-          <li><a href="#sobre-mi" class="hover:text-[#18e191]">Sobre mí</a></li>
-          <li><a href="#proyectos" class="hover:text-[#18e191]">Proyectos</a></li>
-          <li><a href="#contacto" class="hover:text-[#18e191]">Contacto</a></li>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
+    <div class="container">
+      <a class="navbar-brand text-neon-blue" href="index.html">Elisarrtech</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
         </ul>
-      </nav>
-    </header>
-
-    <!-- INICIO -->
-    <section id="inicio" class="flex flex-col items-center justify-center min-h-screen text-center pt-24 px-6" data-aos="fade-up">
-      <h1 class="text-5xl font-bold neon-text mb-6">Elisarrtech</h1>
-      <p class="text-xl text-gray-300 mb-10 max-w-xl">
-        Tecnología, Educación e Inteligencia Artificial para transformar tu mundo.
-      </p>
-      <a href="#proyectos" class="glow-button px-6 py-3 bg-[#18e191] text-black font-bold rounded-full transition transform hover:scale-105">Explorar proyectos</a>
-    </section>
-
-    <!-- SOBRE MÍ -->
-    <section id="sobre-mi" class="py-16 max-w-5xl mx-auto text-center px-4" data-aos="zoom-in">
-      <h2 class="text-4xl font-bold neon-text mb-10">Sobre mí</h2>
-      <div class="flex flex-col md:flex-row items-center justify-center gap-10">
-        <img src="img/avatar.png" alt="Foto de perfil" class="w-48 h-48 rounded-full border-4 border-[#18e191] shadow-lg" />
-        <div class="text-left max-w-xl">
-          <p class="text-lg text-gray-300 mb-4">
-            ¡Hola! Soy un apasionado del mundo digital con más de 20 años explorando tecnología, educación e inteligencia artificial.
-          </p>
-          <a href="cv-elisarrtech.pdf" download class="glow-button mt-4 inline-block px-5 py-2 bg-[#18e191] text-black font-semibold rounded-full transition hover:scale-105">Descargar CV</a>
-        </div>
       </div>
-    </section>
+    </div>
+  </nav>
 
-    <!-- PROYECTOS -->
-    <section id="proyectos" class="py-20 bg-transparent max-w-7xl mx-auto px-6" data-aos="fade-up">
-      <h2 class="text-4xl font-bold neon-text text-center mb-12">Proyectos</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-[#1b1b2f] rounded-2xl p-6 shadow-lg hover:scale-105 transition">
-          <h3 class="text-xl font-semibold text-[#18e191] mb-2">Chatbot de Vacantes</h3>
-          <p class="text-gray-300 text-sm mb-4">Bot en Flask conectado a Google Sheets.</p>
-          <p class="text-xs text-gray-500 mb-4">Python • Flask • JS • Google API</p>
-          <a href="#" class="text-[#18e191] font-semibold hover:underline">Ver Demo →</a>
-        </div>
-        <div class="bg-[#1b1b2f] rounded-2xl p-6 shadow-lg hover:scale-105 transition">
-          <h3 class="text-xl font-semibold text-[#18e191] mb-2">Lector de PDFs con IA</h3>
-          <p class="text-gray-300 text-sm mb-4">App que analiza PDFs y responde preguntas.</p>
-          <p class="text-xs text-gray-500 mb-4">Python • LangChain • Flask • OCR</p>
-          <a href="#" class="text-[#18e191] font-semibold hover:underline">Ver Demo →</a>
-        </div>
-      </div>
-    </section>
+  <!-- Hero -->
+  <header class="py-5 text-center">
+    <div class="container">
+      <img src="img/logo.png" alt="Logotipo" style="max-width: 120px;" class="mb-4">
+      <h1 class="display-4 text-neon-pink">Bienvenido a mi mundo digital</h1>
+      <p class="lead">Educación, Tecnología e Inspiración para el Futuro</p>
+    </div>
+  </header>
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="py-20 max-w-3xl mx-auto px-6 text-center" data-aos="fade-up">
-      <h2 class="text-4xl font-bold neon-text mb-10">Contacto</h2>
-      <p class="text-gray-300 mb-6">¿Quieres trabajar conmigo o tienes alguna pregunta?<br> ¡Estoy a un clic de distancia!</p>
-      <form action="https://formsubmit.co/elisarrtech@gmail.com" method="POST" class="flex flex-col gap-4">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Tu nombre" required class="bg-[#1b1b2f] text-white px-4 py-2 rounded-md border border-[#18e191]" />
-        <input type="email" name="email" placeholder="Tu correo" required class="bg-[#1b1b2f] text-white px-4 py-2 rounded-md border border-[#18e191]" />
-        <textarea name="message" rows="4" placeholder="Tu mensaje" required class="bg-[#1b1b2f] text-white px-4 py-2 rounded-md border border-[#18e191]"></textarea>
-        <button type="submit" class="glow-button px-6 py-2 bg-[#18e191] text-black font-bold rounded-full hover:scale-105 transition">Enviar mensaje</button>
-      </form>
-    </section>
-
-    <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="fixed bottom-5 right-5 bg-[#18e191] p-3 rounded-full shadow-lg hover:scale-110 transition z-50">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6" />
-    </a>
-
-    <footer class="text-center py-6 text-sm text-gray-400 border-t border-[#18e191] mt-10">
-      © 2025 Elisarrtech. Todos los derechos reservados. | Tecnología • Educación • IA
-    </footer>
-
-    <script src="js/script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
-  </body>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
