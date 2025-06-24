@@ -47,4 +47,22 @@ img {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px #ff4df0, 0 0 20px #ff4df0; }
+  50% { text-shadow: 0 0 20px #fff, 0 0 40px #ff4df0; }
+}
+
+.animate-glow {
+  animation: glow 2s infinite ease-in-out;
+}
+.btn-outline-light {
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: #00f0ff;
+  color: #000;
+  border-color: #00f0ff;
+}
 
