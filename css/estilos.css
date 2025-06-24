@@ -21,6 +21,18 @@ body {
   background-color: #121212 !important;
 }
 
+
+form input, form textarea {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #00f0ff;
+  box-shadow: 0 0 10px #00f0ff33;
+  outline: none;
+}
+
 .cta-btn {
   background-color: transparent;
   border: 2px solid #00f0ff;
