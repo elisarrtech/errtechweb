@@ -5,15 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre mí | Elisarrtech</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <!-- Estilos personalizados -->
+  <!-- Estilos -->
   <link rel="stylesheet" href="css/estilos.css" />
-  <!-- Font Awesome -->
+  <!-- Iconos -->
   <script src="https://kit.fontawesome.com/a2e0c6e6f7.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="bg-dark text-light">
 
   <!-- Navbar -->
@@ -37,49 +40,46 @@
     </div>
   </nav>
 
-  <!-- Contenido principal -->
+  <!-- Sección principal -->
   <main class="container py-5">
-    <h1 class="text-neon-pink mb-4">Sobre mí</h1>
-    <p>
-      ¡Hola! Soy <strong>Elisarrtech</strong>, un apasionado de la tecnología y la educación.
-      Desde mis inicios he estado motivado por el deseo de enseñar, crear y compartir soluciones
-      digitales que impacten positivamente en las personas.
-    </p>
-    <p>
-      Me dedico a construir herramientas, recursos, cursos y contenidos sobre temas como desarrollo web,
-      inteligencia artificial, automatización, y herramientas para docentes del siglo XXI.
-    </p>
-    <p>
-      Este sitio web es mi espacio para compartir lo que aprendo, mostrar mis proyectos y conectar con
-      otros entusiastas de la tecnología y la educación.
-    </p>
-    <p>
-      Gracias por visitar y ¡bienvenido a mi mundo digital! 🌐🚀
-    </p>
+    <h1 class="text-neon-blue text-center mb-5 animate-glow" data-aos="fade-down">Sobre mí</h1>
+
+    <div class="row align-items-center">
+      <!-- Foto -->
+      <div class="col-md-5 text-center mb-4 mb-md-0" data-aos="zoom-in">
+        <img src="img/fotobase.jpg" alt="Foto de perfil" class="img-fluid rounded-circle shadow" style="max-width: 250px;">
+      </div>
+
+      <!-- Texto -->
+      <div class="col-md-7" data-aos="fade-left" data-aos-delay="100">
+        <p>Soy <span class="text-neon-pink fw-bold">Elisarrtech</span>, apasionado por la <strong>tecnología, la educación y la innovación digital</strong>. Llevo más de <strong>20 años explorando el mundo tecnológico</strong>, desde los primeros días del internet hasta las más recientes herramientas de inteligencia artificial.</p>
+        <p>Me dedico a enseñar, crear proyectos digitales y ayudar a otros a mejorar su relación con la tecnología.</p>
+
+        <ul class="list-unstyled mt-4">
+          <li><i class="fas fa-code me-2 text-neon-purple"></i> Desarrollo web (HTML, CSS, Bootstrap, Flask)</li>
+          <li><i class="fas fa-brain me-2 text-neon-pink"></i> Aplicaciones con inteligencia artificial</li>
+          <li><i class="fas fa-chalkboard-teacher me-2 text-neon-blue"></i> Formación en herramientas digitales</li>
+        </ul>
+      </div>
+    </div>
   </main>
 
   <!-- Footer -->
   <footer class="bg-black text-center text-light border-top border-secondary py-4 mt-5">
     <div class="container">
-      <h5 class="mb-3 text-neon-purple">Elisarrtech</h5>
-      
+      <h5 class="mb-3 text-neon-purple" style="font-size: 1.25rem; font-weight: 600;">Elisarrtech</h5>
       <div class="mb-3">
-        <a href="https://github.com/elisarrtech" target="_blank" class="text-neon-blue me-3 fs-5">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="#" target="_blank" class="text-neon-pink me-3 fs-5">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="mailto:elisarrtech@gmail.com" class="text-neon-purple fs-5">
-          <i class="fas fa-envelope"></i>
-        </a>
+        <a href="https://github.com/elisarrtech" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-github"></i></a>
+        <a href="#" target="_blank" class="text-neon-pink me-3 fs-5"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:elisarrtech@gmail.com" class="text-neon-purple fs-5"><i class="fas fa-envelope"></i></a>
       </div>
-
       <p class="small m-0">&copy; 2025 Elisarrtech | Todos los derechos reservados</p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
