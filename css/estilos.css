@@ -1,3 +1,4 @@
+
 /* =================== TIPOGRAFÍA GENERAL =================== */
 body {
   font-family: 'Poppins', sans-serif;
@@ -11,7 +12,7 @@ body {
 /* =================== FONDO GENERAL =================== */
 .bg-black { background-color: #121212 !important; }
 
-/* =================== FORMULARIOS (inputs y textarea) =================== */
+/* =================== FORMULARIOS =================== */
 form input, form textarea {
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -21,46 +22,6 @@ form input:focus, form textarea:focus {
   box-shadow: 0 0 10px #00f0ff33;
   outline: none;
 }
-
-/* Tarjetas con efecto neon animado */
-.neon-card {
-  background: rgba(18, 18, 18, 0.75);
-  border: 1px solid rgba(0, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 1.5rem;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  color: #fff;
-}
-
-.neon-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 0 40px rgba(0, 255, 255, 0.1);
-}
-
-/* Animación fade-up */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-up {
-  animation: fadeUp 0.8s ease forwards;
-  opacity: 0;
-}
-
-/* Retrasos para las tarjetas */
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
-
 
 /* =================== BOTÓN PRINCIPAL (CTA) =================== */
 .cta-btn {
@@ -85,7 +46,7 @@ form input:focus, form textarea:focus {
   .hero-content p { font-size: 1rem; }
 }
 
-/* =================== ENLACES DE NAVEGACIÓN =================== */
+/* =================== NAVEGACIÓN =================== */
 a.nav-link {
   transition: all 0.3s;
 }
@@ -98,7 +59,7 @@ img {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.15));
 }
 
-/* =================== TARJETAS (CARDS) =================== */
+/* =================== TARJETAS BASE =================== */
 .card-title { font-weight: 600; }
 .card:hover {
   transform: scale(1.03);
@@ -114,14 +75,30 @@ img {
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
-/* =================== BOTÓN DE FILTRO ACTIVO =================== */
+/* =================== TARJETAS CON EFECTO NEÓN =================== */
+.neon-card {
+  background: rgba(18, 18, 18, 0.75);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+.neon-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 0 40px rgba(0, 255, 255, 0.1);
+}
+
+/* =================== FILTRO ACTIVO =================== */
 .filter-btn.active {
   background-color: #00f0ff;
   color: #000;
   border-color: #00f0ff;
 }
 
-/* =================== HERO CON FONDO ANIMADO + IMAGEN =================== */
+/* =================== HERO CON FONDO ANIMADO =================== */
 .hero-section {
   position: relative;
   background: linear-gradient(-45deg, #121212, #1f0037, #00314d), url("../img/hero.jpg") center/cover no-repeat;
@@ -178,7 +155,7 @@ img {
   animation: fadeUp 1.2s ease-out both;
 }
 
-/* =================== ESTILO PARA ELEMENTOS DE LÍNEA DE TIEMPO =================== */
+/* =================== ELEMENTOS DE LÍNEA DE TIEMPO =================== */
 .timeline-item {
   background-color: #1e1e1e;
   border-left: 4px solid #00f0ff;
@@ -191,3 +168,9 @@ img {
   transform: scale(1.02);
   box-shadow: 0 0 20px rgba(0,255,255,0.2);
 }
+
+/* =================== RETRASOS PARA ANIMACIONES =================== */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
