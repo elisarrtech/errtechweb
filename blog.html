@@ -44,14 +44,22 @@
     <h1 class="text-neon-purple text-center mb-4">Blog</h1>
     <p class="text-center mb-5">Publicaciones sobre educación digital, tecnología, IA, productividad, herramientas, reflexiones y más.</p>
 
+    <!-- Filtros -->
+    <div class="text-center mb-4">
+      <button class="btn btn-outline-light mx-1 filter-btn active" data-filter="all">Todos</button>
+      <button class="btn btn-outline-light mx-1 filter-btn" data-filter="ia">IA</button>
+      <button class="btn btn-outline-light mx-1 filter-btn" data-filter="educacion">Educación</button>
+      <button class="btn btn-outline-light mx-1 filter-btn" data-filter="tecnologia">Tecnología</button>
+    </div>
+
     <div class="row g-4">
       <!-- Entrada 1 -->
-      <div class="col-md-4" data-aos="fade-up">
+      <div class="col-md-4 blog-item" data-category="educacion" data-aos="fade-up">
         <div class="card h-100 bg-black text-light border border-secondary">
           <img src="img/robotiko.jpg" class="card-img-top" alt="Artículo laptop">
           <div class="card-body">
             <h5 class="card-title text-neon-blue">Cómo elegir tu primera laptop para estudiar</h5>
-            <p class="card-text">Guía práctica para estudiantes de todos los niveles sobre cómo elegir una computadora portátil sin gastar de más.</p>
+            <p class="card-text">Guía práctica para estudiantes sobre cómo elegir una computadora sin gastar de más.</p>
           </div>
           <div class="card-footer bg-transparent border-top border-secondary">
             <a href="#" class="btn btn-outline-light btn-sm" style="opacity: 0.5; cursor: not-allowed;">Próximamente</a>
@@ -60,12 +68,12 @@
       </div>
 
       <!-- Entrada 2 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-4 blog-item" data-category="ia" data-aos="fade-up" data-aos-delay="100">
         <div class="card h-100 bg-black text-light border border-secondary">
           <img src="img/robotiko.jpg" class="card-img-top" alt="Artículo chatbot">
           <div class="card-body">
             <h5 class="card-title text-neon-pink">¿Qué es un chatbot y cómo crear uno?</h5>
-            <p class="card-text">Una introducción sencilla a los chatbots con ejemplos y herramientas para crear el tuyo sin experiencia previa.</p>
+            <p class="card-text">Una introducción sencilla a los chatbots con herramientas accesibles.</p>
           </div>
           <div class="card-footer bg-transparent border-top border-secondary">
             <a href="#" class="btn btn-outline-light btn-sm" style="opacity: 0.5; cursor: not-allowed;">Próximamente</a>
@@ -74,12 +82,12 @@
       </div>
 
       <!-- Entrada 3 -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-md-4 blog-item" data-category="tecnologia" data-aos="fade-up" data-aos-delay="200">
         <div class="card h-100 bg-black text-light border border-secondary">
           <img src="img/robotiko.jpg" class="card-img-top" alt="Artículo docente">
           <div class="card-body">
             <h5 class="card-title text-neon-purple">10 herramientas digitales para docentes</h5>
-            <p class="card-text">Recomendaciones prácticas de apps, sitios y plataformas para mejorar la experiencia educativa.</p>
+            <p class="card-text">Apps, sitios y plataformas para mejorar la experiencia educativa.</p>
           </div>
           <div class="card-footer bg-transparent border-top border-secondary">
             <a href="#" class="btn btn-outline-light btn-sm" style="opacity: 0.5; cursor: not-allowed;">Próximamente</a>
@@ -106,5 +114,25 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init();</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+        
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        document.querySelectorAll('.blog-item').forEach(item => {
+          const category = item.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
