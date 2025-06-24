@@ -81,7 +81,7 @@ img {
   animation: glow 2s infinite ease-in-out;
 }
 
-
+/* Línea de tiempo */
 .timeline-item {
   background-color: #1e1e1e;
   border-left: 4px solid #00f0ff;
@@ -95,6 +95,8 @@ img {
   transform: scale(1.02);
   box-shadow: 0 0 20px rgba(0,255,255,0.2);
 }
+
+/* Imagen destacada en tarjetas */
 .card-img-top {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-bottom: 1px solid #444;
@@ -105,4 +107,10 @@ img {
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
+/* Botón de filtro activo */
+.filter-btn.active {
+  background-color: #00f0ff;
+  color: #000;
+  border-color: #00f0ff;
+}
 
