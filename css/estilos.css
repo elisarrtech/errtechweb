@@ -186,72 +186,106 @@ img {
   pointer-events: none;
 }
 
+/* =================== FONDO CON TRIÁNGULOS ANIMADOS =================== */
+.bg-animated-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .bg-animated-shapes li {
   position: absolute;
   display: block;
   list-style: none;
-  width: 25px;
-  height: 25px;
-  background: rgba(0, 240, 255, 0.15);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid rgba(0, 240, 255, 0.15);
   animation: floatShape 25s linear infinite;
   bottom: -150px;
-  border-radius: 50%;
 }
 
-.bg-animated-shapes li:nth-child(1) {
-  left: 25%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 0s;
+.bg-animated-shapes li:nth-child(1) { left: 25%; animation-delay: 0s; }
+.bg-animated-shapes li:nth-child(2) { left: 10%; animation-delay: 2s; }
+.bg-animated-shapes li:nth-child(3) { left: 70%; animation-delay: 4s; }
+.bg-animated-shapes li:nth-child(4) { left: 40%; animation-delay: 0s; }
+.bg-animated-shapes li:nth-child(5) { left: 65%; animation-delay: 0s; }
+.bg-animated-shapes li:nth-child(6) { left: 75%; animation-delay: 3s; }
+.bg-animated-shapes li:nth-child(7) { left: 35%; animation-delay: 7s; }
+.bg-animated-shapes li:nth-child(8) { left: 50%; animation-delay: 15s; }
+.bg-animated-shapes li:nth-child(9) { left: 20%; animation-delay: 2s; }
+.bg-animated-shapes li:nth-child(10) { left: 85%; animation-delay: 0s; }
+
+@keyframes floatShape {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(360deg);
+    opacity: 0;
+  }
 }
-.bg-animated-shapes li:nth-child(2) {
-  left: 10%;
-  width: 30px;
-  height: 30px;
-  animation-delay: 2s;
+
+/* =================== FONDO CON TRIÁNGULOS ANIMADOS =================== */
+.bg-animated-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
 }
-.bg-animated-shapes li:nth-child(3) {
-  left: 70%;
-  animation-delay: 4s;
+
+.bg-animated-shapes li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid rgba(0, 240, 255, 0.15);
+  animation: floatShape 25s linear infinite;
+  bottom: -150px;
 }
-.bg-animated-shapes li:nth-child(4) {
-  left: 40%;
-  width: 40px;
-  height: 40px;
-  animation-delay: 0s;
+
+.bg-animated-shapes li:nth-child(1) { left: 25%; animation-delay: 0s; }
+.bg-animated-shapes li:nth-child(2) { left: 10%; animation-delay: 2s; }
+.bg-animated-shapes li:nth-child(3) { left: 70%; animation-delay: 4s; }
+.bg-animated-shapes li:nth-child(4) { left: 40%; animation-delay: 0s; }
+.bg-animated-shapes li:nth-child(5) { left: 65%; animation-delay: 0s; }
+.bg-animated-shapes li:nth-child(6) { left: 75%; animation-delay: 3s; }
+.bg-animated-shapes li:nth-child(7) { left: 35%; animation-delay: 7s; }
+.bg-animated-shapes li:nth-child(8) { left: 50%; animation-delay: 15s; }
+.bg-animated-shapes li:nth-child(9) { left: 20%; animation-delay: 2s; }
+.bg-animated-shapes li:nth-child(10) { left: 85%; animation-delay: 0s; }
+
+@keyframes floatShape {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(360deg);
+    opacity: 0;
+  }
 }
-.bg-animated-shapes li:nth-child(5) {
-  left: 65%;
-  animation-delay: 0s;
-}
-.bg-animated-shapes li:nth-child(6) {
-  left: 75%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 3s;
-}
-.bg-animated-shapes li:nth-child(7) {
-  left: 35%;
-  width: 30px;
-  height: 30px;
-  animation-delay: 7s;
-}
-.bg-animated-shapes li:nth-child(8) {
-  left: 50%;
-  animation-delay: 15s;
-}
-.bg-animated-shapes li:nth-child(9) {
-  left: 20%;
-  width: 45px;
-  height: 45px;
-  animation-delay: 2s;
-}
-.bg-animated-shapes li:nth-child(10) {
-  left: 85%;
-  width: 25px;
-  height: 25px;
-  animation-delay: 0s;
-}
+
 
 @keyframes floatShape {
   0% {
