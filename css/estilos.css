@@ -1,38 +1,28 @@
-/* Tipografía general */
+/* =================== TIPOGRAFÍA GENERAL =================== */
 body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Colores neón */
-.text-neon-blue {
-  color: #00f0ff !important;
-}
+/* =================== COLORES NEÓN PERSONALIZADOS =================== */
+.text-neon-blue { color: #00f0ff !important; }
+.text-neon-pink { color: #ff4df0 !important; }
+.text-neon-purple { color: #a64eff !important; }
 
-.text-neon-pink {
-  color: #ff4df0 !important;
-}
+/* =================== FONDO GENERAL =================== */
+.bg-black { background-color: #121212 !important; }
 
-.text-neon-purple {
-  color: #a64eff !important;
-}
-
-/* Fondo personalizado */
-.bg-black {
-  background-color: #121212 !important;
-}
-
-
+/* =================== FORMULARIOS (inputs y textarea) =================== */
 form input, form textarea {
   border-radius: 8px;
   transition: all 0.3s ease;
 }
-
 form input:focus, form textarea:focus {
   border-color: #00f0ff;
   box-shadow: 0 0 10px #00f0ff33;
   outline: none;
 }
 
+/* =================== BOTÓN PRINCIPAL (CTA) =================== */
 .cta-btn {
   background-color: transparent;
   border: 2px solid #00f0ff;
@@ -43,115 +33,55 @@ form input:focus, form textarea:focus {
   transition: all 0.3s ease;
   margin-top: 1.5rem;
 }
-
 .cta-btn:hover {
   background-color: #00f0ff;
   color: #000;
   box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
 }
+
+/* =================== RESPONSIVE HERO =================== */
 @media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-  .hero-content p {
-    font-size: 1rem;
-  }
+  .hero-content h1 { font-size: 2.2rem; }
+  .hero-content p { font-size: 1rem; }
 }
 
-
-/* Enlaces */
+/* =================== ENLACES DE NAVEGACIÓN =================== */
 a.nav-link {
   transition: all 0.3s;
 }
-
 a.nav-link:hover {
   color: #00f0ff !important;
 }
 
-/* Imágenes (logo, etc.) */
+/* =================== SOMBRA EN IMÁGENES =================== */
 img {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.15));
 }
 
-/* Tarjetas (cards) */
-.card-title {
-  font-weight: 600;
-}
-
+/* =================== TARJETAS (CARDS) =================== */
+.card-title { font-weight: 600; }
 .card:hover {
   transform: scale(1.03);
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* Botones */
-.btn-outline-light {
-  border-radius: 30px;
-  transition: all 0.3s ease;
-}
-
-.btn-outline-light:hover {
-  background-color: #00f0ff;
-  color: #000;
-  border-color: #00f0ff;
-}
-
-/* Fondo animado en hero */
-.hero-section {
-  background: linear-gradient(-45deg, #121212, #1f0037, #00314d);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-}
-
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Texto brillante */
-@keyframes glow {
-  0%, 100% { text-shadow: 0 0 10px #ff4df0, 0 0 20px #ff4df0; }
-  50% { text-shadow: 0 0 20px #fff, 0 0 40px #ff4df0; }
-}
-
-.animate-glow {
-  animation: glow 2s infinite ease-in-out;
-}
-
-/* Línea de tiempo */
-.timeline-item {
-  background-color: #1e1e1e;
-  border-left: 4px solid #00f0ff;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,255,255,0.1);
-  transition: transform 0.3s;
-}
-
-.timeline-item:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 20px rgba(0,255,255,0.2);
-}
-
-/* Imagen destacada en tarjetas */
 .card-img-top {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-bottom: 1px solid #444;
 }
-
 .card:hover .card-img-top {
   transform: scale(1.05);
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
-/* Botón de filtro activo */
+/* =================== BOTÓN DE FILTRO ACTIVO =================== */
 .filter-btn.active {
   background-color: #00f0ff;
   color: #000;
   border-color: #00f0ff;
 }
 
+/* =================== HERO CON FONDO ANIMADO + IMAGEN =================== */
 .hero-section {
   position: relative;
   background: linear-gradient(-45deg, #121212, #1f0037, #00314d), url("../img/hero.jpg") center/cover no-repeat;
@@ -164,8 +94,6 @@ img {
   justify-content: center;
   color: #fff;
 }
-
-
 .hero-section::before {
   content: "";
   position: absolute;
@@ -173,38 +101,53 @@ img {
   background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
-
-
 .hero-content {
   position: relative;
   z-index: 2;
   text-align: center;
 }
-
 .hero-content h1 {
   font-size: 3rem;
   font-weight: 700;
   text-shadow: 0 0 20px #ff4df0;
 }
-
 .hero-content p {
   font-size: 1.2rem;
   margin-top: 1rem;
   color: #ccc;
 }
 
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* =================== ANIMACIONES CLAVE =================== */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
-
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px #ff4df0, 0 0 20px #ff4df0; }
+  50% { text-shadow: 0 0 20px #fff, 0 0 40px #ff4df0; }
+}
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-glow {
+  animation: glow 2s infinite ease-in-out;
+}
 .fade-up {
   animation: fadeUp 1.2s ease-out both;
 }
 
+/* =================== ESTILO PARA ELEMENTOS DE LÍNEA DE TIEMPO =================== */
+.timeline-item {
+  background-color: #1e1e1e;
+  border-left: 4px solid #00f0ff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.1);
+  transition: transform 0.3s;
+}
+.timeline-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+}
