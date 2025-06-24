@@ -4,19 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre mí | Elisarrtech</title>
+
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/estilos.css" />
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/estilos.css" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2e0c6e6f7.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-dark text-light">
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
     <div class="container">
-      <a class="navbar-brand text-neon-blue" href="index.html">Elisarrtech</a>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logotransp.png" alt="Elisarrtech" style="max-height: 40px;" class="img-fluid">
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link active" href="sobre-mi.html">Sobre mí</a></li>
           <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
           <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
@@ -26,12 +37,49 @@
     </div>
   </nav>
 
+  <!-- Contenido principal -->
   <main class="container py-5">
-    <h1 class="text-neon-pink">Sobre mí</h1>
-    <p>Aquí puedes escribir tu historia, formación, motivación, experiencia en tecnología y educación.</p>
+    <h1 class="text-neon-pink mb-4">Sobre mí</h1>
+    <p>
+      ¡Hola! Soy <strong>Elisarrtech</strong>, un apasionado de la tecnología y la educación.
+      Desde mis inicios he estado motivado por el deseo de enseñar, crear y compartir soluciones
+      digitales que impacten positivamente en las personas.
+    </p>
+    <p>
+      Me dedico a construir herramientas, recursos, cursos y contenidos sobre temas como desarrollo web,
+      inteligencia artificial, automatización, y herramientas para docentes del siglo XXI.
+    </p>
+    <p>
+      Este sitio web es mi espacio para compartir lo que aprendo, mostrar mis proyectos y conectar con
+      otros entusiastas de la tecnología y la educación.
+    </p>
+    <p>
+      Gracias por visitar y ¡bienvenido a mi mundo digital! 🌐🚀
+    </p>
   </main>
 
+  <!-- Footer -->
+  <footer class="bg-black text-center text-light border-top border-secondary py-4 mt-5">
+    <div class="container">
+      <h5 class="mb-3 text-neon-purple">Elisarrtech</h5>
+      
+      <div class="mb-3">
+        <a href="https://github.com/elisarrtech" target="_blank" class="text-neon-blue me-3 fs-5">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="#" target="_blank" class="text-neon-pink me-3 fs-5">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:elisarrtech@gmail.com" class="text-neon-purple fs-5">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <p class="small m-0">&copy; 2025 Elisarrtech | Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
