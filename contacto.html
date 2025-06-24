@@ -73,5 +73,36 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  document.querySelector("form").addEventListener("submit", function (e) {
+    const nombre = document.getElementById("nombre");
+    const correo = document.getElementById("correo");
+    const mensaje = document.getElementById("mensaje");
+
+    // Expresión regular para validar correo electrónico
+    const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    let errores = [];
+
+    if (nombre.value.trim() === "") {
+      errores.push("El nombre es obligatorio.");
+    }
+
+    if (!correoValido.test(correo.value)) {
+      errores.push("El correo electrónico no es válido.");
+    }
+
+    if (mensaje.value.trim().length < 10) {
+      errores.push("El mensaje debe tener al menos 10 caracteres.");
+    }
+
+    if (errores.length > 0) {
+      e.preventDefault(); // Evita el envío
+      alert("Por favor corrige lo siguiente:\n\n" + errores.join("\n"));
+    }
+  });
+</script>
+
 </body>
 </html>
