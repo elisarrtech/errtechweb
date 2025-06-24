@@ -1,13 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF‑8">
-  <meta name="viewport" content="width=device‑width, initial‑scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sobre mí | Elisarrtech</title>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <script src="https://kit.fontawesome.com/a2e0c6e6f7.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-dark text-light">
@@ -15,8 +16,12 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Elisarrtech" style="max-height: 40px;"></a>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="Elisarrtech" style="max-height: 40px;" class="img-fluid">
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
@@ -29,34 +34,68 @@
     </div>
   </nav>
 
-  <!-- Sección Sobre mí -->
+  <!-- Contenido principal -->
   <main class="container py-5">
-    <h1 class="text-neon-purple mb-4">Sobre mí</h1>
-    <div class="row align-items-center">
-      <div class="col-md-4 text-center mb-4" data-aos="fade-right">
-        <img src="img/robotiko.jpg" alt="Foto de perfil" class="img-fluid rounded-circle border border-secondary shadow-lg">
+    <h1 class="text-neon-blue text-center mb-5 animate-glow" data-aos="fade-down">Sobre mí</h1>
+
+    <div class="row align-items-center mb-5">
+      <div class="col-md-5 text-center mb-4 mb-md-0" data-aos="zoom-in">
+        <img src="img/fotobase.jpg" alt="Foto de perfil" class="img-fluid rounded-circle shadow" style="max-width: 250px;">
       </div>
-      <div class="col-md-8" data-aos="fade-left">
-        <p>Soy Elisarr, apasionada por la tecnología, la educación y la creación de soluciones digitales. Con experiencia en:</p>
-        <ul>
-          <li><strong>Soporte técnico</strong>: resolución de incidencias y asesoría personalizada.</li>
-          <li><strong>Desarrollo web</strong>: HTML, CSS, JavaScript y Flask/Python.</li>
-          <li><strong>Cursos</strong>: diseño de contenidos y capacitación a docentes.</li>
-          <li><strong>Asistente virtual</strong>: gestión administrativa y comunicación.</li>
-          <li><strong>Creador de contenidos</strong>: blogs, videos y recursos para educadores.</li>
+      <div class="col-md-7" data-aos="fade-left" data-aos-delay="100">
+        <p>Soy <span class="text-neon-pink fw-bold">Elisarrtech</span>, apasionado por la <strong>tecnología, la educación y la innovación digital</strong>. Llevo más de 20 años explorando el mundo tecnológico, desde los primeros días del Internet hasta las herramientas más modernas de inteligencia artificial.</p>
+        <p>Actualmente combino mi experiencia técnica con la enseñanza digital para crear herramientas, contenidos, cursos y soluciones accesibles para todos.</p>
+
+        <div class="mb-3">
+          <span class="badge bg-secondary me-1">Python</span>
+          <span class="badge bg-secondary me-1">Flask</span>
+          <span class="badge bg-secondary me-1">Google Workspace</span>
+          <span class="badge bg-secondary me-1">HTML/CSS</span>
+          <span class="badge bg-secondary me-1">Soporte Técnico</span>
+        </div>
+
+        <ul class="list-unstyled mt-4">
+          <li><i class="fas fa-laptop-code me-2 text-neon-purple"></i> Desarrollo web con HTML, CSS, Bootstrap y Flask</li>
+          <li><i class="fas fa-microchip me-2 text-neon-blue"></i> Integración de proyectos con inteligencia artificial</li>
+          <li><i class="fas fa-user-graduate me-2 text-neon-pink"></i> Formación en herramientas digitales y acompañamiento educativo</li>
         </ul>
-        <p>Mi objetivo es fusionar tecnología y educación para impactar positivamente en la comunidad.</p>
-        <a href="contacto.html" class="btn btn-outline-light mt-3">¿Hablamos?</a>
       </div>
+    </div>
+
+    <h2 class="text-neon-purple text-center mb-4" data-aos="fade-up">Mi experiencia</h2>
+    <div class="timeline mx-auto" style="max-width: 720px;">
+      <div class="timeline-item mb-4" data-aos="fade-right">
+        <h5 class="text-neon-blue"><i class="fas fa-tools me-2"></i> Soporte Técnico</h5>
+        <p>Asistencia especializada en hardware, software, configuración de redes, periféricos y sistemas operativos.</p>
+      </div>
+      <div class="timeline-item mb-4" data-aos="fade-left" data-aos-delay="100">
+        <h5 class="text-neon-pink"><i class="fas fa-globe me-2"></i> Desarrollo Web</h5>
+        <p>Diseño y creación de sitios web modernos con tecnologías como HTML, CSS, Bootstrap, Flask y GitHub Pages.</p>
+      </div>
+      <div class="timeline-item mb-4" data-aos="fade-right" data-aos-delay="200">
+        <h5 class="text-neon-purple"><i class="fas fa-chalkboard-teacher me-2"></i> Cursos y Talleres</h5>
+        <p>Docente y facilitador de cursos en informática, tecnologías digitales, IA, ofimática, Google Workspace y más.</p>
+      </div>
+      <div class="timeline-item mb-4" data-aos="fade-left" data-aos-delay="300">
+        <h5 class="text-neon-blue"><i class="fas fa-headset me-2"></i> Asistente Virtual</h5>
+        <p>Atención remota y gestión eficiente de tareas administrativas, soporte en línea y productividad empresarial.</p>
+      </div>
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+        <h5 class="text-neon-pink"><i class="fas fa-pen-nib me-2"></i> Creador de Contenidos</h5>
+        <p>Generación de materiales digitales, guías, publicaciones, blogs, y estrategias visuales para redes sociales.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-5" data-aos="zoom-in-up">
+      <a href="contacto.html" class="btn btn-outline-light px-4 py-2">¿Te interesa colaborar conmigo?</a>
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="bg-black text-center text-light border-top border-secondary py-4 mt-5">
     <div class="container">
-      <h5 class="text-neon-purple mb-3">Elisarrtech</h5>
-      <div>
-        <a href="https://github.com/elisarrtech" class="text-neon-blue me-3 fs-5"><i class="fab fa-github"></i></a>
+      <h5 class="mb-3 text-neon-purple">Elisarrtech</h5>
+      <div class="mb-3">
+        <a href="https://github.com/elisarrtech" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-github"></i></a>
         <a href="#" class="text-neon-pink me-3 fs-5"><i class="fab fa-linkedin"></i></a>
         <a href="mailto:elisarrtech@gmail.com" class="text-neon-purple fs-5"><i class="fas fa-envelope"></i></a>
       </div>
@@ -64,8 +103,8 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init();</script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
