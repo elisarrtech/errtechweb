@@ -144,14 +144,15 @@ img {
   position: relative;
   background: linear-gradient(-45deg, #121212, #1f0037, #00314d), url("../img/hero.jpg") center/cover no-repeat;
   background-blend-mode: overlay;
-  background-size: cover;
-  background-position: center;
+  background-size: 400% 400%, cover;
+  animation: gradientBG 15s ease infinite;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
 }
+
 
 .hero-section::before {
   content: "";
