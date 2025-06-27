@@ -1,15 +1,36 @@
+
 /* =================== RESET Y TIPOGRAFÍA =================== */
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #ccc; /* Color base legible sobre fondo oscuro */
+}
+
+/* =================== TIPOGRAFÍA GENERAL =================== */
+h1, h2, h3 {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+a {
+  color: #00f0ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #00f0ff;
 }
 
 /* =================== COLORES NEÓN PERSONALIZADOS =================== */
 .text-neon-blue { color: #00f0ff !important; }
 .text-neon-pink { color: #ff4df0 !important; }
 .text-neon-purple { color: #a64eff !important; }
-
-/* =================== FONDO GENERAL =================== */
-.bg-black { background-color: #121212 !important; }
 
 /* =================== FORMULARIOS =================== */
 form input, form textarea {
@@ -173,9 +194,7 @@ form input:focus, form textarea:focus {
   100% { transform: translateY(-1000px) rotate(360deg); opacity: 0; }
 }
 
-
-
-/* === Mejoras adicionales === */
+/* =================== CARDS =================== */
 .border-neon-blue {
   border-color: #00f0ff !important;
 }
