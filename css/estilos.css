@@ -173,3 +173,20 @@ form input:focus, form textarea:focus {
   100% { transform: translateY(-1000px) rotate(360deg); opacity: 0; }
 }
 
+
+
+/* === Mejoras adicionales === */
+.border-neon-blue {
+  border-color: #00f0ff !important;
+}
+.card-title i {
+  margin-right: 8px;
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00f0ff33;
+}
+
