@@ -21,46 +21,34 @@
 
 <body class="bg-black text-white"> <!-- Cuerpo con fondo oscuro y texto blanco -->
 
-  <!-- Barra de navegación superior -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary shadow-lg">
-    <div class="container">
-      <!-- Logotipo y nombre -->
-      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <img src="img/logotransp.png" alt="Elisarrtech" style="max-height: 40px;">
-        <span class="fw-bold text-neon-blue">Elisarrtech</span>
-      </a>
-
-      <!-- Botón hamburguesa para pantallas pequeñas -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Menú desplegable -->
-      <div class="collapse navbar-collapse justify-content-end" id="menuNav">
-       <ul class="navbar-nav gap-3">
-  <li class="nav-item">
-    <a class="nav-link text-white" href="index.html">Inicio</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link text-white" href="sobre-mi.html">Sobre mí</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link text-white" href="proyectos.html">Proyectos</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link text-white" href="blog.html">Blog</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link text-white" href="contacto.html">Contacto</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link text-white" href="recursos.html">Recursos</a>
-  </li>
-</ul>
-
-      </div>
+ <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary shadow-lg">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="img/logotransp.png" alt="Elisarrtech" style="max-height: 40px;">
+      <span class="fw-bold text-neon-blue">Elisarrtech</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="sobre-mi.html">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="proyectos.html">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="recursos.html">Recursos</a></li>
+        <li class="nav-item">
+          <a class="nav-link nav-musica text-white" href="musica.html">
+            <i class="fas fa-music"></i> Música
+          </a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Contenido principal -->
   <main class="container py-5" data-aos="fade-up"> <!-- AOS: animación al aparecer -->
