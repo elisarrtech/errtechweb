@@ -271,4 +271,26 @@ form input:focus, form textarea:focus {
   background-color: #00d4e6;
 }
 
+.servicio-card {
+  background-color: #1b1b1b;
+  border: 1px solid #00f0ff33;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px #00f0ff22;
+}
+
+.servicio-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px #00f0ff88;
+  background-color: #222;
+}
+
+.servicio-card i {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #00f0ff;
+}
+
 
