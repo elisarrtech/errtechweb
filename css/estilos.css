@@ -31,9 +31,9 @@ a:hover {
 }
 
 /* =================== COLORES NEÓN PERSONALIZADOS =================== */
-.text-neon-blue { color: #00f0ff !important; }
-.text-neon-pink { color: #ff4df0 !important; }
-.text-neon-purple { color: #a64eff !important; }
+.text-neon-blue { color: #00f0ff; }
+.text-neon-pink { color: #ff4df0; }
+.text-neon-purple { color: #a64eff; }
 
 /* =================== FORMULARIOS =================== */
 form input, form textarea {
@@ -73,7 +73,7 @@ form input:focus, form textarea:focus {
 }
 
 .navbar-custom .nav-link {
-  color: #fff !important;
+  color: #fff;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -94,19 +94,45 @@ form input:focus, form textarea:focus {
 }
 
 .navbar-custom .nav-link:hover {
-  color: #00f0ff !important;
+  color: #00f0ff;
   text-shadow: 0 0 8px #00f0ff;
 }
 
-/* Ícono de música especial */
-.nav-musica i {
+/* Estilo especial para Música en el navbar */
+.nav-musica {
+  font-weight: 600;
+  transition: all 0.3s ease;
   color: #a64eff;
+}
+
+.nav-musica i {
+  font-size: 1.2rem;
+  color: #a64eff;
+  transition: transform 0.3s ease, color 0.3s ease;
   margin-right: 6px;
+}
+
+.nav-musica:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #a64eff;
 }
 
 .nav-musica:hover i {
   color: #fff;
-  text-shadow: 0 0 6px #a64eff;
+  transform: scale(1.2) rotate(10deg);
+  text-shadow: 0 0 8px #a64eff;
+}
+
+.icono-musica {
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0 0 5px #a64eff);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.nav-musica:hover .icono-musica {
+  transform: scale(1.3) rotate(15deg);
+  filter: drop-shadow(0 0 10px #a64eff);
 }
 
 /* =================== HERO =================== */
@@ -149,7 +175,6 @@ form input:focus, form textarea:focus {
   color: #ccc;
 }
 
-/* =================== ANIMACIONES =================== */
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -166,7 +191,7 @@ form input:focus, form textarea:focus {
 }
 
 /* =================== BOTÓN IR ARRIBA =================== */
-#backToTopBtn {
+#btnVolverArriba {
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -327,58 +352,3 @@ form input:focus, form textarea:focus {
     opacity: 0.8;
   }
 }
-#btnVolverArriba {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  display: none;
-  background-color: #00f0ff;
-  color: #000;
-  border: none;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0 0 10px #00f0ff;
-  z-index: 1000;
-}
-
-/* Estilo especial para Música en el navbar */
-.nav-musica {
-  color: #a64eff !important;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.nav-musica i {
-  font-size: 1.2rem;
-  color: #a64eff;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.nav-musica:hover {
-  color: #fff !important;
-  text-shadow: 0 0 8px #a64eff;
-}
-
-.nav-musica:hover i {
-  color: #fff;
-  transform: scale(1.2) rotate(10deg);
-  text-shadow: 0 0 8px #a64eff;
-}
-
-/* ========== Ícono personalizado de música en navbar ========== */
-.icono-musica {
-  width: 24px;
-  height: 24px;
-  filter: drop-shadow(0 0 5px #a64eff);
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.nav-musica:hover .icono-musica {
-  transform: scale(1.3) rotate(15deg);
-  filter: drop-shadow(0 0 10px #a64eff);
-}
-
-
