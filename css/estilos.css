@@ -339,36 +339,14 @@ form input:focus, form textarea:focus {
     opacity: 0.8;
   }
 }
-.nav-musica {
-  color: #a64eff !important; /* morado neón */
-  position: relative;
-  transition: all 0.3s ease;
+.nav-musica i {
+  color: #a64eff;
+  margin-right: 6px;
+}
+.nav-musica:hover i {
+  color: #fff;
+  text-shadow: 0 0 6px #a64eff;
 }
 
-.nav-musica::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #a64eff;
-  transition: width 0.3s ease;
-}
-
-.nav-musica:hover {
-  color: #fff !important;
-  text-shadow: 0 0 8px #a64eff;
-}
-
-.nav-musica:hover::after {
-  width: 100%;
-}
- /* Quitar marcadores de lista y márgenes/padding del nav */
-.navbar-nav {
-  list-style: none !important;
-  margin: 0;
-  padding: 0;
-}
 
 
