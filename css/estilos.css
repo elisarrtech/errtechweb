@@ -325,3 +325,19 @@ h1.display-5 {
   text-shadow: 0 0 15px #a64eff;
 }
 
+.card {
+  background-color: #1e1e1e !important; /* Fondo oscuro */
+  border: 1px solid #333;
+  color: #ccc;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+}
+
+.card-title,
+.card-text {
+  color: #ddd;
+}
+
+.card a {
+  color: #00f0ff;
+}
+
