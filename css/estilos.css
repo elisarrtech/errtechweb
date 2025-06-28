@@ -327,3 +327,20 @@ form input:focus, form textarea:focus {
     opacity: 0.8;
   }
 }
+#btnVolverArriba {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background-color: #00f0ff;
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00f0ff;
+  z-index: 1000;
+}
+
