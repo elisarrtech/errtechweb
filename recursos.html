@@ -55,72 +55,80 @@
 <!-- CONTENIDO PRINCIPAL -->
 <main class="container py-5">
   <h1 class="text-neon-blue text-center mb-5" data-aos="fade-up">🧰 Recursos Recomendados</h1>
+<div class="text-center mb-4">
+  <button class="btn btn-outline-light m-2 filtro-btn activo" data-categoria="todos">Todos</button>
+  <button class="btn btn-outline-light m-2 filtro-btn" data-categoria="ia">IA</button>
+  <button class="btn btn-outline-light m-2 filtro-btn" data-categoria="diseño">Diseño</button>
+  <button class="btn btn-outline-light m-2 filtro-btn" data-categoria="productividad">Productividad</button>
+  <button class="btn btn-outline-light m-2 filtro-btn" data-categoria="programacion">Programación</button>
+  <button class="btn btn-outline-light m-2 filtro-btn" data-categoria="web">Web</button>
+</div>
 
   <div class="recursos-grid">
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="ia">
   <img src="https://img.icons8.com/fluency/48/000000/voice-presentation.png" alt="ElevenLabs">
   <h3>ElevenLabs</h3>
   <p>Generador de voz realista con IA para crear narraciones y audios.</p>
   <a href="https://www.elevenlabs.io" target="_blank">Visitar</a>
 </div>
 
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="ia">
   <img src="https://img.icons8.com/color/48/000000/google-sheets.png" alt="Sheets AI">
   <h3>Sheets AI</h3>
   <p>Complemento de Google Sheets que integra inteligencia artificial para automatizar tareas.</p>
   <a href="https://workspace.google.com/marketplace/app/sheets_ai/422650584158" target="_blank">Visitar</a>
 </div>
 
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="productividad">
   <img src="https://img.icons8.com/color/48/000000/google-docs.png" alt="Docs AI">
   <h3>Docs AI</h3>
   <p>Asistente inteligente para escribir y resumir textos dentro de Google Docs.</p>
   <a href="https://workspace.google.com/marketplace/app/docs_ai/1029348083491" target="_blank">Visitar</a>
 </div>
-
-<div class="recurso-card">
+    
+<div class="recurso-card" data-categoria="ia">
   <img src="https://img.icons8.com/fluency/48/video-editing.png" alt="Clipchamp">
   <h3>Clipchamp</h3>
   <p>Editor de video gratuito de Microsoft con IA y plantillas creativas.</p>
   <a href="https://www.clipchamp.com" target="_blank">Visitar</a>
 </div>
 
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="programacion">
   <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/code.png" alt="50 Projects 50 Days">
   <h3>50 Projects 50 Days</h3>
   <p>Reto práctico para mejorar tus habilidades en HTML, CSS y JavaScript con proyectos diarios.</p>
   <a href="https://50projects50days.com" target="_blank">Visitar</a>
 </div>
 
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="ia">
   <img src="https://img.icons8.com/fluency/48/code.png" alt="Toolify AI">
   <h3>Toolify.ai</h3>
   <p>Buscador de herramientas de inteligencia artificial para distintas tareas creativas y técnicas.</p>
   <a href="https://www.toolify.ai" target="_blank">Visitar</a>
 </div>
 
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="ia">
   <img src="https://img.icons8.com/color/48/chat.png" alt="Learning Studio AI">
   <h3>Learning Studio AI</h3>
   <p>Plataforma para crear materiales educativos y actividades interactivas con IA.</p>
   <a href="https://www.learningstudio.ai" target="_blank">Visitar</a>
 </div>
 
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="ia">
   <img src="https://img.icons8.com/fluency/48/presentation.png" alt="Gamma App">
   <h3>Gamma App</h3>
   <p>Crea presentaciones modernas e interactivas con ayuda de IA y diseño limpio.</p>
   <a href="https://gamma.app" target="_blank">Visitar</a>
 </div>
 
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="web">
   <img src="https://img.icons8.com/color/48/map.png" alt="Mapbox">
   <h3>Mapbox</h3>
   <p>Plataforma avanzada para crear mapas personalizados con integración en sitios web y apps.</p>
   <a href="https://www.mapbox.com" target="_blank">Visitar</a>
 </div>
 
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="ia">
     <img src="img/kits-ai.png" alt="Kits AI" />
     <h3>Kits.AI</h3>
     <p>Convierte tu voz en otra voz o personaje usando inteligencia artificial.</p>
@@ -128,7 +136,7 @@
   </div>
 
   <!-- Recurso 18 -->
-  <div class="recurso-card">
+ <div class="recurso-card" data-categoria="ia">
     <img src="img/playground.png" alt="Playground AI" />
     <h3>Playground AI</h3>
     <p>Genera imágenes usando texto con diferentes estilos visuales.</p>
@@ -136,7 +144,7 @@
   </div>
 
   <!-- Recurso 19 -->
-  <div class="recurso-card">
+ <div class="recurso-card" data-categoria="ia">
     <img src="img/perplexity.png" alt="Perplexity" />
     <h3>Perplexity AI</h3>
     <p>Buscador inteligente con respuestas fundamentadas y enlaces.</p>
@@ -144,7 +152,7 @@
   </div>
 
   <!-- Recurso 20 -->
-  <div class="recurso-card">
+  <div class="recurso-card" data-categoria="diseño">
     <img src="img/removebg.png" alt="Remove.bg" />
     <h3>Remove.bg</h3>
     <p>Elimina el fondo de una imagen automáticamente en segundos.</p>
@@ -152,7 +160,7 @@
   </div>
 
   <!-- Recurso 21 -->
-  <div class="recurso-card">
+  <div class="recurso-card" data-categoria="productividad">
     <img src="img/tinywow.png" alt="TinyWow" />
     <h3>TinyWow</h3>
     <p>Herramientas gratuitas para PDF, imágenes, texto, y más.</p>
@@ -160,7 +168,7 @@
   </div>
 
   <!-- Recurso 22 -->
-  <div class="recurso-card">
+<div class="recurso-card" data-categoria="productividad">
     <img src="img/figma.png" alt="Figma" />
     <h3>Figma</h3>
     <p>Diseña interfaces web, apps o presentaciones de forma colaborativa.</p>
@@ -168,7 +176,7 @@
   </div>
 
   <!-- Recurso 23 -->
-  <div class="recurso-card">
+ <div class="recurso-card" data-categoria="diseño">
     <img src="img/haikei.png" alt="Haikei" />
     <h3>Haikei</h3>
     <p>Genera fondos SVG animados o abstractos para tu sitio web.</p>
@@ -176,7 +184,7 @@
   </div>
 
   <!-- Recurso 24 -->
-  <div class="recurso-card">
+ <div class="recurso-card" data-categoria="diseño">
     <img src="img/pixabay.png" alt="Pixabay" />
     <h3>Pixabay</h3>
     <p>Banco de imágenes y videos sin copyright para uso libre.</p>
@@ -184,14 +192,14 @@
   </div>
 
   <!-- Recurso 25 -->
-  <div class="recurso-card">
+ <div class="recurso-card" data-categoria="programacion">
     <img src="img/lottiefiles.png" alt="LottieFiles" />
     <h3>LottieFiles</h3>
     <p>Animaciones ligeras en formato JSON listas para usar en apps o sitios web.</p>
     <a href="https://lottiefiles.com/" target="_blank">Visitar</a>
   </div>
     <!-- Recurso 26 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="ia">
   <img src="https://img.icons8.com/fluency/48/online-support.png" alt="ChatGPT">
   <h3>ChatGPT</h3>
   <p>Asistente inteligente basado en IA para responder preguntas y generar contenido.</p>
@@ -199,7 +207,7 @@
 </div>
 
 <!-- Recurso 27 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="programacion">
   <img src="https://img.icons8.com/color/48/visual-studio-code-2019.png" alt="VS Code">
   <h3>Visual Studio Code</h3>
   <p>Editor de código gratuito y potente con extensiones para desarrollo web y más.</p>
@@ -207,7 +215,7 @@
 </div>
 
 <!-- Recurso 28 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="ia">
   <img src="https://img.icons8.com/color/48/figma--v1.png" alt="Figma AI">
   <h3>Figma AI Plugin</h3>
   <p>Extiende las capacidades de Figma con generación automática asistida por IA.</p>
@@ -215,7 +223,7 @@
 </div>
 
 <!-- Recurso 29 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="ia">
   <img src="https://img.icons8.com/fluency/48/audio-wave--v1.png" alt="Soundraw">
   <h3>Soundraw</h3>
   <p>Crea música original con inteligencia artificial para videos y presentaciones.</p>
@@ -223,7 +231,7 @@
 </div>
 
 <!-- Recurso 30 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="ia">
   <img src="https://img.icons8.com/color/48/000000/notion.png" alt="Notion AI">
   <h3>Notion AI</h3>
   <p>Potente asistente dentro de Notion para organizar ideas y documentos con IA.</p>
@@ -231,7 +239,7 @@
 </div>
 
 <!-- Recurso 31 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="web">
   <img src="https://img.icons8.com/color/48/wordpress.png" alt="WordPress">
   <h3>WordPress</h3>
   <p>Crea sitios web y blogs profesionales con miles de plantillas y plugins.</p>
@@ -239,7 +247,7 @@
 </div>
 
 <!-- Recurso 32 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="ia">
   <img src="https://img.icons8.com/color/48/000000/github--v1.png" alt="GitHub Copilot">
   <h3>GitHub Copilot</h3>
   <p>Asistente de codificación basado en IA entrenado con millones de repositorios.</p>
@@ -247,7 +255,7 @@
 </div>
 
 <!-- Recurso 33 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="productividad">
   <img src="https://img.icons8.com/color/48/trello.png" alt="Trello">
   <h3>Trello</h3>
   <p>Organiza proyectos con tableros, listas y tarjetas en un entorno visual.</p>
@@ -255,7 +263,7 @@
 </div>
 
 <!-- Recurso 34 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="productividad">
   <img src="https://img.icons8.com/color/48/evernote.png" alt="Evernote">
   <h3>Evernote</h3>
   <p>Toma notas, guarda ideas y sincroniza todo en la nube.</p>
@@ -263,7 +271,7 @@
 </div>
 
 <!-- Recurso 35 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="productividad">
   <img src="https://img.icons8.com/fluency/48/idea-sharing.png" alt="MindMeister">
   <h3>MindMeister</h3>
   <p>Crea mapas mentales visuales para organizar ideas y proyectos creativos.</p>
@@ -271,7 +279,7 @@
 </div>
 
 <!-- Recurso 36 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="ia">
   <img src="https://img.icons8.com/color/48/microsoft-powerpoint-2019.png" alt="PowerPoint AI">
   <h3>PowerPoint con IA</h3>
   <p>Crea presentaciones con sugerencias de diseño y generación automática de contenido.</p>
@@ -279,7 +287,7 @@
 </div>
 
 <!-- Recurso 37 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="diseño">
   <img src="https://img.icons8.com/external-others-pike-picture/48/external-unsplash-photo-app-others-pike-picture.png" alt="Unsplash">
   <h3>Unsplash</h3>
   <p>Banco de imágenes de alta calidad y gratuitas para cualquier tipo de proyecto.</p>
@@ -287,7 +295,7 @@
 </div>
 
 <!-- Recurso 38 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="diseño">
   <img src="https://img.icons8.com/fluency/48/commercial.png" alt="Freepik">
   <h3>Freepik</h3>
   <p>Recursos gráficos y vectores gratuitos y premium para diseño y web.</p>
@@ -295,7 +303,7 @@
 </div>
 
 <!-- Recurso 39 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="productividad">
   <img src="https://img.icons8.com/color/48/slack-new.png" alt="Slack">
   <h3>Slack</h3>
   <p>Plataforma de mensajería para trabajo colaborativo, integraciones y canales.</p>
@@ -303,14 +311,14 @@
 </div>
 
 <!-- Recurso 40 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="programacion">
   <img src="https://img.icons8.com/fluency/48/laptop-coding.png" alt="Replit">
   <h3>Replit</h3>
   <p>Entorno online para programar en múltiples lenguajes directamente desde el navegador.</p>
   <a href="https://replit.com/" target="_blank">Visitar</a>
 </div>
     <!-- Recurso 41 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="productividad">
   <img src="https://img.icons8.com/fluency/48/markdown.png" alt="MarkText" />
   <h3>MarkText</h3>
   <p>Editor de texto limpio y multiplataforma para archivos Markdown.</p>
@@ -318,7 +326,7 @@
 </div>
 
 <!-- Recurso 42 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="productividad">
   <img src="https://img.icons8.com/fluency/48/pdf.png" alt="PDFgear" />
   <h3>PDFgear</h3>
   <p>Editor gratuito de PDF, con IA y OCR integrado. Funciona en navegador o escritorio.</p>
@@ -326,7 +334,7 @@
 </div>
 
 <!-- Recurso 43 -->
-<div class="recurso-card">
+  <div class="recurso-card" data-categoria="productividad">
   <img src="https://img.icons8.com/fluency/48/combo-chart.png" alt="Flourish" />
   <h3>Flourish</h3>
   <p>Herramienta para crear visualizaciones de datos interactivas sin programar.</p>
@@ -334,7 +342,7 @@
 </div>
 
 <!-- Recurso 44 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="productividad">
   <img src="https://img.icons8.com/fluency/48/mac-os.png" alt="iA Writer" />
   <h3>iA Writer</h3>
   <p>Aplicación minimalista de escritura enfocada para escritores profesionales.</p>
@@ -342,7 +350,7 @@
 </div>
 
 <!-- Recurso 45 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="productividad">
   <img src="https://img.icons8.com/fluency/48/data-in-both-directions.png" alt="Zotero" />
   <h3>Zotero</h3>
   <p>Gestor de referencias bibliográficas y fuente ideal para académicos.</p>
@@ -350,7 +358,7 @@
 </div>
 
 <!-- Recurso 46 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="diseño">
   <img src="https://img.icons8.com/fluency/48/stack-of-photos.png" alt="Pexels" />
   <h3>Pexels</h3>
   <p>Banco de imágenes y videos gratis para uso comercial o personal sin atribución.</p>
@@ -358,7 +366,7 @@
 </div>
 
 <!-- Recurso 47 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="diseño">
   <img src="https://img.icons8.com/fluency/48/magazine.png" alt="MagLoft" />
   <h3>MagLoft</h3>
   <p>Plataforma para crear y distribuir revistas digitales interactivas.</p>
@@ -366,7 +374,7 @@
 </div>
     <!-- Recurso 48 -->
 
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="programacion">
   <img src="https://img.icons8.com/fluency/48/python.png" alt="Anaconda" />
   <h3>Anaconda</h3>
   <p>Distribución de Python para ciencia de datos, con Jupyter, Pandas, y más incluidos.</p>
@@ -374,8 +382,7 @@
 </div>
 
 <!-- Recurso 49 -->
-
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="programacion">
   <img src="https://img.icons8.com/fluency/48/cloudflare.png" alt="Cloudflare" />
   <h3>Cloudflare</h3>
   <p>Protege y acelera tu sitio web con CDN, SSL y mitigación de ataques DDoS.</p>
@@ -384,7 +391,7 @@
 
 <!-- Recurso 50 -->
 
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="programacion">
   <img src="https://img.icons8.com/fluency/48/html-5.png" alt="W3Schools" />
   <h3>W3Schools</h3>
   <p>Plataforma educativa para aprender HTML, CSS, JavaScript y desarrollo web desde cero.</p>
@@ -392,7 +399,7 @@
 </div>
     
     <!-- Recurso 44 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="diseño">
   <img src="https://img.icons8.com/color/48/000000/canva.png" alt="Canva">
   <h3>Canva</h3>
   <p>Herramienta de diseño gráfico online con plantillas para redes, posters y más.</p>
@@ -400,7 +407,7 @@
 </div>
 
 <!-- Recurso 45 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="web">
   <img src="https://img.icons8.com/fluency/48/linux.png" alt="DistroTest">
   <h3>DistroTest</h3>
   <p>Prueba distribuciones Linux directamente desde tu navegador sin instalar nada.</p>
@@ -408,7 +415,7 @@
 </div>
 
 <!-- Recurso 46 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="ia">
   <img src="https://img.icons8.com/fluency/48/artificial-intelligence.png" alt="Hugging Face">
   <h3>Hugging Face</h3>
   <p>Plataforma con miles de modelos de inteligencia artificial listos para usar.</p>
@@ -416,7 +423,7 @@
 </div>
 
 <!-- Recurso 47 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="diseño">
   <img src="https://img.icons8.com/fluency/48/edit-image.png" alt="Photopea">
   <h3>Photopea</h3>
   <p>Editor de imágenes online compatible con PSD, similar a Photoshop.</p>
@@ -424,7 +431,7 @@
 </div>
 
 <!-- Recurso 48 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="programacion">
   <img src="https://img.icons8.com/fluency/48/api.png" alt="RapidAPI">
   <h3>RapidAPI</h3>
   <p>Explora y prueba APIs públicas y privadas desde una sola plataforma.</p>
@@ -432,7 +439,7 @@
 </div>
 
 <!-- Recurso 49 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="programacion">
   <img src="https://img.icons8.com/fluency/48/json.png" alt="JSON Formatter">
   <h3>JSON Formatter</h3>
   <p>Formatea, valida y visualiza archivos JSON fácilmente desde el navegador.</p>
@@ -440,7 +447,7 @@
 </div>
 
 <!-- Recurso 50 -->
-<div class="recurso-card">
+<div class="recurso-card" data-categoria="web">
   <img src="https://img.icons8.com/fluency/48/globe.png" alt="Google Fonts">
   <h3>Google Fonts</h3>
   <p>Biblioteca gratuita de tipografías web para integrar en tus proyectos.</p>
