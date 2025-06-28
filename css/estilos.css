@@ -65,7 +65,7 @@ form input:focus, form textarea:focus {
   box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
 }
 
-/* =================== NAVEGACIÓN =================== */
+/* =================== NAVBAR PERSONALIZADO =================== */
 .navbar-custom {
   background: linear-gradient(90deg, #1f0037, #00314d);
   box-shadow: 0 4px 10px rgba(0, 255, 255, 0.1);
@@ -98,7 +98,14 @@ form input:focus, form textarea:focus {
   text-shadow: 0 0 8px #00f0ff;
 }
 
-/* Estilo especial para Música en el navbar */
+/* Enlace activo resaltado */
+.navbar-custom .nav-link.activo {
+  color: #00f0ff !important;
+  text-shadow: 0 0 8px #00f0ff;
+  border-bottom: 2px solid #00f0ff;
+}
+
+/* =================== ENLACE ESPECIAL MÚSICA =================== */
 .nav-musica {
   font-weight: 600;
   transition: all 0.3s ease;
@@ -218,16 +225,7 @@ form input:focus, form textarea:focus {
   box-shadow: 0 0 20px #00f0ff33;
 }
 
-.card-title i {
-  margin-right: 8px;
-}
-
 /* =================== RECURSOS =================== */
-.recursos-section {
-  background-color: #121212;
-  padding: 4rem 1rem;
-}
-
 .recursos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -283,93 +281,37 @@ form input:focus, form textarea:focus {
   background-color: #00d4e6;
 }
 
-/* =================== SERVICIOS =================== */
-.servicio-card {
-  background-color: #1b1b1b;
-  border: 1px solid #00f0ff33;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 0 10px #00f0ff22;
-}
+/* =================== RESPONSIVE MEJORA =================== */
+@media (max-width: 576px) {
+  .recurso-card {
+    padding: 1.2rem 1rem;
+  }
 
-.servicio-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 0 25px #00f0ff88;
-  background-color: #222;
-}
+  .recurso-card h3 {
+    font-size: 1rem;
+  }
 
-.servicio-card i {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  display: block;
-  color: #00f0ff;
+  .recurso-card p {
+    font-size: 0.85rem;
+  }
 }
 
 /* =================== VISUALIZADOR MUSICAL =================== */
-.visualizador-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.visualizador-bg::before,
-.visualizador-bg::after {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(0, 240, 255, 0.3) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: pulso 6s ease-in-out infinite;
-  filter: blur(40px);
-}
-
-.visualizador-bg::before {
-  top: 20%;
-  left: 15%;
-  animation-delay: 0s;
-}
-
-.visualizador-bg::after {
-  bottom: 10%;
-  right: 10%;
-  animation-delay: 3s;
-}
-
-@keyframes pulso {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.4;
-  }
-  50% {
-    transform: scale(1.4);
-    opacity: 0.8;
-  }
-}
-/* ==== Fondo semitransparente animado en página de música ==== */
 .fondo-musical-animado {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("img/visualizador-musical.png");
+  background-image: url('../img/visualizador-musical.png');
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.1; /* Ajusta la transparencia */
+  opacity: 0.08;
   z-index: 0;
   pointer-events: none;
   animation: desplazarFondo 30s linear infinite;
 }
 
-/* Efecto de movimiento sutil en el fondo */
 @keyframes desplazarFondo {
   0% {
     background-position: center 0;
@@ -379,26 +321,7 @@ form input:focus, form textarea:focus {
   }
 }
 
-/* Asegura que el contenido esté encima del fondo */
-body, main, .container, section, footer {
-  position: relative;
-  z-index: 1;
-}
-
-.fondo-musical-animado {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('../img/visualizador-musical.png'); /* Asegúrate de que la imagen exista */
-  background-size: cover;
-  background-position: center;
-  opacity: 0.08; /* Más sutil */
-  z-index: 0;
-  pointer-events: none;
-}
-
 h1.display-5 {
   text-shadow: 0 0 15px #a64eff;
 }
+
