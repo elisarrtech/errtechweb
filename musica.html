@@ -2,92 +2,73 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Música | Elisarrtech</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/estilos.css" />
+  <title>Música | Elisarrtech</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link rel="icon" href="img/favicon.png" />
   <script src="https://kit.fontawesome.com/a2e0c6e6f7.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-black text-white">
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary shadow-lg">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-      <img src="img/logotransp.png" alt="Elisarrtech" style="max-height: 40px;">
-      <span class="fw-bold text-neon-blue">Elisarrtech</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="menuNav">
-      <ul class="navbar-nav gap-3">
-        <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="sobre-mi.html">Sobre mí</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="proyectos.html">Proyectos</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="recursos.html">Recursos</a></li>
-        <li class="nav-item">
-          <a class="nav-link nav-musica text-white" href="musica.html">
-            <i class="fas fa-music"></i> Música
-          </a>
-        </li>
-      </ul>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary shadow-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logotransp.png" alt="Elisarrtech" style="max-height: 40px;">
+        <span class="fw-bold text-neon-blue">Elisarrtech</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="sobre-mi.html">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="proyectos.html">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="recursos.html">Recursos</a></li>
+          <li class="nav-item">
+            <a class="nav-link nav-musica text-white" href="musica.html">
+              <i class="fas fa-music"></i> Música
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-
-<main class="container py-5 position-relative">
-  <!-- Visualizador decorativo -->
-  <div class="visualizador-bg"></div>
-
-  <section class="text-center mb-5" data-aos="fade-up">
-    <h1 class="text-neon-blue mb-3">🎧 Mi universo musical</h1>
-    <p class="lead">La música electrónica me acompaña mientras creo, programo o simplemente desconecto. Aquí comparto algunas de mis playlists favoritas.</p>
-  </section>
-
-  <!-- Playlists de Spotify -->
-  <section class="row justify-content-center gy-4" data-aos="fade-up">
-    <div class="col-md-6">
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator"
-        width="100%" height="152" frameborder="0" allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  <!-- CONTENIDO -->
+  <main class="container py-5" data-aos="fade-up">
+    <div class="text-center mb-5">
+      <h1 class="display-5 text-neon-purple"><i class="fas fa-music me-2"></i>Música & Arte</h1>
+      <p class="lead">Aquí comparto mi gusto por la música electrónica y las artes visuales. Pronto encontrarás playlists, visualizadores, inspiración creativa y más.</p>
     </div>
-    <div class="col-md-6">
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXRqgorJj26U?utm_source=generator"
-        width="100%" height="152" frameborder="0" allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <!-- Visualizador o contenido -->
+    <section class="text-center mt-5">
+      <p class="text-muted">🎧 Próximamente: visualizador musical interactivo y mi selección de sonidos favoritos.</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-center text-light border-top border-secondary py-4 mt-5">
+    <div class="container">
+      <h5 class="mb-3 text-neon-purple">Elisarrtech</h5>
+      <div class="mb-3">
+        <a href="https://github.com/elisarrtech" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/tuusuario" target="_blank" class="text-neon-pink me-3 fs-5"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:tuemail@correo.com" class="text-neon-purple fs-5"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="small m-0">&copy; 2025 Elisarrtech | Todos los derechos reservados</p>
     </div>
-  </section>
+  </footer>
 
-  <section class="text-center mt-5" data-aos="zoom-in">
-    <h4 class="text-neon-purple animate-glow">¡La creatividad también se escucha! 🌀🎶</h4>
-  </section>
-</main>
-
-<!-- Footer -->
-<footer class="bg-black text-center text-light border-top border-secondary py-4 mt-5">
-  <div class="container">
-    <h5 class="mb-3 text-neon-purple">Elisarrtech</h5>
-    <div class="mb-3">
-      <a href="https://github.com/elisarrtech" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/tuusuario" target="_blank" class="text-neon-pink me-3 fs-5"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:tuemail@correo.com" class="text-neon-purple fs-5"><i class="fas fa-envelope"></i></a>
-    </div>
-    <p class="small m-0">&copy; 2025 Elisarrtech | Todos los derechos reservados</p>
-  </div>
-</footer>
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({ once: true, duration: 1000, offset: 120 });
-</script>
-
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 1000 });</script>
 </body>
 </html>
