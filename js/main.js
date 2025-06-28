@@ -113,3 +113,27 @@ window.addEventListener("scroll", () => {
   });
 </script>
 
+<script>
+  const botones = document.querySelectorAll(".filtro-btn");
+  const tarjetas = document.querySelectorAll(".recurso-card");
+
+  botones.forEach(boton => {
+    boton.addEventListener("click", () => {
+      const categoria = boton.getAttribute("data-categoria");
+
+      botones.forEach(b => b.classList.remove("activo"));
+      boton.classList.add("activo");
+
+      tarjetas.forEach(card => {
+        const cat = card.getAttribute("data-categoria");
+        if (categoria === "todos" || cat === categoria) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
+
