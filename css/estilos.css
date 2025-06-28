@@ -364,5 +364,11 @@ form input:focus, form textarea:focus {
 .nav-musica:hover::after {
   width: 100%;
 }
+ /* Quitar marcadores de lista y márgenes/padding del nav */
+.navbar-nav {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+}
 
 
