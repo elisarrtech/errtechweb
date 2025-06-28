@@ -344,3 +344,27 @@ form input:focus, form textarea:focus {
   z-index: 1000;
 }
 
+/* Estilo especial para Música en el navbar */
+.nav-musica {
+  color: #a64eff !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-musica i {
+  font-size: 1.2rem;
+  color: #a64eff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-musica:hover {
+  color: #fff !important;
+  text-shadow: 0 0 8px #a64eff;
+}
+
+.nav-musica:hover i {
+  color: #fff;
+  transform: scale(1.2) rotate(10deg);
+  text-shadow: 0 0 8px #a64eff;
+}
+
