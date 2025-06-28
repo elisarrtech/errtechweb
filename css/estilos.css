@@ -383,5 +383,22 @@ h1.display-5 {
   background-color: #00d4e6;
   box-shadow: 0 0 10px #00f0ff;
 }
+.btn-contratame {
+  background-color: transparent;
+  border: 2px solid #ff4df0;
+  color: #ff4df0;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px #ff4df088;
+}
+
+.btn-contratame:hover {
+  background-color: #ff4df0;
+  color: #000;
+  box-shadow: 0 0 15px #ff4df0aa, 0 0 25px #ff4df0aa;
+}
 
 
