@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section id="recursos" class="recursos-section container py-5">
+  <h2 class="text-neon-blue text-center mb-5" data-aos="fade-up">🧰 Recursos Recomendados</h2>
+
+  <div class="recursos-grid">
+    <div class="recurso-card" data-aos="zoom-in">
+      <img src="{{ url_for('static', filename='img/icon-elevenlabs.png') }}" alt="ElevenLabs" />
+      <h3>ElevenLabs</h3>
+      <p>Generador de voz con IA para narraciones y videos.</p>
+      <a href="https://www.elevenlabs.io/" target="_blank">Visitar</a>
+    </div>
+
+    <div class="recurso-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="{{ url_for('static', filename='img/icon-123apps.png') }}" alt="123Apps" />
+      <h3>123Apps</h3>
+      <p>Herramientas online para editar audio, video, PDF y más.</p>
+      <a href="https://www.123apps.com/" target="_blank">Visitar</a>
+    </div>
+
+    <div class="recurso-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="{{ url_for('static', filename='img/icon-mixo.png') }}" alt="Mixo" />
+      <h3>Mixo.io</h3>
+      <p>Generador de landing pages con IA en segundos.</p>
+      <a href="https://www.mixo.io/" target="_blank">Visitar</a>
+    </div>
+
+    <!-- Puedes seguir agregando más recursos siguiendo este formato -->
+  </div>
+</section>
+
+{% endblock %}
