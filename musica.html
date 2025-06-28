@@ -3,18 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explora la pasión musical de Elisarrtech con playlists, visualizadores y arte digital.">
   <title>Música | Elisarrtech</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a2e0c6e6f7.js" crossorigin="anonymous"></script>
 </head>
-
-<body class="bg-black text-white" style="position: relative; z-index: 1;">
+<body class="bg-black text-white">
 <div class="fondo-musical-animado"></div>
-
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary shadow-lg">
@@ -34,12 +31,12 @@
           <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="recursos.html">Recursos</a></li>
-               <li class="nav-item">
-  <a class="nav-link nav-musica text-white d-flex align-items-center gap-2" href="musica.html">
-    <img src="img/music.png" alt="Música" class="icono-musica" />
-    Música
-  </a>
-</li>
+          <li class="nav-item">
+            <a class="nav-link nav-musica text-white d-flex align-items-center gap-2" href="musica.html">
+              <img src="img/music.png" alt="Música" class="icono-musica" />
+              Música
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -48,13 +45,18 @@
   <!-- CONTENIDO -->
   <main class="container py-5" data-aos="fade-up">
     <div class="text-center mb-5">
-      <h1 class="display-5 text-neon-purple"><i class="fas fa-music me-2"></i>Música & Arte</h1>
+      <h1 class="display-5 text-neon-purple animate-glow"><i class="fas fa-music me-2"></i>Música & Arte</h1>
       <p class="lead">Aquí comparto mi gusto por la música electrónica y las artes visuales. Pronto encontrarás playlists, visualizadores, inspiración creativa y más.</p>
     </div>
 
     <!-- Visualizador o contenido -->
     <section class="text-center mt-5">
-      <p class="text-muted">🎧 Próximamente: visualizador musical interactivo y mi selección de sonidos favoritos.</p>
+      <audio id="audioPlayer" controls class="mb-4">
+        <source src="audio/ejemplo.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+      </audio>
+      <canvas id="canvasVisual" width="600" height="200" style="width: 100%; max-width: 700px; height: auto;"></canvas>
+      <p class="text-muted mt-3">🎧 Próximamente: visualizador musical interactivo con más pistas.</p>
     </section>
   </main>
 
@@ -75,5 +77,40 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({ once: true, duration: 1000 });</script>
+  <script>
+    const audio = document.getElementById('audioPlayer');
+    const canvas = document.getElementById('canvasVisual');
+    const ctx = canvas.getContext('2d');
+
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const analyser = audioCtx.createAnalyser();
+    const source = audioCtx.createMediaElementSource(audio);
+    source.connect(analyser);
+    analyser.connect(audioCtx.destination);
+
+    analyser.fftSize = 256;
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
+
+    function draw() {
+      requestAnimationFrame(draw);
+      analyser.getByteFrequencyData(dataArray);
+
+      ctx.fillStyle = '#121212';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const barWidth = (canvas.width / bufferLength) * 2.5;
+      let x = 0;
+
+      for (let i = 0; i < bufferLength; i++) {
+        const barHeight = dataArray[i];
+        ctx.fillStyle = `rgb(${barHeight + 100}, 0, ${255 - barHeight})`;
+        ctx.fillRect(x, canvas.height - barHeight / 2, barWidth, barHeight / 2);
+        x += barWidth + 1;
+      }
+    }
+
+    draw();
+  </script>
 </body>
 </html>
