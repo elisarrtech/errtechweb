@@ -1,27 +1,30 @@
-
 /* =================== RESET Y TIPOGRAFÍA =================== */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #121212;
-  color: #ccc; /* Color base legible sobre fondo oscuro */
+  color: #ccc;
+  margin: 0;
+  padding: 0;
 }
 
-/* =================== TIPOGRAFÍA GENERAL =================== */
 h1, h2, h3 {
   color: #fff;
   text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
 }
+
 p {
   line-height: 1.7;
   font-size: 1.05rem;
   margin-bottom: 1rem;
   color: #ddd;
 }
+
 a {
   color: #00f0ff;
   text-decoration: none;
   transition: all 0.3s ease;
 }
+
 a:hover {
   color: #fff;
   text-shadow: 0 0 8px #00f0ff;
@@ -37,6 +40,7 @@ form input, form textarea {
   border-radius: 8px;
   transition: all 0.3s ease;
 }
+
 form input:focus, form textarea:focus {
   border-color: #00f0ff;
   box-shadow: 0 0 10px #00f0ff33;
@@ -54,6 +58,7 @@ form input:focus, form textarea:focus {
   transition: all 0.3s ease;
   margin-top: 1.5rem;
 }
+
 .cta-btn:hover {
   background-color: #00f0ff;
   color: #000;
@@ -66,13 +71,42 @@ form input:focus, form textarea:focus {
   box-shadow: 0 4px 10px rgba(0, 255, 255, 0.1);
   border-bottom: 2px solid #00f0ff33;
 }
+
 .navbar-custom .nav-link {
   color: #fff !important;
   transition: all 0.3s ease;
+  position: relative;
 }
+
+.navbar-custom .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #00f0ff;
+  transition: width 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover::after {
+  width: 100%;
+}
+
 .navbar-custom .nav-link:hover {
   color: #00f0ff !important;
   text-shadow: 0 0 8px #00f0ff;
+}
+
+/* Ícono de música especial */
+.nav-musica i {
+  color: #a64eff;
+  margin-right: 6px;
+}
+
+.nav-musica:hover i {
+  color: #fff;
+  text-shadow: 0 0 6px #a64eff;
 }
 
 /* =================== HERO =================== */
@@ -88,6 +122,7 @@ form input:focus, form textarea:focus {
   color: #fff;
   overflow: hidden;
 }
+
 .hero-overlay {
   position: absolute;
   top: 0; left: 0;
@@ -95,16 +130,19 @@ form input:focus, form textarea:focus {
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
+
 .hero-content {
   position: relative;
   z-index: 2;
   text-align: center;
 }
+
 .hero-content h1 {
   font-size: 3rem;
   font-weight: 700;
   text-shadow: 0 0 20px #ff4df0;
 }
+
 .hero-content p {
   font-size: 1.2rem;
   margin-top: 1rem;
@@ -117,25 +155,14 @@ form input:focus, form textarea:focus {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
 @keyframes glow {
   0%, 100% { text-shadow: 0 0 10px #ff4df0, 0 0 20px #ff4df0; }
   50% { text-shadow: 0 0 20px #fff, 0 0 40px #ff4df0; }
 }
-@keyframes fadeUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
+
 .animate-glow {
   animation: glow 2s infinite ease-in-out;
-}
-.fade-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
-}
-.fade-section.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* =================== BOTÓN IR ARRIBA =================== */
@@ -156,61 +183,21 @@ form input:focus, form textarea:focus {
   z-index: 1000;
 }
 
-/* =================== TRIÁNGULOS ANIMADOS =================== */
-.bg-animated-shapes {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  overflow: hidden;
-  z-index: 0;
-  pointer-events: none;
-}
-.bg-animated-shapes li {
-  position: absolute;
-  display: block;
-  list-style: none;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 25px solid rgba(0, 240, 255, 0.15);
-  animation: floatShape 25s linear infinite;
-  bottom: -150px;
-}
-.bg-animated-shapes li:nth-child(1) { left: 25%; animation-delay: 0s; }
-.bg-animated-shapes li:nth-child(2) { left: 10%; animation-delay: 2s; }
-.bg-animated-shapes li:nth-child(3) { left: 70%; animation-delay: 4s; }
-.bg-animated-shapes li:nth-child(4) { left: 40%; animation-delay: 0s; }
-.bg-animated-shapes li:nth-child(5) { left: 65%; animation-delay: 0s; }
-.bg-animated-shapes li:nth-child(6) { left: 75%; animation-delay: 3s; }
-.bg-animated-shapes li:nth-child(7) { left: 35%; animation-delay: 7s; }
-.bg-animated-shapes li:nth-child(8) { left: 50%; animation-delay: 15s; }
-.bg-animated-shapes li:nth-child(9) { left: 20%; animation-delay: 2s; }
-.bg-animated-shapes li:nth-child(10) { left: 85%; animation-delay: 0s; }
-
-@keyframes floatShape {
-  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-  50% { opacity: 0.3; }
-  100% { transform: translateY(-1000px) rotate(360deg); opacity: 0; }
-}
-
 /* =================== CARDS =================== */
-.border-neon-blue {
-  border-color: #00f0ff !important;
-}
-.card-title i {
-  margin-right: 8px;
-}
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px #00f0ff33;
 }
 
-/* =================== SECCIÓN DE RECURSOS =================== */
+.card-title i {
+  margin-right: 8px;
+}
 
+/* =================== RECURSOS =================== */
 .recursos-section {
   background-color: #121212;
   padding: 4rem 1rem;
@@ -271,6 +258,7 @@ form input:focus, form textarea:focus {
   background-color: #00d4e6;
 }
 
+/* =================== SERVICIOS =================== */
 .servicio-card {
   background-color: #1b1b1b;
   border: 1px solid #00f0ff33;
@@ -293,7 +281,7 @@ form input:focus, form textarea:focus {
   color: #00f0ff;
 }
 
-/* ========== VISUALIZADOR MUSICAL DECORATIVO (ondas/círculos) ========== */
+/* =================== VISUALIZADOR MUSICAL =================== */
 .visualizador-bg {
   position: absolute;
   top: 0;
@@ -338,29 +326,4 @@ form input:focus, form textarea:focus {
     transform: scale(1.4);
     opacity: 0.8;
   }
-}
-.navbar-custom .nav-link {
-  color: #fff !important;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.navbar-custom .nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  bottom: 0;
-  background-color: #00f0ff;
-  transition: width 0.3s ease;
-}
-
-.navbar-custom .nav-link:hover::after {
-  width: 100%;
-}
-
-.navbar-custom .nav-link:hover {
-  color: #00f0ff !important;
-  text-shadow: 0 0 8px #00f0ff;
 }
