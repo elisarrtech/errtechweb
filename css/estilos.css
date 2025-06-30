@@ -1,483 +1,73 @@
+/* ============================================
+   VARIABLES: SPACING & THEMES
+   ============================================ */
 :root {
+  /* Spacing scale */
   --step--2: 0.625rem; /* 10px */
   --step--1: 0.75rem;  /* 12px */
-  --step-0: 1rem;      /* 16px */
-  --step-1: 1.25rem;   /* 20px */
-  --step-2: 1.563rem;  /* 25px */
-  --step-3: 1.953rem;  /* 31px */
-  --step-4: 2.441rem;  /* 39px */
-}
-h1 { font-size: var(--step-4); }
-h2 { font-size: var(--step-3); }
-h3 { font-size: var(--step-2); }
-p, a, li { font-size: var(--step-0); }
-small { font-size: var(--step--1); }
+  --step-0:   1rem;    /* 16px */
+  --step-1:   1.25rem; /* 20px */
+  --step-2:   1.563rem;/* 25px */
+  --step-3:   1.953rem;/* 31px */
+  --step-4:   2.441rem;/* 39px */
 
-:root {
-  /* Tema claro por defecto */
-  --bg: #ffffff;
-  --text: #121212;
-  --card-bg: #f7f7f7;
+  /* Light theme colors */
+  --bg:          #ffffff;
+  --text:        #121212;
+  --card-bg:     #f7f7f7;
   --card-border: #ddd;
-  --primary: #00f0ff;
-  --cta-bg: #ff4df0;
+  --primary:     #00f0ff;
+  --cta-bg:      #ff4df0;
 }
 
 [data-theme="dark"] {
-  --bg: #121212;
-  --text: #ccc;
-  --card-bg: #1e1e1e;
+  /* Dark theme overrides */
+  --bg:          #121212;
+  --text:        #ccc;
+  --card-bg:     #1e1e1e;
   --card-border: #333;
-  --primary: #00f0ff;
-  --cta-bg: #ff4df0;
+  --primary:     #00f0ff;
+  --cta-bg:      #ff4df0;
 }
 
+/* ============================================
+   RESET & TYPOGRAPHY
+   ============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-/* =================== RESET Y TIPOGRAFÍA =================== */
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
   color: var(--text);
-  margin: 0;
-  padding: 0;   
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3 {
-  color: #fff;
-  text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
-}
+h1 { font-size: var(--step-4); }
+h2 { font-size: var(--step-3); }
+h3 { font-size: var(--step-2); }
 
-p {
+p, a, li {
+  font-size: var(--step-0);
   line-height: 1.7;
-  font-size: 1.05rem;
   margin-bottom: 1rem;
-  color: #ddd;
 }
 
+small { font-size: var(--step--1); }
+
+/* ============================================
+   GLOBAL ELEMENT STYLES
+   ============================================ */
 a {
-  color: #00f0ff;
+  color: var(--primary);
   text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  color: #fff;
-  text-shadow: 0 0 8px #00f0ff;
-}
-
-a, .cta-btn, .recurso-card a {
-  background-color: var(--primary);
-  color: var(--bg);
-
-/* =================== COLORES NEÓN PERSONALIZADOS =================== */
-.text-neon-blue { color: #00f0ff; }
-.text-neon-pink { color: #ff4df0; }
-.text-neon-purple { color: #a64eff; }
-
-/* =================== FORMULARIOS =================== */
-form input, form textarea {
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-form input:focus, form textarea:focus {
-  border-color: #00f0ff;
-  box-shadow: 0 0 10px #00f0ff33;
-  outline: none;
-}
-
-/* =================== BOTÓN PRINCIPAL (CTA) =================== */
-.cta-btn {
-  background-color: transparent;
-  border: 2px solid #00f0ff;
-  color: #00f0ff;
-  padding: 0.6rem 1.5rem;
-  font-weight: bold;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  margin-top: 1.5rem;
-}
-
-.cta-btn:hover {
-  background-color: #00f0ff;
-  color: #000;
-  box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
-}
-
-/* =================== NAVBAR PERSONALIZADO =================== */
-.navbar-custom {
-  background: linear-gradient(90deg, #1f0037, #00314d);
-  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.1);
-  border-bottom: 2px solid #00f0ff33;
-}
-
-.navbar-custom .nav-link {
-  color: #fff;
-  transition: all 0.3s ease;
   position: relative;
-}
-
-.navbar-custom .nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  bottom: 0;
-  background-color: #00f0ff;
-  transition: width 0.3s ease;
-}
-
-.navbar-custom .nav-link:hover::after {
-  width: 100%;
-}
-
-.navbar-custom .nav-link:hover {
-  color: #00f0ff;
-  text-shadow: 0 0 8px #00f0ff;
-}
-
-/* Enlace activo resaltado */
-.navbar-custom .nav-link.activo {
-  color: #00f0ff !important;
-  text-shadow: 0 0 8px #00f0ff;
-  border-bottom: 2px solid #00f0ff;
-}
-
-/* =================== ENLACE ESPECIAL MÚSICA =================== */
-.nav-musica {
-  font-weight: 600;
-  transition: all 0.3s ease;
-  color: #a64eff;
-}
-
-.nav-musica i {
-  font-size: 1.2rem;
-  color: #a64eff;
-  transition: transform 0.3s ease, color 0.3s ease;
-  margin-right: 6px;
-}
-
-.nav-musica:hover {
-  color: #fff;
-  text-shadow: 0 0 8px #a64eff;
-}
-
-.nav-musica:hover i {
-  color: #fff;
-  transform: scale(1.2) rotate(10deg);
-  text-shadow: 0 0 8px #a64eff;
-}
-
-.icono-musica {
-  width: 24px;
-  height: 24px;
-  filter: drop-shadow(0 0 5px #a64eff);
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.nav-musica:hover .icono-musica {
-  transform: scale(1.3) rotate(15deg);
-  filter: drop-shadow(0 0 10px #a64eff);
-}
-
-/* =================== HERO =================== */
-.hero-section {
-  position: relative;
-  background: linear-gradient(-45deg, #121212, #1f0037, #00314d);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  overflow: hidden;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  text-shadow: 0 0 20px #ff4df0;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  color: #ccc;
-}
-
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes glow {
-  0%, 100% { text-shadow: 0 0 10px #ff4df0, 0 0 20px #ff4df0; }
-  50% { text-shadow: 0 0 20px #fff, 0 0 40px #ff4df0; }
-}
-
-.animate-glow {
-  animation: glow 2s infinite ease-in-out;
-}
-
-/* =================== BOTÓN IR ARRIBA =================== */
-#btnVolverArriba {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  display: none;
-  background-color: #00f0ff;
-  color: #000;
-  border: none;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0 0 10px #00f0ff;
-  z-index: 1000;
-}
-
-/* =================== CARDS =================== */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px #00f0ff33;
-}
-
-/* =================== RECURSOS =================== */
-.recursos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.recurso-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
-
-}
-
-.recurso-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
-}
-
-.recurso-card img {
-  height: 60px;
-  margin-bottom: 1rem;
-  object-fit: contain;
-  filter: drop-shadow(0 0 5px #00f0ff44);
-}
-
-.recurso-card h3 {
-  color: #00f0ff;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.recurso-card p {
-  font-size: 0.95rem;
-  color: #ccc;
-  margin-bottom: 1rem;
-}
-
-.recurso-card a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #00f0ff;
-  color: #000;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.recurso-card a:hover {
-  background-color: #00d4e6;
-}
-
-/* =================== RESPONSIVE MEJORA =================== */
-@media (max-width: 576px) {
-  .recurso-card {
-    padding: 1.2rem 1rem;
-  }
-
-  .recurso-card h3 {
-    font-size: 1rem;
-  }
-
-  .recurso-card p {
-    font-size: 0.85rem;
-  }
-}
-
-/* =================== VISUALIZADOR MUSICAL =================== */
-.fondo-musical-animado {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('../img/visualizador-musical.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.08;
-  z-index: 0;
-  pointer-events: none;
-  animation: desplazarFondo 30s linear infinite;
-}
-
-@keyframes desplazarFondo {
-  0% {
-    background-position: center 0;
-  }
-  100% {
-    background-position: center 100%;
-  }
-}
-
-h1.display-5 {
-  text-shadow: 0 0 15px #a64eff;
-}
-
-.card {
-  background-color: #1e1e1e !important; /* Fondo oscuro */
-  border: 1px solid #333;
-  color: #ccc;
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
-}
-
-.card-title,
-.card-text {
-  color: #ddd;
-}
-
-.card a {
-  color: #00f0ff;
-}
-
-/* =================== TARJETAS (CARD) PERSONALIZADAS PARA INDEX =================== */
-.card {
-  background-color: #1e1e1e !important;
-  border: 1px solid #333;
-  border-radius: 12px;
-  color: #ccc;
-  padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
-}
-
-.card-title {
-  color: #00f0ff;
-  font-weight: 600;
-  text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
-  margin-bottom: 1rem;
-}
-
-.card-text {
-  color: #ccc;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.card a.btn {
-  background-color: #00f0ff;
-  color: #000;
-  font-weight: bold;
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card a.btn:hover {
-  background-color: #00d4e6;
-  box-shadow: 0 0 10px #00f0ff;
-}
-.btn-contratame {
-  background-color: transparent;
-  border: 2px solid #ff4df0;
-  color: #ff4df0;
-  padding: 0.8rem 1.8rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  text-shadow: 0 0 5px #ff4df088;
-}
-
-.btn-contratame:hover {
-  background-color: #ff4df0;
-  color: #000;
-  box-shadow: 0 0 15px #ff4df0aa, 0 0 25px #ff4df0aa;
-}
-
-/* Navbar fija y cambio de fondo al hacer scroll */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background-color: transparent;
-  transition: background-color 0.3s ease;
-}
-.navbar.scrolled {
-  background-color: rgba(18,18,18,0.95);
-}
-
-:root {
-  --bg: #121212;
-  --fg: #ccc;
-}
-[data-theme="light"] {
-  --bg: #fff;
-  --fg: #333;
-}
-body {
-  background-color: var(--bg);
-  color: var(--fg);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Botón presionado */
-button, .btn {
-  transition: transform 0.1s ease;
-}
-button:active, .btn:active {
-  transform: scale(0.97);
-}
-
-/* Links con subrayado animado */
-a {
-  position: relative;
+  transition: color 0.3s ease;
 }
 a::after {
   content: '';
@@ -487,25 +77,301 @@ a::after {
   background: currentColor;
   transition: width 0.3s ease;
 }
+a:hover {
+  color: var(--bg);
+}
 a:hover::after {
   width: 100%;
 }
 
-/* en estilos.css */
+button, .btn {
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+button:active, .btn:active {
+  transform: scale(0.97);
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+form input,
+form textarea {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+  padding: 0.5rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: var(--bg);
+  color: var(--text);
+}
+form input:focus,
+form textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 10px var(--primary)33;
+  outline: none;
+}
+
+/* ============================================
+   BUTTONS & CALL-TO-ACTION
+   ============================================ */
+.cta-btn {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  font-weight: bold;
+  border-radius: 30px;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+.cta-btn:hover {
+  background: var(--primary);
+  color: var(--bg);
+  box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
+}
+
+.btn-contratame {
+  padding: 0.8rem 1.8rem;
+  font-size: var(--step-1);
+  font-weight: bold;
+  border-radius: 30px;
+  border: 2px solid #ff4df0;
+  background: transparent;
+  color: #ff4df0;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-contratame:hover {
+  background: #ff4df0;
+  color: #000;
+  box-shadow: 0 0 15px #ff4df0aa, 0 0 25px #ff4df0aa;
+}
+
 .cta-fixed {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #ff4df0;
+  bottom: 20px; right: 20px;
+  background: var(--cta-bg);
   color: #fff;
-  padding: .8rem 1.2rem;
+  padding: 0.8rem 1.2rem;
   border-radius: 50px;
-  text-decoration: none;
-  box-shadow: 0 0 10px #ff4df0aa;
   font-weight: 600;
-  transition: transform .2s ease;
+  box-shadow: 0 0 10px var(--cta-bg)aa;
+  transition: transform 0.2s ease;
 }
 .cta-fixed:hover {
   transform: scale(1.1);
 }
 
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar {
+  position: sticky;
+  top: 0; z-index: 999;
+  background: transparent;
+  transition: background-color 0.3s ease;
+}
+.navbar.scrolled {
+  background-color: rgba(18, 18, 18, 0.95);
+}
+
+.navbar-custom {
+  background: linear-gradient(90deg, #1f0037, #00314d);
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.1);
+  border-bottom: 2px solid var(--primary)33;
+}
+.navbar-custom .nav-link {
+  color: #fff;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.navbar-custom .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+.navbar-custom .nav-link:hover::after { width: 100%; }
+.navbar-custom .nav-link:hover { color: var(--primary); }
+
+.navbar-custom .nav-link.activo {
+  color: var(--primary) !important;
+  border-bottom: 2px solid var(--primary);
+}
+
+/* Música link special */
+.nav-musica {
+  color: #a64eff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.nav-musica:hover {
+  color: #fff;
+}
+.nav-musica .icono-musica {
+  width: 24px; height: 24px;
+  filter: drop-shadow(0 0 5px #a64eff);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+.nav-musica:hover .icono-musica {
+  transform: scale(1.3) rotate(15deg);
+  filter: drop-shadow(0 0 10px #a64eff);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #121212, #1f0037, #00314d);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+.hero-content {
+  position: relative; z-index: 1;
+  text-align: center;
+}
+@keyframes gradientBG {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes glow {
+  0%,100% { text-shadow: 0 0 10px #ff4df0, 0 0 20px #ff4df0; }
+  50%     { text-shadow: 0 0 20px #fff, 0 0 40px #ff4df0; }
+}
+.animate-glow { animation: glow 2s infinite ease-in-out; }
+
+/* ============================================
+   BACK TO TOP BUTTON
+   ============================================ */
+#btnVolverArriba {
+  position: fixed; bottom: 30px; right: 30px;
+  width: 45px; height: 45px;
+  border: none; border-radius: 50%;
+  background: var(--primary); color: #000;
+  font-size: 1.5rem; cursor: pointer;
+  box-shadow: 0 0 10px var(--primary);
+  display: none; z-index: 1000;
+}
+
+/* ============================================
+   GENERIC CARD
+   ============================================ */
+.card {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 15px var(--primary)22;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px var(--primary)33;
+}
+.card-title {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.card-text, .card a {
+  color: var(--text);
+}
+.card a.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: var(--bg);
+  border-radius: 8px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.card a.btn:hover {
+  background: #00d4e6;
+  box-shadow: 0 0 10px var(--primary);
+}
+
+/* ============================================
+   RECURSOS GRID
+   ============================================ */
+.recursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 2rem;
+}
+.recurso-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 15px var(--primary)22;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.recurso-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--primary)33;
+}
+.recurso-card img {
+  height: 60px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px var(--primary)44);
+}
+.recurso-card h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: var(--step-1);
+}
+.recurso-card p {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+.recurso-card a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: var(--bg);
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+.recurso-card a:hover {
+  background: #00d4e6;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+@media (max-width: 576px) {
+  .recurso-card {
+    padding: 1.2rem 1rem;
+  }
+  .recurso-card h3 { font-size: 1rem; }
+  .recurso-card p  { font-size: 0.85rem; }
+}
+
+/* ============================================
+   VISUALIZADOR MUSICAL BACKGROUND
+   ============================================ */
+.fondo-musical-animado {
+  position: fixed; inset: 0; z-index: 0;
+  background: url('../img/visualizador-musical.png') center/cover no-repeat;
+  opacity: 0.08; pointer-events: none;
+  animation: desplazarFondo 30s linear infinite;
+}
+@keyframes desplazarFondo {
+  0%   { background-position: center 0; }
+  100% { background-position: center 100%; }
+}
