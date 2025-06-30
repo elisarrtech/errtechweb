@@ -36,10 +36,10 @@ small { font-size: var(--step--1); }
 /* =================== RESET Y TIPOGRAFÍA =================== */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #121212;
-  color: #ccc;
+  background-color: var(--bg);
+  color: var(--text);
   margin: 0;
-  padding: 0;
+  padding: 0;   
 }
 
 h1, h2, h3 {
@@ -64,6 +64,10 @@ a:hover {
   color: #fff;
   text-shadow: 0 0 8px #00f0ff;
 }
+
+a, .cta-btn, .recurso-card a {
+  background-color: var(--primary);
+  color: var(--bg);
 
 /* =================== COLORES NEÓN PERSONALIZADOS =================== */
 .text-neon-blue { color: #00f0ff; }
@@ -268,13 +272,14 @@ form input:focus, form textarea:focus {
 }
 
 .recurso-card {
-  background: #1e1e1e;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 2rem 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
-  border: 1px solid #333;
+
 }
 
 .recurso-card:hover {
