@@ -1,112 +1,36 @@
-/* ——— VARIABLES TIPOGRÁFICAS Y DE TEMA ——— */
-:root {
-  /* Escalado tipográfico */
-  --step--2: 0.625rem; /* 10px */
-  --step--1: 0.75rem;  /* 12px */
-  --step-0: 1rem;      /* 16px */
-  --step-1: 1.25rem;   /* 20px */
-  --step-2: 1.563rem;  /* 25px */
-  --step-3: 1.953rem;  /* 31px */
-  --step-4: 2.441rem;  /* 39px */
-
-  /* Tema claro por defecto */
-  --bg: #ffffff;
-  --text: #121212;
-  --card-bg: #f7f7f7;
-  --card-border: #ddd;
-  --primary: #00f0ff;
-  --cta-bg: #ff4df0;
-}
-
-/* Tema oscuro */
-[data-theme="dark"] {
-  --bg: #121212;
-  --text: #ccc;
-  --card-bg: #1e1e1e;
-  --card-border: #333;
-  --primary: #00f0ff;
-  --cta-bg: #ff4df0;
-}
-
-
 
 /* =================== RESET Y TIPOGRAFÍA =================== */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  margin: 0;
-  padding: 0;   
+  background-color: #121212;
+  color: #ccc; /* Color base legible sobre fondo oscuro */
 }
 
-/* Tamaños según escala */
-h1 { font-size: var(--step-4); }
-h2 { font-size: var(--step-3); }
-h3 { font-size: var(--step-2); }
-p, a, li { font-size: var(--step-0); }
-small { font-size: var(--step--1); }
-
-
-
-
-/* =================== ENLACES GLOBALES =================== */
+/* =================== TIPOGRAFÍA GENERAL =================== */
+h1, h2, h3 {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
 a {
-  color: var(--primary);
+  color: #00f0ff;
   text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease;
-}
-a::after {
-  content: '';
-  position: absolute;
-  left: 0; bottom: -2px;
-  width: 0; height: 2px;
-  background: currentColor;
-  transition: width 0.3s ease;
+  transition: all 0.3s ease;
 }
 a:hover {
   color: #fff;
-}
-a:hover::after {
-  width: 100%;
+  text-shadow: 0 0 8px #00f0ff;
 }
 
-/* =================== BOTÓN PRINCIPAL (CTA) =================== */
-.cta-btn {
-  background-color: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
-  padding: 0.6rem 1.5rem;
-  font-weight: bold;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  margin-top: 1.5rem;
-}
-
-/* =================== ENLACES “VISITAR” EN TARJETAS =================== */
-.recurso-card a {
-  display: inline-block;
-  background-color: var(--primary);
-  color: var(--bg);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-.recurso-card a:hover {
-  background-color: #00d4e6;
-}
-
-a, .cta-btn, .recurso-card a {
-  background-color: var(--primary);
-  color: var(--bg);
-}
-
-
-
-/* ——— COLORES NEÓN PERSONALIZADOS ——— */
-.text-neon-blue  { color: #00f0ff; }
-.text-neon-pink  { color: #ff4df0; }
-.text-neon-purple{ color: #a64eff; }
+/* =================== COLORES NEÓN PERSONALIZADOS =================== */
+.text-neon-blue { color: #00f0ff !important; }
+.text-neon-pink { color: #ff4df0 !important; }
+.text-neon-purple { color: #a64eff !important; }
 
 /* =================== FORMULARIOS =================== */
 form input, form textarea {
@@ -114,73 +38,41 @@ form input, form textarea {
   transition: all 0.3s ease;
 }
 form input:focus, form textarea:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 10px var(--primary)33;
+  border-color: #00f0ff;
+  box-shadow: 0 0 10px #00f0ff33;
   outline: none;
 }
 
-/* =================== NAVBAR =================== */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 999;
+/* =================== BOTÓN PRINCIPAL (CTA) =================== */
+.cta-btn {
   background-color: transparent;
-  transition: background-color 0.3s ease;
+  border: 2px solid #00f0ff;
+  color: #00f0ff;
+  padding: 0.6rem 1.5rem;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
 }
-.navbar.scrolled {
-  background-color: rgba(18,18,18,0.95);
+.cta-btn:hover {
+  background-color: #00f0ff;
+  color: #000;
+  box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
 }
 
-/* Navbar personalizado (si usas .navbar-custom) */
+/* =================== NAVEGACIÓN =================== */
 .navbar-custom {
   background: linear-gradient(90deg, #1f0037, #00314d);
   box-shadow: 0 4px 10px rgba(0, 255, 255, 0.1);
-  border-bottom: 2px solid var(--primary)33;
+  border-bottom: 2px solid #00f0ff33;
 }
 .navbar-custom .nav-link {
-  color: #fff;
+  color: #fff !important;
   transition: all 0.3s ease;
-  position: relative;
-}
-.navbar-custom .nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0; height: 2px;
-  left: 0; bottom: 0;
-  background-color: var(--primary);
-  transition: width 0.3s ease;
-}
-.navbar-custom .nav-link:hover::after {
-  width: 100%;
 }
 .navbar-custom .nav-link:hover {
-  color: var(--primary);
-  text-shadow: 0 0 8px var(--primary);
-}
-.navbar-custom .nav-link.activo {
-  color: var(--primary) !important;
-  text-shadow: 0 0 8px var(--primary);
-  border-bottom: 2px solid var(--primary);
-}
-
-/* =================== ENLACE ESPECIAL MÚSICA =================== */
-.nav-musica {
-  font-weight: 600;
-  color: #a64eff;
-  transition: all 0.3s ease;
-}
-.nav-musica i {
-  font-size: 1.2rem;
-  margin-right: 6px;
-  transition: transform 0.3s, color 0.3s;
-}
-.nav-musica:hover {
-  color: #fff;
-  text-shadow: 0 0 8px #a64eff;
-}
-.nav-musica:hover i {
-  color: #fff;
-  transform: scale(1.2) rotate(10deg);
+  color: #00f0ff !important;
+  text-shadow: 0 0 8px #00f0ff;
 }
 
 /* =================== HERO =================== */
@@ -193,113 +85,284 @@ form input:focus, form textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #fff;
   overflow: hidden;
 }
 .hero-overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 .hero-content {
   position: relative;
   z-index: 2;
   text-align: center;
 }
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 0 20px #ff4df0;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #ccc;
+}
+
+/* =================== ANIMACIONES =================== */
 @keyframes gradientBG {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position:100% 50%; }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 @keyframes glow {
-  0%,100% { text-shadow: 0 0 10px #ff4df0, 0 0 20px #ff4df0; }
-  50%     { text-shadow: 0 0 20px #fff,     0 0 40px #ff4df0; }
+  0%, 100% { text-shadow: 0 0 10px #ff4df0, 0 0 20px #ff4df0; }
+  50% { text-shadow: 0 0 20px #fff, 0 0 40px #ff4df0; }
 }
-.animate-glow { animation: glow 2s infinite ease-in-out; }
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-glow {
+  animation: glow 2s infinite ease-in-out;
+}
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* =================== BOTÓN IR ARRIBA =================== */
-#btnVolverArriba {
+#backToTopBtn {
   position: fixed;
-  bottom: 30px; right: 30px;
+  bottom: 30px;
+  right: 30px;
   display: none;
-  background-color: var(--primary);
+  background-color: #00f0ff;
   color: #000;
   border: none;
   border-radius: 50%;
-  width: 45px; height: 45px;
+  width: 45px;
+  height: 45px;
   font-size: 1.5rem;
   cursor: pointer;
-  box-shadow: 0 0 10px var(--primary);
+  box-shadow: 0 0 10px #00f0ff;
   z-index: 1000;
 }
 
-/* =================== TARJETAS / RECURSOS =================== */
+/* =================== TRIÁNGULOS ANIMADOS =================== */
+.bg-animated-shapes {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+.bg-animated-shapes li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid rgba(0, 240, 255, 0.15);
+  animation: floatShape 25s linear infinite;
+  bottom: -150px;
+}
+.bg-animated-shapes li:nth-child(1) { left: 25%; animation-delay: 0s; }
+.bg-animated-shapes li:nth-child(2) { left: 10%; animation-delay: 2s; }
+.bg-animated-shapes li:nth-child(3) { left: 70%; animation-delay: 4s; }
+.bg-animated-shapes li:nth-child(4) { left: 40%; animation-delay: 0s; }
+.bg-animated-shapes li:nth-child(5) { left: 65%; animation-delay: 0s; }
+.bg-animated-shapes li:nth-child(6) { left: 75%; animation-delay: 3s; }
+.bg-animated-shapes li:nth-child(7) { left: 35%; animation-delay: 7s; }
+.bg-animated-shapes li:nth-child(8) { left: 50%; animation-delay: 15s; }
+.bg-animated-shapes li:nth-child(9) { left: 20%; animation-delay: 2s; }
+.bg-animated-shapes li:nth-child(10) { left: 85%; animation-delay: 0s; }
+
+@keyframes floatShape {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  50% { opacity: 0.3; }
+  100% { transform: translateY(-1000px) rotate(360deg); opacity: 0; }
+}
+
+/* =================== CARDS =================== */
+.border-neon-blue {
+  border-color: #00f0ff !important;
+}
+.card-title i {
+  margin-right: 8px;
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00f0ff33;
+}
+
+/* =================== SECCIÓN DE RECURSOS =================== */
+
+.recursos-section {
+  background-color: #121212;
+  padding: 4rem 1rem;
+}
+
 .recursos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
+
 .recurso-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
+  background: #1e1e1e;
   border-radius: 12px;
   padding: 2rem 1.5rem;
   text-align: center;
-  box-shadow: 0 0 15px rgba(0,240,255,0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+  border: 1px solid #333;
 }
+
 .recurso-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0,240,255,0.3);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
 }
+
 .recurso-card img {
-  height: 60px; margin-bottom: 1rem;
+  height: 60px;
+  margin-bottom: 1rem;
   object-fit: contain;
   filter: drop-shadow(0 0 5px #00f0ff44);
 }
+
 .recurso-card h3 {
-  color: var(--primary);
+  color: #00f0ff;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
+
 .recurso-card p {
-  color: var(--text);
+  font-size: 0.95rem;
+  color: #ccc;
   margin-bottom: 1rem;
 }
 
-/* =================== RESPONSIVE =================== */
-@media (max-width:576px) {
-  .recurso-card {
-    padding: 1.2rem 1rem;
-  }
-  .recurso-card h3 { font-size: 1rem; }
-  .recurso-card p  { font-size: 0.85rem; }
-}
-
-/* =================== VISUALIZADOR MUSICAL =================== */
-.fondo-musical-animado {
-  position: fixed; inset:0;
-  background: url('../img/visualizador-musical.png') center/cover no-repeat;
-  opacity: 0.08;
-  pointer-events: none;
-  animation: desplazarFondo 30s linear infinite;
-}
-@keyframes desplazarFondo {
-  0%   { background-position: center 0; }
-  100% { background-position: center 100%; }
-}
-
-/* =================== BOTÓN FIJO “CONTÁCTAME” =================== */
-.cta-fixed {
-  position: fixed;
-  bottom: 20px; right: 20px;
-  background: var(--cta-bg);
-  color: #fff;
-  padding: .8rem 1.2rem;
-  border-radius: 50px;
+.recurso-card a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #00f0ff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
   text-decoration: none;
-  box-shadow: 0 0 10px var(--cta-bg)aa;
-  font-weight: 600;
-  transition: transform .2s ease;
+  transition: background-color 0.3s ease;
 }
-.cta-fixed:hover {
-  transform: scale(1.1);
+
+.recurso-card a:hover {
+  background-color: #00d4e6;
 }
+
+.servicio-card {
+  background-color: #1b1b1b;
+  border: 1px solid #00f0ff33;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px #00f0ff22;
+}
+
+.servicio-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px #00f0ff88;
+  background-color: #222;
+}
+
+.servicio-card i {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #00f0ff;
+}
+
+/* ========== VISUALIZADOR MUSICAL DECORATIVO (ondas/círculos) ========== */
+.visualizador-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.visualizador-bg::before,
+.visualizador-bg::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: pulso 6s ease-in-out infinite;
+  filter: blur(40px);
+}
+
+.visualizador-bg::before {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.visualizador-bg::after {
+  bottom: 10%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+@keyframes pulso {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.8;
+  }
+}
+.navbar-custom .nav-link {
+  color: #fff !important;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-custom .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #00f0ff;
+  transition: width 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #00f0ff !important;
+  text-shadow: 0 0 8px #00f0ff;
+}
+
+
