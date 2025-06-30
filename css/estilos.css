@@ -429,4 +429,17 @@ h1.display-5 {
   background-color: rgba(18,18,18,0.95);
 }
 
+:root {
+  --bg: #121212;
+  --fg: #ccc;
+}
+[data-theme="light"] {
+  --bg: #fff;
+  --fg: #333;
+}
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: background-color 0.3s, color 0.3s;
+}
 
