@@ -401,4 +401,16 @@ h1.display-5 {
   box-shadow: 0 0 15px #ff4df0aa, 0 0 25px #ff4df0aa;
 }
 
+/* Navbar fija y cambio de fondo al hacer scroll */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+.navbar.scrolled {
+  background-color: rgba(18,18,18,0.95);
+}
+
 
