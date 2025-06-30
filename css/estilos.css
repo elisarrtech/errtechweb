@@ -1,5 +1,6 @@
-/* =================== VARIABLES TIPOGRÁFICAS =================== */
+/* ——— VARIABLES TIPOGRÁFICAS Y DE TEMA ——— */
 :root {
+  /* Escalado tipográfico */
   --step--2: 0.625rem; /* 10px */
   --step--1: 0.75rem;  /* 12px */
   --step-0: 1rem;      /* 16px */
@@ -7,16 +8,7 @@
   --step-2: 1.563rem;  /* 25px */
   --step-3: 1.953rem;  /* 31px */
   --step-4: 2.441rem;  /* 39px */
-}
 
-h1 { font-size: var(--step-4); }
-h2 { font-size: var(--step-3); }
-h3 { font-size: var(--step-2); }
-p, li { font-size: var(--step-0); }
-small { font-size: var(--step--1); }
-
-/* =================== VARIABLES DE TEMA =================== */
-:root {
   /* Tema claro por defecto */
   --bg: #ffffff;
   --text: #121212;
@@ -26,6 +18,7 @@ small { font-size: var(--step--1); }
   --cta-bg: #ff4df0;
 }
 
+/* Tema oscuro */
 [data-theme="dark"] {
   --bg: #121212;
   --text: #ccc;
@@ -35,26 +28,26 @@ small { font-size: var(--step--1); }
   --cta-bg: #ff4df0;
 }
 
+
+
 /* =================== RESET Y TIPOGRAFÍA =================== */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
   color: var(--text);
   margin: 0;
-  padding: 0;
-  transition: background-color 0.3s, color 0.3s;
+  padding: 0;   
 }
 
-h1, h2, h3 {
-  color: #fff;
-  text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
-}
+/* Tamaños según escala */
+h1 { font-size: var(--step-4); }
+h2 { font-size: var(--step-3); }
+h3 { font-size: var(--step-2); }
+p, a, li { font-size: var(--step-0); }
+small { font-size: var(--step--1); }
 
-p {
-  line-height: 1.7;
-  margin-bottom: 1rem;
-  color: #ddd;
-}
+
+
 
 /* =================== ENLACES GLOBALES =================== */
 a {
@@ -78,6 +71,11 @@ a:hover::after {
   width: 100%;
 }
 
+a, .cta-btn, .recurso-card a {
+  background-color: var(--primary);
+  color: var(--bg);
+}
+
 /* =================== BOTÓN PRINCIPAL (CTA) =================== */
 .cta-btn {
   background-color: transparent;
@@ -88,11 +86,6 @@ a:hover::after {
   border-radius: 30px;
   transition: all 0.3s ease;
   margin-top: 1.5rem;
-}
-.cta-btn:hover {
-  background-color: var(--primary);
-  color: var(--bg);
-  box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
 }
 
 /* =================== ENLACES “VISITAR” EN TARJETAS =================== */
@@ -108,7 +101,13 @@ a:hover::after {
   background-color: #00d4e6;
 }
 
-/* =================== COLORES NEÓN PERSONALIZADOS =================== */
+a, .cta-btn, .recurso-card a {
+  background-color: var(--primary);
+  color: var(--bg);
+}
+
+
+/* ——— COLORES NEÓN PERSONALIZADOS ——— */
 .text-neon-blue  { color: #00f0ff; }
 .text-neon-pink  { color: #ff4df0; }
 .text-neon-purple{ color: #a64eff; }
