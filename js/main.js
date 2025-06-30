@@ -66,3 +66,14 @@ window.addEventListener('scroll', () => {
   else nav.classList.remove('scrolled');
 });
 
+const toggle = document.getElementById('theme-toggle');
+toggle.addEventListener('click', () => {
+  const next = document.documentElement.getAttribute('data-theme') === 'light' ? '' : 'light';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
+// Al cargar, aplica preferencia guardada
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('theme');
+  if (saved) document.documentElement.setAttribute('data-theme', saved);
+});
