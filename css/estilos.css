@@ -447,36 +447,36 @@ footer i {
 /* Colores personalizados para cada tarjeta */
 .tarjeta-1 {
   background-color: #181f3d; /* Azul oscuro */
-  border: 1px solid #00f0ff;
+  border: 2px solid #00f0ff;
   color: #ffffff;
 }
 
 .tarjeta-2 {
   background-color: #301934; /* Morado profundo */
-  border: 1px solid #ff4df0;
+  border: 2px solid #ff4df0;
   color: #ffffff;
 }
 
 .tarjeta-3 {
   background-color: #1d2d1d; /* Verde oscuro */
-  border: 1px solid #18e191;
+  border: 2px solid #1d2d1d;
   color: #ffffff;
 }
 .tarjeta-4 {
   background-color: #ffe933 ; /* Amarillo */
-  border: 1px solid #00f0ff;
+  border: 2px solid #ffe933;
   color: #ffffff;
 }
 
 .tarjeta-5 {
   background-color: #fa1105 ; /* Rojo */
-  border: 1px solid #ff4df0;
+  border: 2px solid #fa1105;
   color: #ffffff;
 }
 
 .tarjeta-6 {
   background-color: #fa05ca  /* Rosa */
-  border: 1px solid #18e191;
+  border: 2px solid #fa05ca;
   color: #ffffff;
 }
 
