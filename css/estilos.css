@@ -68,6 +68,7 @@ a:hover {
 a, .cta-btn, .recurso-card a {
   background-color: var(--primary);
   color: var(--bg);
+}
 
 /* =================== COLORES NEÓN PERSONALIZADOS =================== */
 .text-neon-blue { color: #00f0ff; }
