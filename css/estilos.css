@@ -1,3 +1,35 @@
+/* ========== Variables tema claro ========== */
+:root {
+  --bg: #ffffff;
+  --text: #121212;
+  --card-bg: #f7f7f7;
+  --card-border: #ddd;
+  --primary: #00f0ff;
+  --cta-bg: #ff4df0;
+}
+
+/* ========== Tema oscuro ========== */
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #ccc;
+  --card-bg: #1e1e1e;
+  --card-border: #333;
+}
+
+/* ========== Aplicación de variables ========= */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ejemplo de uso en otros elementos */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+}
+
+
 /* =================== RESET Y TIPOGRAFÍA =================== */
 body {
   font-family: 'Poppins', sans-serif;
