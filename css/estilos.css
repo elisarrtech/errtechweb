@@ -467,3 +467,21 @@ a:hover::after {
   width: 100%;
 }
 
+/* en estilos.css */
+.cta-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff4df0;
+  color: #fff;
+  padding: .8rem 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #ff4df0aa;
+  font-weight: 600;
+  transition: transform .2s ease;
+}
+.cta-fixed:hover {
+  transform: scale(1.1);
+}
+
