@@ -71,11 +71,6 @@ a:hover::after {
   width: 100%;
 }
 
-a, .cta-btn, .recurso-card a {
-  background-color: var(--primary);
-  color: var(--bg);
-}
-
 /* =================== BOTÓN PRINCIPAL (CTA) =================== */
 .cta-btn {
   background-color: transparent;
@@ -105,6 +100,7 @@ a, .cta-btn, .recurso-card a {
   background-color: var(--primary);
   color: var(--bg);
 }
+
 
 
 /* ——— COLORES NEÓN PERSONALIZADOS ——— */
