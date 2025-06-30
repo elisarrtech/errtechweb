@@ -462,8 +462,9 @@ footer i {
   border: 2px solid #1d2d1d;
   color: #ffffff;
 }
+
 .tarjeta-4 {
-  background-color: #ffe933 ; /* Amarillo */
+  background-color: #ffe933; /* Amarillo */
   border: 2px solid #ffe933;
   color: #ffffff;
 }
@@ -475,7 +476,7 @@ footer i {
 }
 
 .tarjeta-6 {
-  background-color: #fa05ca  /* Rosa */
+  background-color: #fa05ca;  /* Rosa */
   border: 2px solid #fa05ca;
   color: #ffffff;
 }
