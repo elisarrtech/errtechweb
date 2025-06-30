@@ -444,4 +444,28 @@ footer i {
   transition: all 0.3s ease;
 }
 
+/* Colores personalizados para cada tarjeta */
+.tarjeta-1 {
+  background-color: #181f3d; /* Azul oscuro */
+  border: 1px solid #00f0ff;
+  color: #ffffff;
+}
+
+.tarjeta-2 {
+  background-color: #301934; /* Morado profundo */
+  border: 1px solid #ff4df0;
+  color: #ffffff;
+}
+
+.tarjeta-3 {
+  background-color: #1d2d1d; /* Verde oscuro */
+  border: 1px solid #18e191;
+  color: #ffffff;
+}
+
+.servicio-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px var(--primary);
+  transition: all 0.3s ease;
+}
 
