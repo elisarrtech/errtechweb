@@ -463,19 +463,19 @@ footer i {
   color: #ffffff;
 }
 .tarjeta-4 {
-  background-color: #281f3d; /* Azul oscuro */
+  background-color: #ffe933 ; /* Amarillo */
   border: 1px solid #00f0ff;
   color: #ffffff;
 }
 
 .tarjeta-5 {
-  background-color: #351934; /* Morado profundo */
+  background-color: #fa1105 ; /* Rojo */
   border: 1px solid #ff4df0;
   color: #ffffff;
 }
 
 .tarjeta-6 {
-  background-color: #8d2d1d; /* Verde oscuro */
+  background-color: #fa05ca  /* Rosa */
   border: 1px solid #18e191;
   color: #ffffff;
 }
