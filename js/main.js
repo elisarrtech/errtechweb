@@ -58,3 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Cambia la clase 'scrolled' según el scroll
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  if (window.scrollY > 50) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
