@@ -4,84 +4,149 @@
   <meta charset="UTF-8">
   <title>Inicio | Elisarrtech</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Estilos y fuentes -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Íconos -->
+  <script src="https://kit.fontawesome.com/a2e0c6e6f7.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-black text-white">
-  
-<nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary shadow-lg">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-      <img src="img/logotransp.png" alt="Elisarrtech" style="max-height: 40px;">
-      <span class="fw-bold text-neon-blue">Elisarrtech</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="menuNav">
-      <ul class="navbar-nav gap-3">
-        <li class="nav-item">
-          <a class="nav-link text-white" href="index.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="sobre-mi.html">Sobre mí</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="proyectos.html">Proyectos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="blog.html">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="contacto.html">Contacto</a>
-        </li>
-      </ul>
+
+<!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary shadow-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logotransp.png" alt="Elisarrtech" style="max-height: 40px;">
+        <span class="fw-bold text-neon-blue">Elisarrtech</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="sobre-mi.html">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="proyectos.html">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="recursos.html">Recursos</a></li>
+          <li class="nav-item">
+            <a class="nav-link nav-musica text-white d-flex align-items-center gap-2" href="musica.html">
+              <img src="img/music.png" alt="Música" class="icono-musica" />
+              Música
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+<!-- CONTENIDO PRINCIPAL -->
+<main class="container py-5" data-aos="fade-up">
+  <div class="text-center mb-5">
+    <h1 class="display-4 text-neon-blue">Hola, soy Elisarrtech</h1>
+    <p class="lead">Tecnología, educación y creatividad para transformar ideas en soluciones.</p>
+    <a href="proyectos.html" class="btn cta-btn mt-3">Ver proyectos</a>
   </div>
-</nav>
 
-
-  <main class="container py-5" data-aos="fade-up">
-    <div class="text-center mb-5">
-      <h1 class="display-4 text-neon-blue">Hola, soy Elisarrtech</h1>
-      <p class="lead">Tecnología, educación y creatividad para transformar ideas en soluciones.</p>
-      <a href="proyectos.html" class="btn cta-btn mt-3">Ver proyectos</a>
+  <section class="row">
+    <!-- Servicios -->
+    <!-- Cada tarjeta tiene animación y diseño neon -->
+    <div class="col-md-4 mb-4" data-aos="zoom-in">
+      <div class="card servicio-card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title text-neon-blue"><i class="fas fa-laptop-code"></i> Desarrollo Web</h5>
+          <p>Creo páginas web modernas, visuales y adaptadas a celulares y computadoras, usando HTML, CSS, Bootstrap y Flask.</p>
+        </div>
+      </div>
     </div>
 
-    <section class="row">
-      <div class="col-md-4 mb-4" data-aos="zoom-in">
-        <div class="card bg-black border border-neon-blue text-white h-100">
-          <div class="card-body">
-            <h5 class="card-title text-neon-blue"><i class="fas fa-code"></i> Desarrollo Web</h5>
-            <p>Diseño moderno y responsivo con HTML, CSS, Bootstrap y Flask.</p>
-          </div>
+    <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+      <div class="card servicio-card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title text-neon-blue"><i class="fas fa-brain"></i> Inteligencia Artificial</h5>
+          <p>Desarrollo asistentes virtuales (chatbots) que automatizan tareas y responden preguntas en educación y negocios.</p>
         </div>
       </div>
-      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="150">
-        <div class="card bg-black border border-neon-blue text-white h-100">
-          <div class="card-body">
-            <h5 class="card-title text-neon-blue"><i class="fas fa-brain"></i> Inteligencia Artificial</h5>
-            <p>Aplicaciones educativas y empresariales con chatbots y asistentes IA.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
-        <div class="card bg-black border border-neon-blue text-white h-100">
-          <div class="card-body">
-            <h5 class="card-title text-neon-blue"><i class="fas fa-microchip"></i> Raspberry Pi</h5>
-            <p>Proyectos creativos de automatización y formación práctica con Python.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+    </div>
 
+    <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+      <div class="card servicio-card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title text-neon-blue"><i class="fas fa-user-cog"></i> Asistente Virtual</h5>
+          <p>Apoyo en tareas remotas como automatización, organización digital, productividad, soporte administrativo y más.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+      <div class="card servicio-card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title text-neon-blue"><i class="fas fa-tools"></i> Soporte Técnico Remoto</h5>
+          <p>Resuelvo problemas de software, realizo instalaciones, optimizaciones y doy asistencia digital desde cualquier lugar.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
+      <div class="card servicio-card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title text-neon-blue"><i class="fas fa-chart-pie"></i> Dashboards Interactivos</h5>
+          <p>Diseño paneles visuales en Excel, Google Sheets o web para analizar datos, medir productividad y tomar decisiones más rápido.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="500">
+      <div class="card servicio-card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title text-neon-blue"><i class="fas fa-magic"></i> Automatización de Tareas</h5>
+          <p>Automatizo procesos con tecnología: formularios, scripts, integraciones y más para que trabajes menos y logres más.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Botón "Volver arriba" -->
+<button id="btnVolverArriba" onclick="volverArriba()" title="Volver arriba">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+  <div class="text-center mt-4">
+  <a href="contacto.html" class="cta-btn btn-contratame animate-glow">
+    🚀 ¡Contáctame o Contrátame!
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-black text-center text-light py-4 mt-5">
+  <div class="container">
+    <h5 class="mb-3 text-neon-purple">Elisarrtech</h5>
+    <div class="mb-3">
+      <a href="https://github.com/elisarrtech" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/tuusuario" target="_blank" class="text-neon-pink me-3 fs-5"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:tuemail@correo.com" class="text-neon-purple fs-5"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p class="small m-0">&copy; 2025 Elisarrtech | Todos los derechos reservados</p>
+  </div>
+</footer>
+
+  <!-- JS de Bootstrap que maneja el collapse del navbar -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS (si lo usas) -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ once: true, duration: 1000, offset: 120 });
   </script>
+  <!-- Tu JS personalizado -->
+  <script src="js/main.js"></script>
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/a2e0c6e6f7.js" crossorigin="anonymous"></script>
 </body>
 </html>
 
