@@ -446,13 +446,13 @@ footer i {
 
 /* Colores personalizados para cada tarjeta */
 .tarjeta-1 {
-  background-color: #181f3d; /* Azul oscuro */
+  background-color: #00f0ff; /* Azul oscuro */
   border: 2px solid #00f0ff;
   color: #ffffff;
 }
 
 .tarjeta-2 {
-  background-color: #301934; /* Morado profundo */
+  background-color: #ff4df0; /* Morado profundo */
   border: 2px solid #ff4df0;
   color: #ffffff;
 }
