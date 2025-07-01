@@ -487,3 +487,21 @@ footer i {
   transition: all 0.3s ease;
 }
 
+/* Botón estilizado para cambiar tema */
+.toggle-theme-btn {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  color: var(--primary);
+  padding: 8px 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-theme-btn:hover {
+  background-color: var(--primary);
+  color: #121212;
+  box-shadow: 0 0 10px var(--primary);
+}
+
