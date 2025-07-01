@@ -12,7 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   toggleBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
+    let currentTheme = document.documentElement.getAttribute('data-theme');
+if (!currentTheme) {
+  currentTheme = 'light'; // o 'dark' según prefieras el valor por defecto
+}
+
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
