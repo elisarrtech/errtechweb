@@ -447,7 +447,7 @@ footer i {
 /* Colores personalizados para cada tarjeta */
 .tarjeta-1 {
   background-color: #00f0ff; /* Azul oscuro */
-  border: 2px solid #00f0ff;
+  border: 2px solid #333cff;
   color: #ffffff;
 }
 
@@ -477,7 +477,7 @@ footer i {
 
 .tarjeta-6 {
   background-color: #05fae4;  /* Rosa */
-  border: 2px solid #05fae4;
+  border: 2px solid #ff9c33;
   color: #ffffff;
 }
 
