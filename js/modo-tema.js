@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleBtn.addEventListener('click', () => {
     let currentTheme = document.documentElement.getAttribute('data-theme');
 if (!currentTheme) {
-  currentTheme = 'light'; // o 'dark' según prefieras el valor por defecto
+  currentTheme = 'dark'; // o 'dark' según prefieras el valor por defecto
 }
 
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
