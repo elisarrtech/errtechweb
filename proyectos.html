@@ -1,73 +1,196 @@
-<!-- ✅ PROYECTOS.HTML CON ESTILO MODERNO -->
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML5 -->
+<html lang="es"> <!-- Inicio del documento con idioma español -->
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proyectos destacados de Elisarrtech: desarrollo web, IA y educación digital">
-    <title>Proyectos | Elisarrtech</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" /> <!-- Codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Escala y adaptación en móviles -->
+  <title>Proyectos | Elisarrtech</title> <!-- Título en la pestaña del navegador -->
+
+  <!-- Bootstrap para estilos y diseño responsivo -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+  <!-- Fuente personalizada desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Fuente genericos cloudfare -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <!-- Tus estilos personalizados -->
+  <link rel="stylesheet" href="css/estilos.css" />
+
+  <!-- Librería AOS para animaciones al hacer scroll -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-<body>
 
-<!-- Navbar -->
-<nav class="navbar-custom">
-    <div class="nav-container">
-        <a href="index.html" class="logo">Elisarrtech</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="proyectos.html" class="activo">Proyectos</a></li>
-            <li><a href="recursos.html">Recursos</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="musica.html" class="nav-musica"><i class="fas fa-music"></i> Música</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+<body class="bg-black text-white"> <!-- Cuerpo con fondo oscuro y texto blanco -->
+
+<!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary shadow-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logotransp.png" alt="Elisarrtech" style="max-height: 40px;">
+        <span class="fw-bold text-neon-blue">Elisarrtech</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="sobre-mi.html">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="proyectos.html">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="recursos.html">Recursos</a></li>
+          <li class="nav-item">
+            <a class="nav-link nav-musica text-white d-flex align-items-center gap-2" href="musica.html">
+              <img src="img/music.png" alt="Música" class="icono-musica" />
+              Música
+            </a>
+          </li>
         </ul>
-        <button class="toggle-theme-btn" title="Cambiar tema">&#9788;</button>
+      </div>
     </div>
-</nav>
+  </nav>
+  <!-- Contenido principal -->
+  <main class="container py-5" data-aos="fade-up"> <!-- AOS: animación al aparecer -->
+    <h1 class="text-neon-blue mb-4">Mis Proyectos</h1>
 
-<!-- Hero simple -->
-<section class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1 class="animate-glow">Mis Proyectos</h1>
-        <p>Soluciones prácticas con tecnologías modernas</p>
+    <!-- Fila de tarjetas de proyectos -->
+    <div class="row">
+      <!-- Tarjeta 1 -->
+      <div class="col-md-4 mb-4" data-aos="fade-up">
+        <div class="card bg-black border border-neon-blue text-white h-100">
+          <img src="img/fotobase.jpg" class="card-img-top p-3" alt="Proyecto HTML">
+          <div class="card-body">
+            <h5 class="card-title text-neon-blue">Sitio Educativo</h5>
+            <p class="card-text">Un sitio completo para compartir contenido educativo con HTML, CSS y Bootstrap.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card bg-black border border-neon-blue text-white h-100">
+          <img src="img/fotobase.jpg" class="card-img-top p-3" alt="Proyecto Flask">
+          <div class="card-body">
+            <h5 class="card-title text-neon-blue">Chatbot Flask</h5>
+            <p class="card-text">Chatbot funcional conectado a Google Sheets y desplegado en la web con Flask.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card bg-black border border-neon-blue text-white h-100">
+          <img src="img/fotobase.jpg" class="card-img-top p-3" alt="Python Tools">
+          <div class="card-body">
+            <h5 class="card-title text-neon-blue">Automatizaciones</h5>
+            <p class="card-text">Scripts en Python para organizar tareas, crear reportes y manejar PDFs localmente.</p>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
 
-<!-- Proyectos -->
-<section class="cards-section">
-    <div class="cards-container">
-
-        <div class="card tarjeta-1">
-            <h3>Dashboard de Presupuestos</h3>
-            <p>App en Streamlit para gestionar y visualizar gastos y presupuestos anuales.</p>
-            <a href="https://dashboard-presupuesto-app.streamlit.app/" target="_blank">Ver Demo</a>
+  <!-- Fila de tarjetas de proyectos -->
+    <div class="row">
+      <!-- Tarjeta 4 -->
+      <div class="col-md-4 mb-4" data-aos="fade-up">
+        <div class="card bg-black border border-neon-blue text-white h-100">
+          <img src="img/fotobase.jpg" class="card-img-top p-3" alt="Proyecto HTML">
+          <div class="card-body">
+            <h5 class="card-title text-neon-blue">Sitio Educativo</h5>
+            <p class="card-text">Un sitio completo para compartir contenido educativo con HTML, CSS y Bootstrap.</p>
+          </div>
         </div>
+      </div>
 
-        <div class="card tarjeta-2">
-            <h3>Chatbot Educativo</h3>
-            <p>Chatbot IA que responde preguntas de matemáticas para secundaria, desarrollado en Flask.</p>
-            <a href="proyecto-chatbot.html">Ver Más</a>
+      <!-- Tarjeta 5 -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card bg-black border border-neon-blue text-white h-100">
+          <img src="img/fotobase.jpg" class="card-img-top p-3" alt="Proyecto Flask">
+          <div class="card-body">
+            <h5 class="card-title text-neon-blue">Chatbot Flask</h5>
+            <p class="card-text">Chatbot funcional conectado a Google Sheets y desplegado en la web con Flask.</p>
+          </div>
         </div>
+      </div>
 
-        <div class="card tarjeta-3">
-            <h3>Web Personal Elisarrtech</h3>
-            <p>Diseño moderno, recursos digitales y secciones interactivas con Bootstrap y JS.</p>
-            <a href="https://elisarrtech.github.io/errtechweb/" target="_blank">Visitar Sitio</a>
+      <!-- Tarjeta 6 -->
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card bg-black border border-neon-blue text-white h-100">
+          <img src="img/fotobase.jpg" class="card-img-top p-3" alt="Python Tools">
+          <div class="card-body">
+            <h5 class="card-title text-neon-blue">Automatizaciones</h5>
+            <p class="card-text">Scripts en Python para organizar tareas, crear reportes y manejar PDFs localmente.</p>
+          </div>
         </div>
-
+      </div>
     </div>
-</section>
 
-<!-- Footer -->
-<footer>
-    <p>&copy; 2025 Elisarrtech - Todos los derechos reservados</p>
+  </main>
+
+
+  <!-- Script de animaciones AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 1000, offset: 120 });
+  </script>
+
+  <!-- Botón "Volver arriba" -->
+<button id="btnVolverArriba" onclick="volverArriba()" title="Volver arriba">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+  <div class="text-center mt-4">
+  <a href="contacto.html" class="cta-btn btn-contratame animate-glow">
+    🚀 ¡Contáctame o Contrátame!
+  </a>
+</div>
+  
+  <!-- FOOTER -->
+<footer class="bg-black text-center text-light py-4 mt-5">
+  <div class="container">
+    <h5 class="mb-3 text-neon-purple">Elisarrtech</h5>
+    <div class="mb-3">
+      <a href="https://github.com/elisarrtech" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/tuusuario" target="_blank" class="text-neon-pink me-3 fs-5"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:tuemail@correo.com" class="text-neon-purple fs-5"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="mb-3">
+  <a href="https://www.instagram.com/tuusuario" target="_blank" class="text-neon-pink me-3 fs-5">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.tiktok.com/@tuusuario" target="_blank" class="text-neon-purple me-3 fs-5">
+    <i class="fab fa-tiktok"></i>
+  </a>
+  <a href="https://www.youtube.com/@tuusuario" target="_blank" class="text-neon-blue me-3 fs-5">
+    <i class="fab fa-youtube"></i>
+  </a>
+  <a href="https://www.facebook.com/tuusuario" target="_blank" class="text-neon-blue me-3 fs-5">
+    <i class="fab fa-facebook"></i>
+  </a>
+  <a href="https://discord.gg/tuinvitacion" target="_blank" class="text-neon-pink me-3 fs-5">
+    <i class="fab fa-discord"></i>
+  </a>
+
+</div>
+
+    <p class="small m-0">&copy; 2025 Elisarrtech | Todos los derechos reservados</p>
+  </div>
 </footer>
 
-<script src="https://kit.fontawesome.com/a2e0e6f4c9.js" crossorigin="anonymous"></script>
-<script src="js/theme-toggle.js"></script>
-
+  <!-- JS de Bootstrap que maneja el collapse del navbar -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS (si lo usas) -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 1000, offset: 120 });
+  </script>
+  <!-- Tu JS personalizado -->
+  <script src="js/main.js"></script>
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/a2e0c6e6f7.js" crossorigin="anonymous"></script>
 </body>
 </html>
