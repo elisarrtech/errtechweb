@@ -9,6 +9,66 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a2e0c6e6f7.js" crossorigin="anonymous"></script>
+  <style>
+    .music-card {
+      background: rgba(30, 30, 40, 0.88);
+      border-radius: 24px;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      box-shadow: 0 0 24px #00f0ff33, 0 2px 24px #000b;
+      padding: 2rem 1.5rem 1.5rem 1.5rem;
+      text-align: center;
+      border: 1.5px solid #00f0ff33;
+    }
+    .music-card h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 16px #a259f7, 0 0 8px #00f0ff99;
+      letter-spacing: 1px;
+    }
+    .music-card p {
+      color: #d2e3f7;
+      margin-bottom: 1.5rem;
+    }
+    .visual-glow {
+      box-shadow: 0 0 30px #00f0ff55, 0 0 12px #a259f7aa;
+      border-radius: 12px;
+      background: #181926;
+      margin-bottom: 1.2rem;
+    }
+    .music-select {
+      margin-bottom: 1.5rem;
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .music-select select {
+      background: #191c26;
+      color: #00f0ff;
+      border: 1.5px solid #00f0ff;
+      border-radius: 12px;
+      font-weight: 600;
+      padding: 0.5em 1em;
+      font-size: 1.1em;
+      box-shadow: 0 0 10px #00f0ff44;
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+    .music-select select:focus {
+      border-color: #a259f7;
+      outline: none;
+      box-shadow: 0 0 16px #a259f7cc;
+    }
+    audio {
+      background: #181926;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00f0ff55;
+      margin-bottom: 1.2rem;
+    }
+    @media (max-width:600px){
+      .music-card { padding: 1.2rem 0.6rem 1.2rem 0.6rem; }
+      canvas#canvasVisual { min-height: 120px; }
+    }
+  </style>
 </head>
 <body class="bg-black text-white">
 <div class="fondo-musical-animado"></div>
@@ -44,20 +104,24 @@
 
   <!-- CONTENIDO -->
   <main class="container py-5" data-aos="fade-up">
-    <div class="text-center mb-5">
+    <div class="music-card">
       <h1 class="display-5 text-neon-purple animate-glow"><i class="fas fa-music me-2"></i>Música & Arte</h1>
-      <p class="lead">Aquí comparto mi gusto por la música electrónica y las artes visuales. Pronto encontrarás playlists, visualizadores, inspiración creativa y más.</p>
-    </div>
-
-    <!-- Visualizador o contenido -->
-    <section class="text-center mt-5">
-      <audio id="audioPlayer" controls class="mb-4">
+      <p class="lead">Explora mi lado creativo: escucha mis playlists, experimenta el <span class="text-neon-blue">visualizador interactivo</span> y déjate inspirar por la fusión de arte y tecnología.</p>
+      <!-- Selector de pista -->
+      <div class="music-select">
+        <select id="trackSelector">
+          <option value="audio/ejemplo.mp3">🎵 Sample 1 - Electrónica</option>
+          <option value="audio/sample2.mp3">🎹 Sample 2 - Chillwave</option>
+          <option value="audio/sample3.mp3">🎸 Sample 3 - Synthwave</option>
+        </select>
+      </div>
+      <audio id="audioPlayer" controls>
         <source src="audio/ejemplo.mp3" type="audio/mpeg">
         Tu navegador no soporta la reproducción de audio.
       </audio>
-      <canvas id="canvasVisual" width="600" height="200" style="width: 100%; max-width: 700px; height: auto;"></canvas>
-      <p class="text-muted mt-3">🎧 Próximamente: visualizador musical interactivo con más pistas.</p>
-    </section>
+      <canvas id="canvasVisual" width="600" height="180" class="visual-glow" style="width: 100%; max-width: 700px; height: auto;"></canvas>
+      <p class="text-muted mt-3">🎧 Prueba las pistas, disfruta el visualizador y regresa pronto para playlists y experiencias aún más inmersivas.</p>
+    </div>
   </main>
 <!-- Botón "Volver arriba" -->
 <button id="btnVolverArriba" onclick="volverArriba()" title="Volver arriba">
@@ -87,39 +151,78 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({ once: true, duration: 1000 });</script>
   <script>
+    // Cambiar pista con el selector
     const audio = document.getElementById('audioPlayer');
+    const trackSelector = document.getElementById('trackSelector');
+    trackSelector.addEventListener('change', function() {
+      audio.pause();
+      audio.querySelector('source').src = this.value;
+      audio.load();
+      audio.play();
+    });
+
+    // Visualizador musical: solo activa cuando el usuario da play (por autoplay policy)
     const canvas = document.getElementById('canvasVisual');
     const ctx = canvas.getContext('2d');
+    let audioCtx, analyser, source, animationId;
 
-    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    const analyser = audioCtx.createAnalyser();
-    const source = audioCtx.createMediaElementSource(audio);
-    source.connect(analyser);
-    analyser.connect(audioCtx.destination);
+    function setupAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioCtx.createAnalyser();
+        source = audioCtx.createMediaElementSource(audio);
+        source.connect(analyser);
+        analyser.connect(audioCtx.destination);
+        analyser.fftSize = 256;
+      }
+    }
 
-    analyser.fftSize = 256;
-    const bufferLength = analyser.frequencyBinCount;
-    const dataArray = new Uint8Array(bufferLength);
-
-    function draw() {
-      requestAnimationFrame(draw);
+    function drawVisualizer() {
+      animationId = requestAnimationFrame(drawVisualizer);
+      const bufferLength = analyser.frequencyBinCount;
+      const dataArray = new Uint8Array(bufferLength);
       analyser.getByteFrequencyData(dataArray);
 
-      ctx.fillStyle = '#121212';
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#181926";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       const barWidth = (canvas.width / bufferLength) * 2.5;
       let x = 0;
-
       for (let i = 0; i < bufferLength; i++) {
         const barHeight = dataArray[i];
-        ctx.fillStyle = `rgb(${barHeight + 100}, 0, ${255 - barHeight})`;
-        ctx.fillRect(x, canvas.height - barHeight / 2, barWidth, barHeight / 2);
+        ctx.save();
+        ctx.shadowColor = "#00f0ff";
+        ctx.shadowBlur = 10;
+        ctx.fillStyle = `rgb(${barHeight + 70}, 0, ${255 - barHeight})`;
+        ctx.fillRect(x, canvas.height - barHeight / 1.8, barWidth, barHeight / 1.8);
+        ctx.restore();
         x += barWidth + 1;
       }
     }
 
-    draw();
+    function startVisualizer() {
+      setupAudioContext();
+      drawVisualizer();
+    }
+    function stopVisualizer() {
+      if (animationId) cancelAnimationFrame(animationId);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#181926";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    // policies: solo inicia cuando el usuario interactúa
+    let visualActive = false;
+    audio.addEventListener('play', () => {
+      if (!visualActive) {
+        visualActive = true;
+        startVisualizer();
+      }
+    });
+    audio.addEventListener('pause', stopVisualizer);
+    audio.addEventListener('ended', stopVisualizer);
+
   </script>
 </body>
 </html>
