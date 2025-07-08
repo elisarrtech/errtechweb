@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog | Elisarrtech</title>
-
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Bootstrap -->
@@ -13,7 +12,7 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <!-- CSS -->
+  <!-- Tu CSS -->
   <link rel="stylesheet" href="css/estilos.css" />
 </head>
 
@@ -50,27 +49,33 @@
   <!-- Contenido principal -->
   <main class="container py-5">
     <h1 class="text-neon-purple text-center mb-4">Blog</h1>
-    <p class="text-center mb-5">Publicaciones sobre educación digital, tecnología, IA, productividad, herramientas, reflexiones y más.</p>
+    <p class="text-center mb-4">Publicaciones sobre educación digital, tecnología, IA, productividad, herramientas, reflexiones y más.</p>
+
+    <!-- Buscador -->
+    <div class="text-center mb-3">
+      <input type="text" id="searchBlog" class="form-control d-inline-block w-auto" style="max-width:250px;" placeholder="Buscar en el blog..." aria-label="Buscar en el blog">
+    </div>
 
     <!-- Filtros -->
     <div class="text-center mb-4">
-      <button class="btn btn-outline-light mx-1 filter-btn active" data-filter="all">Todos</button>
-      <button class="btn btn-outline-light mx-1 filter-btn" data-filter="ia">IA</button>
-      <button class="btn btn-outline-light mx-1 filter-btn" data-filter="educacion">Educación</button>
-      <button class="btn btn-outline-light mx-1 filter-btn" data-filter="tecnologia">Tecnología</button>
+      <button class="btn btn-outline-light mx-1 filter-btn active" data-filter="all" aria-label="Mostrar todas las categorías">Todos</button>
+      <button class="btn btn-outline-light mx-1 filter-btn" data-filter="ia" aria-label="Filtrar por IA">IA</button>
+      <button class="btn btn-outline-light mx-1 filter-btn" data-filter="educacion" aria-label="Filtrar por Educación">Educación</button>
+      <button class="btn btn-outline-light mx-1 filter-btn" data-filter="tecnologia" aria-label="Filtrar por Tecnología">Tecnología</button>
     </div>
 
-    <div class="row g-4">
+    <div class="row g-4" id="blogList">
       <!-- Entrada 1 -->
       <div class="col-md-4 blog-item" data-category="educacion" data-aos="fade-up">
         <div class="card h-100 bg-black text-light border border-secondary">
-          <img src="img/robotiko.jpg" class="card-img-top" alt="Artículo laptop">
           <div class="card-body">
+            <span class="badge bg-primary mb-2">Educación</span>
+            <img src="img/robotiko.jpg" class="card-img-top mb-3" alt="Artículo laptop">
             <h5 class="card-title text-neon-blue">La revolución digital en la educación</h5>
             <p class="card-text">La educación ya cambió. Conoce cómo la tecnología está abriendo nuevas puertas al aprendizaje en todo el mundo.</p>
           </div>
           <div class="card-footer bg-transparent border-top border-secondary">
-              <a href="articulo1.html" class="btn btn-outline-light btn-sm">Leer artículo</a>
+            <a href="articulo1.html" class="btn btn-outline-light btn-sm">Leer artículo</a>
           </div>
         </div>
       </div>
@@ -78,13 +83,14 @@
       <!-- Entrada 2 -->
       <div class="col-md-4 blog-item" data-category="ia" data-aos="fade-up" data-aos-delay="100">
         <div class="card h-100 bg-black text-light border border-secondary">
-          <img src="img/robotiko.jpg" class="card-img-top" alt="Artículo chatbot">
           <div class="card-body">
+            <span class="badge bg-success mb-2">IA</span>
+            <img src="img/robotiko.jpg" class="card-img-top mb-3" alt="Artículo chatbot">
             <h5 class="card-title text-neon-pink">¿Qué es un chatbot y cómo crear uno?</h5>
             <p class="card-text">Una introducción sencilla a los chatbots con herramientas accesibles.</p>
           </div>
           <div class="card-footer bg-transparent border-top border-secondary">
-             <a href="articulo2.html" class="btn btn-outline-light btn-sm">Leer artículo</a>
+            <a href="articulo2.html" class="btn btn-outline-light btn-sm">Leer artículo</a>
           </div>
         </div>
       </div>
@@ -92,8 +98,9 @@
       <!-- Entrada 3 -->
       <div class="col-md-4 blog-item" data-category="tecnologia" data-aos="fade-up" data-aos-delay="200">
         <div class="card h-100 bg-black text-light border border-secondary">
-          <img src="img/robotiko.jpg" class="card-img-top" alt="Artículo docente">
           <div class="card-body">
+            <span class="badge bg-warning text-dark mb-2">Tecnología</span>
+            <img src="img/robotiko.jpg" class="card-img-top mb-3" alt="Artículo docente">
             <h5 class="card-title text-neon-purple">10 herramientas digitales para docentes</h5>
             <p class="card-text">Apps, sitios y plataformas para mejorar la experiencia educativa.</p>
           </div>
@@ -106,8 +113,9 @@
       <!-- Entrada 4 -->
       <div class="col-md-4 blog-item" data-category="tecnologia" data-aos="fade-up" data-aos-delay="200">
         <div class="card h-100 bg-black text-light border border-secondary">
-          <img src="img/robotiko.jpg" class="card-img-top" alt="Artículo docente">
           <div class="card-body">
+            <span class="badge bg-warning text-dark mb-2">Tecnología</span>
+            <img src="img/robotiko.jpg" class="card-img-top mb-3" alt="Artículo docente">
             <h5 class="card-title text-neon-purple">5 formas prácticas de usar inteligencia artificial en la educación</h5>
             <p class="card-text">Cómo aprovechar la inteligencia artificial para optimizar tus clases, personalizar el aprendizaje y ahorrar tiempo como docente.</p>
           </div>
@@ -117,36 +125,41 @@
         </div>
       </div>
     </div>
-  </main>
-<!-- Botón "Volver arriba" -->
-<button id="btnVolverArriba" onclick="volverArriba()" title="Volver arriba">
-  <i class="fas fa-arrow-up"></i>
-</button>
 
-<div class="text-center mt-4">
-  <a href="contacto.html" class="cta-btn btn-contratame animate-glow">
-    🚀 ¡Contáctame o Contrátame!
-  </a>
-</div>
- <!-- FOOTER -->
-<footer class="bg-black text-center text-light py-4 mt-5">
-  <div class="container">
-    <h5 class="mb-3 text-neon-purple">Elisarrtech</h5>
-    <div class="mb-3">
-      <a href="https://github.com/elisarrtech" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/tuusuario" target="_blank" class="text-neon-pink me-3 fs-5"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:tuemail@correo.com" class="text-neon-purple fs-5"><i class="fas fa-envelope"></i></a>
-    </div>
-    <div class="mb-3">
-      <a href="https://www.instagram.com/tuusuario" target="_blank" class="text-neon-pink me-3 fs-5"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.tiktok.com/@tuusuario" target="_blank" class="text-neon-purple me-3 fs-5"><i class="fab fa-tiktok"></i></a>
-      <a href="https://www.youtube.com/@tuusuario" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.facebook.com/tuusuario" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-facebook"></i></a>
-      <a href="https://discord.gg/tuinvitacion" target="_blank" class="text-neon-pink me-3 fs-5"><i class="fab fa-discord"></i></a>
-    </div>
-    <p class="small m-0">&copy; 2025 Elisarrtech | Todos los derechos reservados</p>
+    <!-- Mensaje si no hay resultados -->
+    <div id="noResults" class="text-center text-warning mt-4 d-none">No hay artículos en esta categoría.</div>
+  </main>
+
+  <!-- Botón "Volver arriba" -->
+  <button id="btnVolverArriba" onclick="volverArriba()" title="Volver arriba" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div class="text-center mt-4">
+    <a href="contacto.html" class="cta-btn btn-contratame animate-glow">
+      🚀 ¡Contáctame o Contrátame!
+    </a>
   </div>
-</footer>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-center text-light py-4 mt-5">
+    <div class="container">
+      <h5 class="mb-3 text-neon-purple">Elisarrtech</h5>
+      <div class="mb-3">
+        <a href="https://github.com/elisarrtech" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/tuusuario" target="_blank" class="text-neon-pink me-3 fs-5"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:tuemail@correo.com" class="text-neon-purple fs-5"><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="mb-3">
+        <a href="https://www.instagram.com/tuusuario" target="_blank" class="text-neon-pink me-3 fs-5"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@tuusuario" target="_blank" class="text-neon-purple me-3 fs-5"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@tuusuario" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com/tuusuario" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-facebook"></i></a>
+        <a href="https://discord.gg/tuinvitacion" target="_blank" class="text-neon-pink me-3 fs-5"><i class="fab fa-discord"></i></a>
+      </div>
+      <p class="small m-0">&copy; 2025 Elisarrtech | Todos los derechos reservados</p>
+    </div>
+  </footer>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -156,21 +169,49 @@
   </script>
   <script src="js/main.js"></script>
   <script>
-    document.querySelectorAll('.filter-btn').forEach(button => {
+    // Filtro de categorías y buscador
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const blogItems = document.querySelectorAll('.blog-item');
+    const searchInput = document.getElementById('searchBlog');
+    const noResults = document.getElementById('noResults');
+
+    function filterBlog() {
+      const filter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+      const query = searchInput.value.trim().toLowerCase();
+      let anyVisible = false;
+      blogItems.forEach(item => {
+        const category = item.getAttribute('data-category');
+        const text = item.innerText.toLowerCase();
+        const categoryMatch = (filter === 'all' || category === filter);
+        const searchMatch = (text.includes(query));
+        if (categoryMatch && searchMatch) {
+          item.classList.remove('d-none');
+          anyVisible = true;
+        } else {
+          item.classList.add('d-none');
+        }
+      });
+      noResults.classList.toggle('d-none', anyVisible);
+    }
+
+    filterBtns.forEach(button => {
       button.addEventListener('click', () => {
-        const filter = button.getAttribute('data-filter');
-        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        filterBtns.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
-        document.querySelectorAll('.blog-item').forEach(item => {
-          const category = item.getAttribute('data-category');
-          if (filter === 'all' || category === filter) {
-            item.classList.remove('d-none');
-          } else {
-            item.classList.add('d-none');
-          }
-        });
+        filterBlog();
       });
     });
+    searchInput.addEventListener('input', filterBlog);
+
+    // Volver arriba
+    const btnVolverArriba = document.getElementById("btnVolverArriba");
+    window.onscroll = function() {
+      btnVolverArriba.style.display = window.scrollY > 200 ? "block" : "none";
+    };
+    function volverArriba() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+    window.volverArriba = volverArriba;
   </script>
 </body>
 </html>
