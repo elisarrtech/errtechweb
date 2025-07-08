@@ -1,132 +1,163 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <title>Sobre mí | Elisarrtech</title>
+  <title>Sobre Mí | Elisarrtech</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- Bootstrap, AOS, FontAwesome, Google Fonts -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="icon" href="img/favicon.png">
- 
-  <!-- Íconos -->
-  <script src="https://kit.fontawesome.com/a2e0c6e6f7.js" crossorigin="anonymous"></script>
-  
-  <!-- Fuente genericos cloudfare -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #232526 0%, #3a6186 100%);
+      color: #fff;
+      min-height: 100vh;
+    }
+    .sobre-mi-bg {
+      background: rgba(34,36,38,0.95);
+      padding: 40px 30px 60px 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(31,38,135,0.15);
+      max-width: 900px;
+      margin: 40px auto 0 auto;
+      position: relative;
+      z-index:1;
+    }
+    .img-perfil {
+      max-width: 160px;
+      box-shadow: 0 4px 18px 0 rgba(0,240,255,0.15);
+      border: 5px solid #2c2f7c;
+    }
+    .text-neon-purple { color: #a259f7; }
+    .text-neon-blue { color: #00f0ff; }
+    .skill-card {
+      background: #181926;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px 0 rgba(0,240,255,0.10);
+      border: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .skill-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 32px 0 rgba(160,89,247,0.19);
+    }
+    .cta-btn {
+      background: linear-gradient(90deg,#00f0ff,#a259f7);
+      color: #fff;
+      border: none;
+      padding: 10px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0 4px 16px 0 rgba(0,240,255,0.23);
+      transition: background 0.3s, box-shadow 0.3s;
+      outline: none;
+      margin-top: 30px;
+    }
+    .cta-btn:hover {
+      background: linear-gradient(90deg,#a259f7,#00f0ff);
+      box-shadow: 0 8px 24px 0 rgba(0,240,255,0.35);
+      color: #fff;
+    }
+    /* Typewriter custom color */
+    #typed-about {
+      min-height: 38px;
+    }
+    /* Responsive */
+    @media (max-width: 576px) {
+      .sobre-mi-bg { padding: 24px 8px 32px 8px; }
+      .img-perfil { max-width: 100px; }
+    }
+  </style>
 </head>
-<body class="bg-black text-white">
+<body class="bg-dynamic text-dynamic">
 
-<!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary shadow-lg">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <img src="img/logotransp.png" alt="Elisarrtech" style="max-height: 40px;">
-        <span class="fw-bold text-neon-blue">Elisarrtech</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="menuNav">
-        <ul class="navbar-nav gap-3">
-          <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="sobre-mi.html">Sobre mí</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="proyectos.html">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="recursos.html">Recursos</a></li>
-          <li class="nav-item">
-            <a class="nav-link nav-musica text-white d-flex align-items-center gap-2" href="musica.html">
-              <img src="img/music.png" alt="Música" class="icono-musica" />
-              Música
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-<main class="container py-5">
-  <section class="mx-auto text-center" style="max-width: 800px;">
-    
-    <!-- Avatar -->
-    <img src="img/avatar-nina.png" alt="Avatar Elisarrtech" class="mb-4 rounded-circle shadow" style="width: 150px; border: 3px solid #ff4df0;">
-
-    <h1 class="text-neon-blue mb-3">Sobre mí</h1>
-    <p class="lead">Apasionada por la tecnología, la educación y el aprendizaje continuo. Bienvenid@ a mi mundo digital.</p>
-    
-    <hr class="border-neon-blue my-4">
-
-    <!-- Educación -->
-    <div class="mb-4 text-start">
-      <h4><i class="fas fa-graduation-cap text-neon-purple me-2"></i> Formación académica</h4>
-      <p>Estudios enfocados en informática, docencia y herramientas digitales. Soy autodidacta y siempre estoy explorando nuevas tecnologías.</p>
-    </div>
-
-    <!-- Habilidades -->
-    <div class="mb-4 text-start">
-      <h4><i class="fas fa-laptop-code text-neon-blue me-2"></i> Habilidades</h4>
-      <p>Manejo de HTML, CSS, JavaScript, Python, Flask, WordPress, IA, diseño web, automatización y recursos digitales para docentes.</p>
-    </div>
-
-    <!-- Proyectos -->
-    <div class="mb-4 text-start">
-      <h4><i class="fas fa-rocket text-neon-pink me-2"></i> Proyectos destacados</h4>
-      <p>He desarrollado chatbots, plataformas educativas, sitios personales, dashboards, recursos para profesores y contenido para redes.</p>
-    </div>
-
-    <!-- Pasión -->
-    <div class="mb-4 text-start">
-      <h4><i class="fas fa-heart text-neon-purple me-2"></i> Pasión por enseñar</h4>
-      <p>Me encanta compartir lo que sé. He impartido talleres a estudiantes, docentes y empresas que desean mejorar su presencia digital.</p>
-    </div>
-
-    <!-- Contacto rápido -->
-    <div class="text-center mt-5">
-      <a href="contacto.html" class="btn cta-btn"><i class="fas fa-envelope me-2"></i>Contáctame</a>
-    </div>
-
-  </section>
-</main>
-
- <section class="text-center mt-5" data-aos="fade-up">
-  <h3 class="text-neon-blue mb-3">🎶 Mi inspiración musical</h3>
-  <p>
-    La <strong>música electrónica</strong> es una de mis grandes pasiones. Escucho desde chillout y techno hasta progressive house. Me acompaña mientras trabajo, diseño y creo.
-  </p>
- 
-</section>
-<section class="text-center mt-5" data-aos="fade-up">
-  <h3 class="text-neon-pink mb-3">🎨 Pintura y creatividad</h3>
-  <p>También disfruto pintar con <strong>tinta y óleo</strong>. Me inspira la música, el movimiento y la improvisación. Es una forma diferente de crear sin pantallas.</p>
-  <div class="row justify-content-center mt-4">
-    <!-- Imágenes opcionales -->
-    <div class="col-md-4 mb-3">
-      <img src="img/arte1.jpg" class="img-fluid rounded shadow" alt="Pintura 1">
-    </div>
-    <div class="col-md-4 mb-3">
-      <img src="img/arte2.jpg" class="img-fluid rounded shadow" alt="Pintura 2">
+<!-- NAVBAR (opcional, igual que en index.html) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary shadow-lg">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="img/logotransp.png" alt="Elisarrtech" style="max-height: 40px;">
+      <span class="fw-bold text-neon-blue">Elisarrtech</span>
+    </a>
+    <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+      <ul class="navbar-nav gap-3">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="sobre-mi.html">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="proyectos.html">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="recursos.html">Recursos</a></li>
+      </ul>
     </div>
   </div>
-</section>
-<section class="text-center mt-5" data-aos="zoom-in">
-  <h4 class="text-neon-purple animate-glow">Crear, aprender y compartir: eso me mueve 🚀</h4>
-</section>
+</nav>
 
-  <div class="text-center mt-4">
-  <a href="contacto.html" class="cta-btn btn-contratame animate-glow">
-    🚀 ¡Contáctame o Contrátame!
-  </a>
-</div>
+<!-- SOBRE MI CON ANIMACIONES -->
+<main>
+  <div class="sobre-mi-bg">
 
-  <!-- Botón "Volver arriba" -->
-<button id="btnVolverArriba" onclick="volverArriba()" title="Volver arriba">
-  <i class="fas fa-arrow-up"></i>
-</button>
+    <!-- Foto + Typewriter + Descripción -->
+    <div class="text-center mb-4">
+      <div data-aos="fade-right" data-aos-duration="1200">
+        <img src="img/tu-foto.jpg" class="img-perfil rounded-circle mb-3" alt="Foto de Elisarrtech">
+      </div>
+      <h1 id="typed-about" class="text-neon-purple mb-2 fw-bold"></h1>
+      <div data-aos="fade-left" data-aos-duration="1200">
+        <h2 class="text-neon-blue mt-2 mb-2">Sobre Mí</h2>
+        <p class="lead">
+          <!-- TU TEXTO AQUÍ, NO MODIFICADO -->
+          Soy Elisarrtech, apasionado por la tecnología, la educación y la inteligencia artificial. Me dedico a crear soluciones digitales que faciliten el aprendizaje, la productividad y el crecimiento personal y profesional. Mi objetivo es fusionar la creatividad con la tecnología para generar impacto positivo en la vida de las personas.
+        </p>
+      </div>
+    </div>
 
+    <!-- Skills animadas -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card skill-card h-100 text-center tarjeta-1">
+          <div class="card-body">
+            <i class="fas fa-laptop-code fa-2x text-neon-blue mb-2"></i>
+            <h5 class="card-title">Desarrollo Web</h5>
+            <p class="card-text">HTML, CSS, JavaScript, Bootstrap, Flask</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card skill-card h-100 text-center tarjeta-2">
+          <div class="card-body">
+            <i class="fas fa-brain fa-2x text-neon-purple mb-2"></i>
+            <h5 class="card-title">Inteligencia Artificial</h5>
+            <p class="card-text">Asistentes virtuales, chatbots, automatización</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card skill-card h-100 text-center tarjeta-3">
+          <div class="card-body">
+            <i class="fas fa-chalkboard-teacher fa-2x text-neon-blue mb-2"></i>
+            <h5 class="card-title">Educación Digital</h5>
+            <p class="card-text">Formación online, recursos didácticos, mentoría</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
- <!-- FOOTER -->
+    <!-- Botón de contacto -->
+    <div class="text-center">
+      <a href="contacto.html" class="cta-btn animate-glow mt-4">
+        📩 ¡Contáctame!
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER (puedes copiar el mismo de index.html) -->
 <footer class="bg-black text-center text-light py-4 mt-5">
   <div class="container">
     <h5 class="mb-3 text-neon-purple">Elisarrtech</h5>
@@ -134,42 +165,38 @@
       <a href="https://github.com/elisarrtech" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/tuusuario" target="_blank" class="text-neon-pink me-3 fs-5"><i class="fab fa-linkedin"></i></a>
       <a href="mailto:tuemail@correo.com" class="text-neon-purple fs-5"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.instagram.com/tuusuario" target="_blank" class="text-neon-pink me-3 fs-5"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@tuusuario" target="_blank" class="text-neon-purple me-3 fs-5"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.youtube.com/@tuusuario" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.facebook.com/tuusuario" target="_blank" class="text-neon-blue me-3 fs-5"><i class="fab fa-facebook"></i></a>
+      <a href="https://discord.gg/tuinvitacion" target="_blank" class="text-neon-pink me-3 fs-5"><i class="fab fa-discord"></i></a>
     </div>
-    <div class="mb-3">
-  <a href="https://www.instagram.com/tuusuario" target="_blank" class="text-neon-pink me-3 fs-5">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://www.tiktok.com/@tuusuario" target="_blank" class="text-neon-purple me-3 fs-5">
-    <i class="fab fa-tiktok"></i>
-  </a>
-  <a href="https://www.youtube.com/@tuusuario" target="_blank" class="text-neon-blue me-3 fs-5">
-    <i class="fab fa-youtube"></i>
-  </a>
-  <a href="https://www.facebook.com/tuusuario" target="_blank" class="text-neon-blue me-3 fs-5">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a href="https://discord.gg/tuinvitacion" target="_blank" class="text-neon-pink me-3 fs-5">
-    <i class="fab fa-discord"></i>
-  </a>
-
-</div>
-
     <p class="small m-0">&copy; 2025 Elisarrtech | Todos los derechos reservados</p>
   </div>
 </footer>
 
-  <!-- JS de Bootstrap que maneja el collapse del navbar -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS (si lo usas) -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true, duration: 1000, offset: 120 });
-  </script>
-  <!-- Tu JS personalizado -->
-  <script src="js/main.js"></script>
-  <!-- FontAwesome -->
-  <script src="https://kit.fontawesome.com/a2e0c6e6f7.js" crossorigin="anonymous"></script>
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, duration: 1000, offset: 120 });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.0/dist/core.js"></script>
+<script>
+  new Typewriter('#typed-about', {
+    strings: [
+      'Desarrollador Web',
+      'Apasionado por la IA',
+      'Educador Digital'
+    ],
+    autoStart: true,
+    loop: true,
+    delay: 60,
+    deleteSpeed: 30,
+    pauseFor: 1600
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+<!-- Si tienes scripts personalizados para modo oscuro o similares, agrégalos aquí -->
 </body>
 </html>
-
-
