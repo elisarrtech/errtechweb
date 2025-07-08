@@ -31,16 +31,23 @@
       letter-spacing: 0.5px;
       box-shadow: 0 0 6px #00f0ff77;
     }
-    #buscaRecurso {
-      background: #181926;
-      border: 1px solid #222;
-      color: #fff;
-    }
-    #buscaRecurso:focus {
-      border-color: #00f0ff;
-      box-shadow: 0 0 8px #00f0ff77;
-      outline: none;
-    }
+ #buscaRecurso {
+  background: #191c26;
+  border: 2px solid #00f0ff;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 0 12px #00f0ff44;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+#buscaRecurso::placeholder {
+  color: #a8e8f8;
+  opacity: 1;
+}
+#buscaRecurso:focus {
+  border-color: #a259f7;
+  box-shadow: 0 0 18px #a259f7aa;
+  outline: none;
+}
     @media (max-width: 576px) {
       #buscaRecurso { width: 100%!important; }
     }
