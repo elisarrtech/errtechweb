@@ -1,26 +1,9 @@
-/* ========== VARIABLES Y TEMAS ========== */
-:root {
-  --bg: #ffffff;
-  --text: #121212;
-  --card-bg: #f7f7f7;
-  --card-border: #ddd;
-  --primary: #00f0ff;
-  --cta-bg: #ff4df0;
-}
-
-[data-theme="dark"] {
-  --bg: #121212;
-  --text: #ccc;
-  --card-bg: #1e1e1e;
-  --card-border: #333;
-}
-
 /* ========== RESET Y TIPOGRAFÍA ========== */
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #232526 0%, #3a6186 100%);
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: #121212;
+  color: #ccc;
   min-height: 100vh;
   margin: 0;
   padding: 0;
