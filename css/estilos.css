@@ -505,3 +505,15 @@ footer i {
   box-shadow: 0 0 10px var(--primary);
 }
 
+#particles-js {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+.text-center.mb-5 {
+  position: relative;
+  z-index: 1;
+}
