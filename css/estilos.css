@@ -589,4 +589,45 @@ footer i {
       .sobre-mi-bg { padding: 24px 8px 32px 8px; }
       .img-perfil { max-width: 100px; }
     }
-  
+
+/* Badges por categoría */
+.badge.bg-primary    { background: #007bff !important; }
+.badge.bg-success    { background: #28a745 !important; }
+.badge.bg-warning    { background: #ffc107 !important; color: #222 !important; }
+
+/* Card hover animado */
+.card {
+  transition: box-shadow .25s, transform .25s;
+}
+.card:hover {
+  box-shadow: 0 0 20px #7b2ff2;
+  transform: translateY(-6px) scale(1.02);
+  z-index:2;
+}
+
+/* Botón volver arriba */
+#btnVolverArriba {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1050;
+  background: #7b2ff2;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  font-size: 1.4rem;
+  box-shadow: 0 2px 8px #000a;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+#btnVolverArriba:hover {
+  background: #fff;
+  color: #7b2ff2;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-10px);}
+}
