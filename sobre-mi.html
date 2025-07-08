@@ -12,12 +12,23 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <!-- Particles.js -->
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #232526 0%, #3a6186 100%);
       color: #fff;
       min-height: 100vh;
+    }
+    #particles-js {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      left:0;
+      top:0;
+      z-index:0;
+      pointer-events: none;
+      opacity: 0.22;
     }
     .sobre-mi-bg {
       background: rgba(34,36,38,0.95);
@@ -65,11 +76,9 @@
       box-shadow: 0 8px 24px 0 rgba(0,240,255,0.35);
       color: #fff;
     }
-    /* Typewriter custom color */
     #typed-about {
       min-height: 38px;
     }
-    /* Responsive */
     @media (max-width: 576px) {
       .sobre-mi-bg { padding: 24px 8px 32px 8px; }
       .img-perfil { max-width: 100px; }
@@ -78,7 +87,10 @@
 </head>
 <body class="bg-dynamic text-dynamic">
 
-<!-- NAVBAR (opcional, igual que en index.html) -->
+<!-- Partículas animadas -->
+<div id="particles-js"></div>
+
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary shadow-lg">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
@@ -98,7 +110,6 @@
   </div>
 </nav>
 
-<!-- SOBRE MI CON ANIMACIONES -->
 <main>
   <div class="sobre-mi-bg">
 
@@ -108,13 +119,14 @@
         <img src="img/tu-foto.jpg" class="img-perfil rounded-circle mb-3" alt="Foto de Elisarrtech">
       </div>
       <h1 id="typed-about" class="text-neon-purple mb-2 fw-bold"></h1>
-     <div data-aos="fade-left" data-aos-duration="1200">
-  <h2 class="text-neon-blue mt-2 mb-2">Sobre Mí</h2>
-  <p class="lead">
-    Soy Elisarrtech, una apasionada de la tecnología, la educación y la inteligencia artificial. Me dedico a crear soluciones digitales que facilitan el aprendizaje, la productividad y el crecimiento personal y profesional. Mi objetivo es fusionar la creatividad con la tecnología para generar un impacto positivo en la vida de las personas.<br><br>
-    Además, ofrezco servicios de soporte técnico remoto, resolviendo problemas de software, optimizando sistemas y brindando asistencia digital a distancia. También trabajo como asistente virtual, apoyando en la organización, automatización de tareas y gestión administrativa para que mis clientas y clientes puedan enfocarse en lo más importante.
-  </p>
-</div>
+      <div data-aos="fade-left" data-aos-duration="1200">
+        <h2 class="text-neon-blue mt-2 mb-2">Sobre Mí</h2>
+        <p class="lead">
+          <!-- Pega aquí tu texto personal sin cambiarlo. Aquí un ejemplo femenino: -->
+          Soy Elisarrtech, una apasionada de la tecnología, la educación y la inteligencia artificial. Me dedico a crear soluciones digitales que facilitan el aprendizaje, la productividad y el crecimiento personal y profesional. Mi objetivo es fusionar la creatividad con la tecnología para generar un impacto positivo en la vida de las personas.<br><br>
+          Además, ofrezco servicios de soporte técnico remoto, resolviendo problemas de software, optimizando sistemas y brindando asistencia digital a distancia. También trabajo como asistente virtual, apoyando en la organización, automatización de tareas y gestión administrativa para que mis clientas y clientes puedan enfocarse en lo más importante.
+        </p>
+      </div>
     </div>
 
     <!-- Skills animadas -->
@@ -146,6 +158,24 @@
           </div>
         </div>
       </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
+        <div class="card skill-card h-100 text-center tarjeta-4">
+          <div class="card-body">
+            <i class="fas fa-headset fa-2x text-neon-purple mb-2"></i>
+            <h5 class="card-title">Soporte Técnico Remoto</h5>
+            <p class="card-text">Resolución de problemas, optimización y asistencia a distancia</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="500">
+        <div class="card skill-card h-100 text-center tarjeta-5">
+          <div class="card-body">
+            <i class="fas fa-user-cog fa-2x text-neon-blue mb-2"></i>
+            <h5 class="card-title">Asistencia Virtual</h5>
+            <p class="card-text">Gestión administrativa, organización y automatización de tareas</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Botón de contacto -->
@@ -157,7 +187,7 @@
   </div>
 </main>
 
-<!-- FOOTER (puedes copiar el mismo de index.html) -->
+<!-- FOOTER -->
 <footer class="bg-black text-center text-light py-4 mt-5">
   <div class="container">
     <h5 class="mb-3 text-neon-purple">Elisarrtech</h5>
@@ -185,9 +215,11 @@
 <script>
   new Typewriter('#typed-about', {
     strings: [
-      'Desarrollador Web',
-      'Apasionado por la IA',
-      'Educador Digital'
+      'Desarrolladora Web',
+      'Apasionada por la IA',
+      'Educadora Digital',
+      'Soporte Técnico Remoto',
+      'Asistente Virtual'
     ],
     autoStart: true,
     loop: true,
@@ -197,6 +229,25 @@
   });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
-<!-- Si tienes scripts personalizados para modo oscuro o similares, agrégalos aquí -->
+<!-- Particles.js -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 45, "density": { "enable": true, "value_area": 700 } },
+    "color": { "value": "#a259f7" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.25, "random": true },
+    "size": { "value": 3, "random": true },
+    "line_linked": { "enable": true, "distance": 130, "color": "#00f0ff", "opacity": 0.15, "width": 1 },
+    "move": { "enable": true, "speed": 1.2, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": { "onhover": { "enable": false }, "onclick": { "enable": false }, "resize": true }
+  },
+  "retina_detect": true
+});
+</script>
 </body>
 </html>
